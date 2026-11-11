@@ -1,0 +1,26 @@
+provider: algorand
+apis_io: https://apis.io/providers/algorand/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  block:
+    path_segment:
+    - blocks
+    properties:
+      created_at: timestamp
+      parent_hash: previous-block-hash
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/algorand-algod-openapi.json#GET /v2/blocks/{round}
+    - openapi/_original/algorand-indexer-openapi.json#GET /v2/blocks/{round-number}
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      hash: signature
+      from: sender
+      id: id
+      fee: fee
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/algorand-indexer-openapi.json#GET /v2/accounts/{account-id}/transactions

@@ -1,0 +1,41 @@
+provider: cardano
+apis_io: https://apis.io/providers/cardano/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  block:
+    path_segment:
+    - blocks
+    properties:
+      created_at: time
+      number:
+      - height
+      - slot
+      hash: hash
+      transaction_count: tx_count
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/blockfrost-cardano-api-openapi.yml#GET /blocks/{hash_or_number}
+    - openapi/_original/blockfrost-cardano-api-openapi.yml#GET /epochs/{number}/blocks
+    - openapi/_original/blockfrost-cardano-api-openapi.yml#GET /epochs/{number}/blocks/{pool_id}
+    - openapi/_original/blockfrost-cardano-api-openapi.yml#GET /pools/{pool_id}/blocks
+  transaction:
+    path_segment:
+    - txs
+    - transactions
+    properties:
+      hash:
+      - hash
+      - tx_hash
+      block_number:
+      - block
+      - block_height
+      created_at: block_time
+      fee: fees
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/blockfrost-cardano-api-openapi.yml#GET /accounts/{stake_address}/transactions
+    - openapi/_original/blockfrost-cardano-api-openapi.yml#GET /addresses/{address}/transactions
+    - openapi/_original/blockfrost-cardano-api-openapi.yml#GET /addresses/{address}/txs
+    - openapi/_original/blockfrost-cardano-api-openapi.yml#GET /assets/{asset}/txs
+    - openapi/_original/blockfrost-cardano-api-openapi.yml#GET /blocks/latest/txs

@@ -1,0 +1,14 @@
+provider: odos
+apis_io: https://apis.io/providers/odos/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  token:
+    path_segment:
+    - tokens
+    - token
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/openapi.json#GET /info/tokens/{chain_id}
+    - openapi/_original/openapi.json#GET /pricing/token/{chain_id}

@@ -1,0 +1,24 @@
+provider: lighter
+apis_io: https://apis.io/providers/lighter/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  transaction:
+    path_segment:
+    - tx
+    properties:
+      hash: hash
+      block_number: block_height
+      type: type
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/lighter-openapi.json#GET /api/v1/tx
+  token:
+    path_segment:
+    - tokens
+    properties:
+      name: name
+      id: token_id
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/lighter-openapi.json#GET /api/v1/tokens

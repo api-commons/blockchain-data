@@ -1,0 +1,18 @@
+provider: meter
+apis_io: https://apis.io/providers/meter/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  block:
+    path_segment:
+    - blocks
+    - block
+    properties:
+      created_at: timestamp
+      number: number
+      gas_used: gasUsed
+      id: id
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/meter-openapi-original.yml#GET /blocks/{revision}
+    - openapi/_original/meter-openapi-original.yml#GET /subscriptions/block

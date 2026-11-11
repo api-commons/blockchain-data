@@ -1,0 +1,21 @@
+provider: anchor-x402
+apis_io: https://apis.io/providers/anchor-x402/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  transaction:
+    path_segment:
+    - tx
+    properties:
+      hash: tx_hash
+      block_number: block_number
+      created_at:
+      - timestamp
+      - block_time
+      from: from_address
+      to: to_address
+      chain: chain
+      gas_used: gas_used
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/anchor-x402-openapi.json#POST /v1/decode/tx

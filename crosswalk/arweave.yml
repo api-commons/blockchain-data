@@ -1,0 +1,15 @@
+provider: arweave
+apis_io: https://apis.io/providers/arweave/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  transaction:
+    path_segment:
+    - tx
+    properties:
+      hash: signature
+      created_at: timestamp
+      id: id
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/arweave-openapi.json#POST /tx

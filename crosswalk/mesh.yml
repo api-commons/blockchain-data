@@ -1,0 +1,12 @@
+provider: mesh
+apis_io: https://apis.io/providers/mesh/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  token:
+    path_segment:
+    - tokens
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/mesh-integration-api-openapi.json#GET /api/v1/transfers/managed/tokens

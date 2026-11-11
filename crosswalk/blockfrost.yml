@@ -1,0 +1,42 @@
+provider: blockfrost
+apis_io: https://apis.io/providers/blockfrost/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  block:
+    path_segment:
+    - blocks
+    properties:
+      created_at: time
+      number:
+      - height
+      - slot
+      hash: hash
+      transaction_count: tx_count
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/blockfrost-openapi.yaml#GET /blocks/{hash_or_number}
+    - openapi/_original/blockfrost-openapi.yaml#GET /epochs/{number}/blocks
+    - openapi/_original/blockfrost-openapi.yaml#GET /epochs/{number}/blocks/{pool_id}
+    - openapi/_original/blockfrost-openapi.yaml#GET /pools/{pool_id}/blocks
+    - openapi/_original/openapi.yml#GET /blocks/{hash_or_number}
+  transaction:
+    path_segment:
+    - txs
+    - transactions
+    properties:
+      hash:
+      - hash
+      - tx_hash
+      block_number:
+      - block
+      - block_height
+      created_at: block_time
+      fee: fees
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/blockfrost-openapi.yaml#GET /accounts/{stake_address}/transactions
+    - openapi/_original/blockfrost-openapi.yaml#GET /addresses/{address}/transactions
+    - openapi/_original/blockfrost-openapi.yaml#GET /addresses/{address}/txs
+    - openapi/_original/blockfrost-openapi.yaml#GET /assets/{asset}/txs
+    - openapi/_original/blockfrost-openapi.yaml#GET /blocks/latest/txs

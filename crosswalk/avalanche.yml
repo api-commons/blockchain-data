@@ -1,0 +1,53 @@
+provider: avalanche
+apis_io: https://apis.io/providers/avalanche/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  block:
+    path_segment:
+    - blocks
+    properties:
+      created_at: blockTimestamp
+      number: blockNumber
+      hash: blockHash
+      gas_used: gasUsed
+      transaction_count: txCount
+      parent_hash: parentHash
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/data-api.json#GET /v1/blocks
+    - openapi/_original/data-api.json#GET /v1/chains/{chainId}/blocks
+    - openapi/_original/data-api.json#GET /v1/chains/{chainId}/blocks/{blockId}
+    - openapi/_original/data-api.json#GET /v1/networks/{network}/blockchains/{blockchainId}/blocks
+    - openapi/_original/data-api.json#GET /v1/networks/{network}/blockchains/{blockchainId}/blocks/{blockId}
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      hash: txHash
+      block_number: blockNumber
+      created_at: blockTimestamp
+      from: from
+      to: to
+      block_hash: blockHash
+      chain: chainId
+      gas_used: gasUsed
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/data-api.json#GET /v1/chains/{chainId}/addresses/{address}/transactions
+    - openapi/_original/data-api.json#GET /v1/chains/{chainId}/blocks/{blockId}/transactions
+    - openapi/_original/data-api.json#GET /v1/chains/{chainId}/transactions
+    - openapi/_original/data-api.json#GET /v1/chains/{chainId}/transactions/{txHash}
+    - openapi/_original/data-api.json#GET /v2/chains/{chainId}/addresses/{address}/transactions
+  token:
+    path_segment:
+    - tokens
+    properties:
+      name: name
+      symbol: symbol
+      contract_address: address
+      id: tokenId
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/data-api.json#GET /v1/chains/{chainId}/nfts/collections/{address}/tokens
+    - openapi/_original/data-api.json#GET /v1/chains/{chainId}/nfts/collections/{address}/tokens/{tokenId}

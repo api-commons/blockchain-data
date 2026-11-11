@@ -1,0 +1,13 @@
+provider: ankr
+apis_io: https://apis.io/providers/ankr/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  block:
+    path_segment:
+    - blocks
+    properties:
+      id: id
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/ankr-advanced-api-openapi.yml#POST /query/blocks

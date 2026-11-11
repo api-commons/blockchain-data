@@ -1,0 +1,12 @@
+provider: imgauth-api-di-attestazione-opere-digitali
+apis_io: https://apis.io/providers/imgauth-api-di-attestazione-opere-digitali/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  token:
+    path_segment:
+    - token
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/imgauth-api-di-attestazione-opere-digitali-openapi-original.json#GET /api/agent/token

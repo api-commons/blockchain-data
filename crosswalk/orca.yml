@@ -1,0 +1,19 @@
+provider: orca
+apis_io: https://apis.io/providers/orca/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  token:
+    path_segment:
+    - tokens
+    - token
+    properties:
+      name: name
+      symbol: symbol
+      decimals: decimals
+      contract_address: address
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/orca-openapi-original.json#GET /protocol/token
+    - openapi/_original/orca-openapi-original.json#GET /tokens
+    - openapi/_original/orca-openapi-original.json#GET /tokens/{mint_address}

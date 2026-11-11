@@ -1,0 +1,12 @@
+provider: kadena
+apis_io: https://apis.io/providers/kadena/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  block:
+    path_segment:
+    - block
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/kadena-chainweb-openapi-original.yml#GET /chain/{chain}/block

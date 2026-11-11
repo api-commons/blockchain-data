@@ -1,0 +1,14 @@
+provider: opensea
+apis_io: https://apis.io/providers/opensea/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  token:
+    path_segment:
+    - tokens
+    - token
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/opensea-api.json#GET /api/v2/chain/{chain}/token/{address}
+    - openapi/_original/opensea-api.json#POST /api/v2/tokens/batch

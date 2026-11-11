@@ -1,0 +1,200 @@
+openapi: 3.1.0
+info:
+  title: Blockchain Data (API Commons)
+  version: 0.1.0-draft.20261111
+  description: 'The common Blockchain Data interface, distilled from the harvested OpenAPI of 374 providers in the
+    APIs.io catalog. Not a product: no one serves this API. It is the shape the market already shares, measured,
+    so that providers, agents and integrators can map to one vocabulary. See profile.yml.'
+  license:
+    name: CC BY-NC-SA 4.0
+    url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+paths:
+  /blocks:
+    get:
+      operationId: listBlocks
+      summary: List blocks
+      tags:
+      - Blocks
+      x-commons-tier: core
+      x-commons-share: 0.787
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id001
+                  $ref: '#/components/schemas/Block'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+  /blocks/{block_id}:
+    parameters:
+    - $ref: '#/components/parameters/block_id'
+    get:
+      operationId: getBlock
+      summary: Get a block
+      tags:
+      - Blocks
+      x-commons-tier: core
+      x-commons-share: 0.66
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+  /transactions:
+    get:
+      operationId: listTransactions
+      summary: List transactions
+      tags:
+      - Transactions
+      x-commons-tier: core
+      x-commons-share: 0.744
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id002
+                  $ref: '#/components/schemas/Transaction'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createTransaction
+      summary: Create a transaction
+      tags:
+      - Transactions
+      x-commons-tier: extended
+      x-commons-share: 0.279
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id002
+  /transactions/{transaction_id}:
+    parameters:
+    - $ref: '#/components/parameters/transaction_id'
+    get:
+      operationId: getTransaction
+      summary: Get a transaction
+      tags:
+      - Transactions
+      x-commons-tier: core
+      x-commons-share: 0.512
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+  /tokens:
+    get:
+      operationId: listTokens
+      summary: List tokens
+      tags:
+      - Tokens
+      x-commons-tier: core
+      x-commons-share: 0.836
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id003
+                  $ref: '#/components/schemas/Token'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createToken
+      summary: Create a token
+      tags:
+      - Tokens
+      x-commons-tier: extended
+      x-commons-share: 0.224
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id003
+  /tokens/{token_id}:
+    parameters:
+    - $ref: '#/components/parameters/token_id'
+    get:
+      operationId: getToken
+      summary: Get a token
+      tags:
+      - Tokens
+      x-commons-tier: core
+      x-commons-share: 0.552
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+components:
+  schemas:
+    Block:
+      $ref: ./schema/block.json
+    Transaction:
+      $ref: ./schema/transaction.json
+    Token:
+      $ref: ./schema/token.json
+  parameters:
+    block_id:
+      name: block_id
+      in: path
+      required: true
+      schema:
+        type: string
+    transaction_id:
+      name: transaction_id
+      in: path
+      required: true
+      schema:
+        type: string
+    token_id:
+      name: token_id
+      in: path
+      required: true
+      schema:
+        type: string

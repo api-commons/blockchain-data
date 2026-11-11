@@ -1,0 +1,13 @@
+provider: breeze
+apis_io: https://apis.io/providers/breeze/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  transaction:
+    path_segment:
+    - tx
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/breeze-openapi-original.json#POST /deposit/tx
+    - openapi/_original/breeze-openapi-original.json#POST /withdraw/tx

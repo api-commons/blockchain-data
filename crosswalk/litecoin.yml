@@ -1,0 +1,43 @@
+provider: litecoin
+apis_io: https://apis.io/providers/litecoin/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  block:
+    path_segment:
+    - blocks
+    - block
+    properties:
+      created_at:
+      - time
+      - timestamp
+      number: height
+      hash: hash
+      transaction_count:
+      - nTx
+      - tx_count
+      id: id
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/litecoin-core-rest.yml#GET /rest/block/{blockHash}.json
+    - openapi/_original/litecoin-space-rest.yml#GET /block/{hash}
+    - openapi/_original/litecoin-space-rest.yml#GET /blocks/{startHeight}
+    - openapi/_original/litecoin-space-rest.yml#GET /v1/blocks/{startHeight}
+    - openapi/_original/litecoin-space-rest.yml#GET /v1/mining/pool/{slug}/blocks/{blockHeight}
+  transaction:
+    path_segment:
+    - tx
+    - txs
+    properties:
+      hash:
+      - txid
+      - hash
+      created_at: time
+      fee: fee
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/litecoin-core-rest.yml#GET /rest/tx/{txHash}.json
+    - openapi/_original/litecoin-space-rest.yml#GET /address/{address}/txs
+    - openapi/_original/litecoin-space-rest.yml#GET /block/{hash}/txs/{startIndex}
+    - openapi/_original/litecoin-space-rest.yml#GET /tx/{txid}
+    - openapi/_original/litecoin-space-rest.yml#POST /tx

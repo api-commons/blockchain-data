@@ -1,0 +1,28 @@
+provider: coin-metrics
+apis_io: https://apis.io/providers/coin-metrics/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  block:
+    path_segment:
+    - blocks
+    properties:
+      number: height
+      hash: block_hash
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/coin-metrics-api-v4-openapi.json#GET /blockchain-v2/{asset}/blocks
+    - openapi/_original/coin-metrics-api-v4-openapi.json#GET /blockchain-v2/{asset}/blocks/{block_hash}
+    - openapi/_original/coin-metrics-api-v4-openapi.json#GET /catalog-all-v2/blockchain-v2/blocks
+    - openapi/_original/coin-metrics-api-v4-openapi.json#GET /catalog-v2/blockchain-v2/blocks
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      hash: txid
+      block_number: height
+      fee: fee
+      block_hash: block_hash
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/coin-metrics-api-v4-openapi.json#GET /blockchain-v2/{asset}/blocks/{block_hash}/transactions/{txid}

@@ -1,0 +1,15 @@
+provider: stellar
+apis_io: https://apis.io/providers/stellar/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      hash: hash
+      created_at: created_at
+      id: id
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/stellar-horizon-api.yml#GET /accounts/{account_id}/transactions

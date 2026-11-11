@@ -1,0 +1,153 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/blockchain-data/main/schema/transaction.json",
+  "title": "Transaction",
+  "description": "The common transaction in Blockchain Data, distilled from 41 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "hash": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.683,
+      "x-commons-providers": 28,
+      "x-commons-spellings": [
+        "hash",
+        "signature",
+        "transactionHash",
+        "tx_hash",
+        "txHash",
+        "txid"
+      ]
+    },
+    "block_number": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.537,
+      "x-commons-providers": 22,
+      "x-commons-spellings": [
+        "blockNumber",
+        "height",
+        "block",
+        "block_height",
+        "block_number",
+        "blockHeight"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.537,
+      "x-commons-providers": 22,
+      "x-commons-spellings": [
+        "timestamp",
+        "block_time",
+        "createdAt",
+        "blockTimestamp",
+        "block_timestamp",
+        "created",
+        "time",
+        "created_at"
+      ],
+      "format": "date-time"
+    },
+    "from": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.317,
+      "x-commons-providers": 13,
+      "x-commons-spellings": [
+        "from",
+        "fromAddress",
+        "sender",
+        "from_address"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.293,
+      "x-commons-providers": 12,
+      "x-commons-spellings": [
+        "id",
+        "externalId",
+        "transactionId",
+        "guid"
+      ]
+    },
+    "fee": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.268,
+      "x-commons-providers": 11,
+      "x-commons-spellings": [
+        "fee",
+        "fees"
+      ]
+    },
+    "to": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.268,
+      "x-commons-providers": 11,
+      "x-commons-spellings": [
+        "to",
+        "toAddress",
+        "to_address"
+      ]
+    },
+    "block_hash": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.244,
+      "x-commons-providers": 10,
+      "x-commons-spellings": [
+        "blockHash",
+        "block_hash"
+      ]
+    },
+    "chain": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.244,
+      "x-commons-providers": 10,
+      "x-commons-spellings": [
+        "chainId",
+        "chain",
+        "chainName",
+        "chain_id",
+        "network",
+        "blockchain"
+      ]
+    },
+    "gas_used": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.244,
+      "x-commons-providers": 10,
+      "x-commons-spellings": [
+        "gas_used",
+        "gasUsed"
+      ]
+    },
+    "type": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.22,
+      "x-commons-providers": 9,
+      "x-commons-spellings": [
+        "type"
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "blockchain-data",
+    "concept": "transaction",
+    "providers": 41,
+    "generated": "2026-11-11",
+    "version": "0.1.0-draft.20261111",
+    "status": "draft"
+  }
+}

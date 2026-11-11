@@ -1,0 +1,16 @@
+provider: blockchair
+apis_io: https://apis.io/providers/blockchair/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  block:
+    path_segment:
+    - block
+    - blocks
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/blockchair-openapi.yml#GET /{chain}/blocks
+    - openapi/_original/blockchair-openapi.yml#GET /{chain}/dashboards/block/{id}
+    - openapi/_original/blockchair-openapi.yml#GET /{chain}/dashboards/blocks/{ids}
+    - openapi/_original/blockchair-openapi.yml#GET /{chain}/raw/block/{id}

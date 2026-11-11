@@ -1,0 +1,51 @@
+aid: common-blockchain-data
+name: Blockchain Data
+type: Common
+description: 'The common Blockchain Data vocabulary, distilled from the harvested OpenAPI of 374 providers in APIs.io:
+  shared operations, JSON Schema per concept with measured adoption, and a crosswalk from the common names to each
+  provider''s own.'
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+- Application Programming Interface
+- API
+- Blockchain
+- Ethereum
+- Solana
+- Bitcoin
+- Common Schema
+created: '2026-11-11'
+modified: '2026-11-11'
+url: https://raw.githubusercontent.com/api-commons/blockchain-data/main/apis.yml
+specificationVersion: '0.20'
+apis:
+- aid: common-blockchain-data:blockchain-data
+  name: Common Blockchain Data Interface
+  description: The Blockchain Data interface the market already shares, measured.
+  humanURL: https://github.com/api-commons/blockchain-data
+  tags:
+  - Blockchain
+  - Ethereum
+  properties:
+  - type: OpenAPI
+    url: https://raw.githubusercontent.com/api-commons/blockchain-data/main/openapi.yml
+  - type: Profile
+    url: https://raw.githubusercontent.com/api-commons/blockchain-data/main/profile.yml
+  - type: Adopters
+    url: https://raw.githubusercontent.com/api-commons/blockchain-data/main/adopters.yml
+  - type: Rules
+    url: https://raw.githubusercontent.com/api-commons/schema-commons/main/ruleset/schema-commons-naming.yaml
+  - type: JSONSchema
+    name: block
+    url: https://raw.githubusercontent.com/api-commons/blockchain-data/main/schema/block.json
+  - type: JSONSchema
+    name: transaction
+    url: https://raw.githubusercontent.com/api-commons/blockchain-data/main/schema/transaction.json
+  - type: JSONSchema
+    name: token
+    url: https://raw.githubusercontent.com/api-commons/blockchain-data/main/schema/token.json
+common:
+- type: License
+  url: https://raw.githubusercontent.com/api-commons/blockchain-data/main/LICENSE
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

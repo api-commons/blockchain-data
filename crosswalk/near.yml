@@ -1,0 +1,37 @@
+provider: near
+apis_io: https://apis.io/providers/near/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  block:
+    path_segment:
+    - blocks
+    - block
+    properties:
+      gas_used: gas_used
+      id: id
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/near-rpc-api.json#POST /block
+    - openapi/_original/nearblocks-api.json#GET /v1/blocks
+    - openapi/_original/nearblocks-api.json#GET /v1/blocks/{hash}
+    - openapi/_original/nearblocks-api.json#GET /v1/search/blocks
+    - openapi/_original/openapi.yml#POST /block
+  transaction:
+    path_segment:
+    - tx
+    properties:
+      id: id
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/near-rpc-api.json#POST /tx
+    - openapi/_original/openapi.yml#POST /tx
+  token:
+    path_segment:
+    - tokens
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/nearblocks-api.json#GET /v1/nfts/{contract}/tokens
+    - openapi/_original/nearblocks-api.json#GET /v1/nfts/{contract}/tokens/{token}
+    - openapi/_original/nearblocks-api.json#GET /v1/search/tokens

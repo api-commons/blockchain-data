@@ -1,0 +1,24 @@
+provider: top-group
+apis_io: https://apis.io/providers/top-group/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  block:
+    path_segment:
+    - blocks
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/top-group-tonapi-openapi.yml#GET /v2/blockchain/blocks/{block_id}
+    - openapi/_original/top-group-tonapi-openapi.yml#GET /v2/blockchain/masterchain/{masterchain_seqno}/blocks
+    - openapi/_original/top-group-tonapi-openapi.yml#GET /v2/blockchain/reduced/blocks
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      hash: hash
+      block_number: block
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/top-group-tonapi-openapi.yml#GET /v2/blockchain/accounts/{account_id}/transactions
+    - openapi/_original/top-group-tonapi-openapi.yml#GET /v2/blockchain/blocks/{block_id}/transactions

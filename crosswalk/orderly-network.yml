@@ -1,0 +1,14 @@
+provider: orderly-network
+apis_io: https://apis.io/providers/orderly-network/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  token:
+    path_segment:
+    - token
+    properties:
+      decimals: decimals
+      created_at: timestamp
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/orderly-network-openapi-original.yml#GET /v1/public/token

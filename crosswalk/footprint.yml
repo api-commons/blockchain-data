@@ -1,0 +1,28 @@
+provider: footprint
+apis_io: https://apis.io/providers/footprint/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  block:
+    path_segment:
+    - blocks
+    properties:
+      created_at: block_timestamp
+      number: block_number
+      hash: block_hash
+      gas_used: gas_used
+      transaction_count: transaction_count
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/openapi.yml#GET /api/v1/chain/{chain}/blocks
+  token:
+    path_segment:
+    - tokens
+    - token
+    properties:
+      contract_address: token_address
+      chain: chain
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/openapi.yml#GET /api/v1/tokens/{token_address}
+    - openapi/_original/openapi.yml#GET /api/v1/wallet/{wallet_address}/eligibility/token

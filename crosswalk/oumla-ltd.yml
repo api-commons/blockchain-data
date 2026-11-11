@@ -1,0 +1,38 @@
+provider: oumla-ltd
+apis_io: https://apis.io/providers/oumla-ltd/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  transaction:
+    path_segment:
+    - tx
+    properties:
+      hash: transactionHash
+      block_number: blockNumber
+      from: from
+      to: to
+      block_hash: blockHash
+      gas_used: gasUsed
+      type: type
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/oumla-ltd-openapi-original.json#GET /api/v1/contract-interactions/network/{networkId}/tx/{txId}
+  token:
+    path_segment:
+    - tokens
+    properties:
+      name: name
+      symbol: symbol
+      contract_address: contractAddress
+      id:
+      - id
+      - tokenId
+      chain: network
+      created_at: createdAt
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/oumla-ltd-openapi-original.json#DELETE /api/v1/tokenization/tokens/{id}
+    - openapi/_original/oumla-ltd-openapi-original.json#GET /api/v1/tokenization/collection/tokens
+    - openapi/_original/oumla-ltd-openapi-original.json#GET /api/v1/tokenization/collections/{id}/tokens/{tokenId}
+    - openapi/_original/oumla-ltd-openapi-original.json#GET /api/v1/tokenization/tokens
+    - openapi/_original/oumla-ltd-openapi-original.json#GET /api/v1/tokenization/tokens/{id}

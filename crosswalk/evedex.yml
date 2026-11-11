@@ -1,0 +1,14 @@
+provider: evedex
+apis_io: https://apis.io/providers/evedex/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  block:
+    path_segment:
+    - blocks
+    - block
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/evedex-academy-openapi.json#GET /api/course/blocks
+    - openapi/_original/evedex-auth-openapi.json#POST /auth/user/{authId}/block

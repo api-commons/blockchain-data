@@ -1,0 +1,17 @@
+provider: aptos
+apis_io: https://apis.io/providers/aptos/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      hash:
+      - hash
+      - signature
+      from: sender
+      type: type
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/aptos-fullnode-rest-api-openapi.yaml#GET /accounts/{address}/transactions

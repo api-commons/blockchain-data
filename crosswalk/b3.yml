@@ -1,0 +1,72 @@
+provider: b3
+apis_io: https://apis.io/providers/b3/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  block:
+    path_segment:
+    - blocks
+    properties:
+      created_at:
+      - timestamp
+      - block_timestamp
+      number:
+      - height
+      - block_number
+      hash:
+      - hash
+      - block_hash
+      gas_used: gas_used
+      transaction_count: transaction_count
+      parent_hash: parent_hash
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/b3-data-api-openapi.json#GET /blockscout/blocks
+    - openapi/_original/b3-data-api-openapi.json#GET /blockscout/blocks/{block_number_or_hash}
+    - openapi/_original/b3-data-api-openapi.json#GET /blockscout/main-page/blocks
+    - openapi/_original/b3-data-api-openapi.json#GET /insights/v1/blocks
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      hash: hash
+      block_number: block_number
+      created_at:
+      - timestamp
+      - block_timestamp
+      from:
+      - from
+      - from_address
+      fee: fee
+      to:
+      - to
+      - to_address
+      block_hash: block_hash
+      chain: chain_id
+      gas_used: gas_used
+      type: type
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/b3-data-api-openapi.json#GET /blockscout/addresses/{address_hash}/transactions
+    - openapi/_original/b3-data-api-openapi.json#GET /blockscout/blocks/{block_number_or_hash}/transactions
+    - openapi/_original/b3-data-api-openapi.json#GET /insights/v1/wallets/{wallet_address}/transactions
+  token:
+    path_segment:
+    - tokens
+    - erc20
+    properties:
+      name: name
+      symbol: symbol
+      decimals: decimals
+      contract_address:
+      - address
+      - token_address
+      id: token_id
+      chain: chain_id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/b3-data-api-openapi.json#GET /blockscout/addresses/{address_hash}/tokens
+    - openapi/_original/b3-data-api-openapi.json#GET /blockscout/tokens
+    - openapi/_original/b3-data-api-openapi.json#GET /blockscout/tokens/{address_hash}
+    - openapi/_original/b3-data-api-openapi.json#GET /insights/v1/tokens
+    - openapi/_original/b3-data-api-openapi.json#GET /insights/v1/tokens/erc20/{ownerAddress}

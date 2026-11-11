@@ -1,0 +1,13 @@
+provider: cubist
+apis_io: https://apis.io/providers/cubist/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  transaction:
+    path_segment:
+    - tx
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/cubist-cubesigner-openapi-original.json#GET /v0/org/{org_id}/keys/{key_id}/tx
+    - openapi/_original/cubist-cubesigner-openapi-original.json#GET /v0/org/{org_id}/roles/{role_id}/tx

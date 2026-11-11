@@ -1,0 +1,18 @@
+provider: bitski
+apis_io: https://apis.io/providers/bitski/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  token:
+    path_segment:
+    - tokens
+    properties:
+      id:
+      - id
+      - tokenId
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/bitski-nft-service-openapi-original.json#GET /v1/apps/{app_id}/tokens
+    - openapi/_original/bitski-nft-service-openapi-original.json#GET /v1/apps/{app_id}/tokens/{token_id}
+    - openapi/_original/bitski-nft-service-openapi-original.json#PATCH /v1/apps/{app_id}/tokens/{token_id}
+    - openapi/_original/bitski-nft-service-openapi-original.json#POST /v1/apps/{app_id}/tokens

@@ -1,0 +1,15 @@
+provider: waodao
+apis_io: https://apis.io/providers/waodao/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  token:
+    path_segment:
+    - token
+    properties:
+      name: name
+      created_at: timestamp
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/waodao-agent-api-openapi-3.0.json#GET /api/v1/waodao/token/{day}
+    - openapi/_original/waodao-agent-api-openapi.json#GET /api/v1/waodao/token/{day}

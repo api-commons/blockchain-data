@@ -1,0 +1,48 @@
+provider: blockscout
+apis_io: https://apis.io/providers/blockscout/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  block:
+    path_segment:
+    - blocks
+    properties:
+      created_at: timestamp
+      number: height
+      hash: hash
+      gas_used: gas_used
+      parent_hash: parent_hash
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/blockscout-openapi.yml#GET /blocks
+    - openapi/_original/blockscout-openapi.yml#GET /blocks/{block_number_or_hash}
+    - openapi/_original/blockscout-openapi.yml#GET /main-page/blocks
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      hash: hash
+      block_number: block_number
+      created_at: timestamp
+      from: from
+      fee: fee
+      to: to
+      gas_used: gas_used
+      type: type
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/blockscout-openapi.yml#GET /addresses/{address_hash}/transactions
+    - openapi/_original/blockscout-openapi.yml#GET /blocks/{block_number_or_hash}/transactions
+  token:
+    path_segment:
+    - tokens
+    properties:
+      name: name
+      symbol: symbol
+      decimals: decimals
+      id: token_id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/blockscout-openapi.yml#GET /addresses/{address_hash}/tokens
+    - openapi/_original/blockscout-openapi.yml#GET /tokens
+    - openapi/_original/blockscout-openapi.yml#GET /tokens/{address_hash}

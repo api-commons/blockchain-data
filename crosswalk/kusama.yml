@@ -1,0 +1,18 @@
+provider: kusama
+apis_io: https://apis.io/providers/kusama/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  block:
+    path_segment:
+    - blocks
+    properties:
+      number: number
+      hash: hash
+      parent_hash: parentHash
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/kusama-sidecar-openapi.yaml#GET /blocks
+    - openapi/_original/kusama-sidecar-openapi.yaml#GET /blocks/{blockId}
+    - openapi/_original/kusama-sidecar-openapi.yaml#GET /rc/blocks
+    - openapi/_original/kusama-sidecar-openapi.yaml#GET /rc/blocks/{blockId}

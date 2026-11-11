@@ -1,0 +1,66 @@
+context: blockchain-data
+name: Blockchain Data
+intro: >-
+  The common on-chain data vocabulary -- blocks, transactions, addresses and their balances, and
+  tokens -- distilled from the node, indexer and explorer APIs that already exist.
+tags: [Blockchain, Ethereum, Solana, Bitcoin, Web3, Smart Contracts, Blockchain Infrastructure, Blockchain Data]
+
+envelope: [_links, _pagination, _results, data, success, errors, count, total, page, meta, links, result, results, jsonrpc,
+           value, next, previous, has_more, message, page_info, cursor, total_count, per_page, total_pages, object, status, code]
+
+common_fields:
+  id: [uuid, guid, external_id]
+  created_at: [created, timestamp, block_timestamp, block_time, time]
+  chain: [network, blockchain, chain_id, chain_name]
+
+concepts:
+  block:
+    segments: [blocks, block]
+    aliases:
+      number: [height, block_number, block_height, slot]
+      hash: [block_hash]
+      parent_hash: [previous_hash, prev_hash, previous_block_hash]
+      transaction_count: [tx_count, num_txs, n_tx]
+  transaction:
+    segments: [transactions@blocks|addresses|accounts|wallets|chains|chain, txs, tx, transaction@chain]
+    aliases:
+      hash: [tx_hash, transaction_hash, txid, signature]
+      from: [from_address, sender]
+      to: [to_address, recipient]
+      value: [amount]
+      block_number: [block_height, height, block]
+      fee: [gas_fee, fees, tx_fee]
+  # address was measured and dropped: 32 readable providers, balance spelled differently everywhere and nothing at half.
+  token:
+    segments: [tokens!auth|oauth|oauth2|sessions|users|me|login|access|api_keys|keys|session|identity|account, token!auth|oauth|oauth2|sessions|login, erc20, assets@chain|chains]
+    aliases:
+      contract_address: [address, token_address, mint]
+      symbol: [ticker]
+      decimals: [token_decimals]
+exclude:
+  token:
+    coinbase: POST /token is an OAuth token, not an on-chain token
+    manifold: POST /token is an OAuth token
+    cubist: role API tokens
+    crunchdao: project API tokens
+    coinflow: payment card tokenization
+    anchor-x402: a price quote for a token, not the token resource
+
+findings:
+  - >-
+    Transactions agree on hash, block_number and created_at; from reaches 32%, because UTXO chains
+    have inputs and outputs rather than a sender.
+  - >-
+    Tokens agree on name and symbol; decimals reaches 43% and the contract address 41% -- spelled
+    address, token_address or mint depending on the chain.
+  - >-
+    Blocks share number, hash and created_at at 44-46%, just under core: the market splits between
+    raw node RPC (height, hash, time) and indexers that reshape them.
+decisions:
+  - >-
+    The context is blockchain-data, because api-commons/blockchain already holds a standard.
+  - >-
+    One vocabulary across chains: number for block height and slot, hash for transaction hash,
+    txid and signature, with chain as a common field.
+  - >-
+    Auth tokens (POST /auth/tokens, /oauth/token) are kept out of token with a never-under qualifier.

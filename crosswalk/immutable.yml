@@ -1,0 +1,18 @@
+provider: immutable
+apis_io: https://apis.io/providers/immutable/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  token:
+    path_segment:
+    - tokens
+    properties:
+      name: name
+      symbol: symbol
+      decimals: decimals
+      contract_address: contract_address
+      chain: chain
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/immutable-zkevm-openapi.json#GET /v1/chains/{chain_name}/tokens
+    - openapi/_original/immutable-zkevm-openapi.json#GET /v1/chains/{chain_name}/tokens/{contract_address}

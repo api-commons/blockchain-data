@@ -1,0 +1,501 @@
+context: blockchain-data
+name: Blockchain Data
+generated: '2026-11-11'
+version: 0.1.0-draft.20261111
+status: draft
+cohort:
+  tags:
+  - Blockchain
+  - Ethereum
+  - Solana
+  - Bitcoin
+  - Web3
+  - Smart Contracts
+  - Blockchain Infrastructure
+  - Blockchain Data
+  providers_with_harvested_openapi: 374
+thresholds:
+  core: 0.5
+  extended: 0.2
+  min_providers: 3
+excluded:
+  token:
+    coinbase: POST /token is an OAuth token, not an on-chain token
+    manifold: POST /token is an OAuth token
+    cubist: role API tokens
+    crunchdao: project API tokens
+    coinflow: payment card tokenization
+    anchor-x402: a price quote for a token, not the token resource
+duplicates: {}
+shared_specs: {}
+concepts:
+  block:
+    segments_seen:
+      blocks: 35
+      block: 24
+    providers_exposing: 47
+    providers_with_readable_schema: 43
+    operations:
+    - operation: GET collection
+      providers: 37
+      share: 0.787
+      tier: core
+    - operation: GET item
+      providers: 31
+      share: 0.66
+      tier: core
+    - operation: POST collection
+      providers: 8
+      share: 0.17
+      tier: long-tail
+    - operation: DELETE item
+      providers: 2
+      share: 0.043
+      tier: long-tail
+    - operation: DELETE collection
+      providers: 1
+      share: 0.021
+      tier: long-tail
+    - operation: POST item
+      providers: 1
+      share: 0.021
+      tier: long-tail
+    - operation: UPDATE item
+      providers: 1
+      share: 0.021
+      tier: long-tail
+    properties:
+    - name: created_at
+      tier: extended
+      providers: 20
+      share: 0.465
+      type: integer
+      spellings:
+      - timestamp
+      - block_timestamp
+      - time
+      - blockTimestamp
+      - created_at
+      - block_time
+    - name: number
+      tier: extended
+      providers: 20
+      share: 0.465
+      type: integer
+      spellings:
+      - height
+      - number
+      - block_number
+      - blockNumber
+      - slot
+      - block_height
+    - name: hash
+      tier: extended
+      providers: 19
+      share: 0.442
+      type: string
+      spellings:
+      - hash
+      - block_hash
+      - blockHash
+      - BlockHash
+    - name: gas_used
+      tier: extended
+      providers: 12
+      share: 0.279
+      type: string
+      spellings:
+      - gas_used
+      - gasUsed
+    - name: transaction_count
+      tier: extended
+      providers: 12
+      share: 0.279
+      type: integer
+      spellings:
+      - tx_count
+      - transaction_count
+      - txCount
+      - transactionCount
+      - nTx
+    - name: id
+      tier: extended
+      providers: 10
+      share: 0.233
+      type: string
+      spellings:
+      - id
+      - block_id
+      - blockId
+    - name: parent_hash
+      tier: extended
+      providers: 9
+      share: 0.209
+      type: string
+      spellings:
+      - parentHash
+      - parent_hash
+      - previous-block-hash
+      - previous_hash
+    long_tail_count: 369
+    long_tail_sample:
+    - gas_limit
+    - size
+    - transactions
+    - nonce
+    - state_root
+    - difficulty
+    - header
+    - extra_data
+    - miner
+    - payload
+    - base_fee_per_gas
+    - body
+    - chain
+    - confirmations
+    - events
+    - fees
+    - limit
+    - logs_bloom
+    - proposer
+    - receipts_root
+    - rewards
+    - total_difficulty
+    - transactions_root
+    - type
+    - version
+    - active_l1_validators
+    - ah_timestamp
+    - auth_info
+    - author
+    - author_id
+    - base_fee
+    - block_size_bytes
+    - block_status
+    - block_type
+    - block_vrf
+    - burnt_fees
+    - burnt_fees_percentage
+    - cumulative_transactions
+    - current_supply
+    - downward_messages
+  transaction:
+    segments_seen:
+      transactions: 23
+      tx: 21
+      txs: 9
+    providers_exposing: 43
+    providers_with_readable_schema: 41
+    operations:
+    - operation: GET collection
+      providers: 32
+      share: 0.744
+      tier: core
+    - operation: GET item
+      providers: 22
+      share: 0.512
+      tier: core
+    - operation: POST collection
+      providers: 12
+      share: 0.279
+      tier: extended
+    - operation: POST item
+      providers: 2
+      share: 0.047
+      tier: long-tail
+    - operation: DELETE item
+      providers: 1
+      share: 0.023
+      tier: long-tail
+    - operation: UPDATE item
+      providers: 1
+      share: 0.023
+      tier: long-tail
+    properties:
+    - name: hash
+      tier: core
+      providers: 28
+      share: 0.683
+      type: string
+      spellings:
+      - hash
+      - signature
+      - transactionHash
+      - tx_hash
+      - txHash
+      - txid
+    - name: block_number
+      tier: core
+      providers: 22
+      share: 0.537
+      type: string
+      spellings:
+      - blockNumber
+      - height
+      - block
+      - block_height
+      - block_number
+      - blockHeight
+    - name: created_at
+      tier: core
+      providers: 22
+      share: 0.537
+      type: string
+      spellings:
+      - timestamp
+      - block_time
+      - createdAt
+      - blockTimestamp
+      - block_timestamp
+      - created
+      - time
+      - created_at
+    - name: from
+      tier: extended
+      providers: 13
+      share: 0.317
+      type: string
+      spellings:
+      - from
+      - fromAddress
+      - sender
+      - from_address
+    - name: id
+      tier: extended
+      providers: 12
+      share: 0.293
+      type: string
+      spellings:
+      - id
+      - externalId
+      - transactionId
+      - guid
+    - name: fee
+      tier: extended
+      providers: 11
+      share: 0.268
+      type: string
+      spellings:
+      - fee
+      - fees
+    - name: to
+      tier: extended
+      providers: 11
+      share: 0.268
+      type: string
+      spellings:
+      - to
+      - toAddress
+      - to_address
+    - name: block_hash
+      tier: extended
+      providers: 10
+      share: 0.244
+      type: string
+      spellings:
+      - blockHash
+      - block_hash
+    - name: chain
+      tier: extended
+      providers: 10
+      share: 0.244
+      type: string
+      spellings:
+      - chainId
+      - chain
+      - chainName
+      - chain_id
+      - network
+      - blockchain
+    - name: gas_used
+      tier: extended
+      providers: 10
+      share: 0.244
+      type: string
+      spellings:
+      - gas_used
+      - gasUsed
+    - name: type
+      tier: extended
+      providers: 9
+      share: 0.22
+      type: string
+      spellings:
+      - type
+    long_tail_count: 392
+    long_tail_sample:
+    - nonce
+    - gas_price
+    - confirmations
+    - events
+    - gas_limit
+    - logs
+    - method
+    - slot
+    - value
+    - index
+    - info
+    - mode
+    - token_transfers
+    - transaction_index
+    - tx_bytes
+    - tx_type
+    - codespace
+    - description
+    - gas_wanted
+    - max_fee_per_gas
+    - max_priority_fee_per_gas
+    - pagination
+    - payload
+    - raw_log
+    - size
+    - source
+    - transaction_type
+    - tx_index
+    - tx_response
+    - tx_responses
+    - tx_result
+    - tx_status
+    - txhash
+    - version
+    - account
+    - account_data
+    - actions
+    - address
+    - asset_mint_or_burn_count
+    - asset_transfers
+  token:
+    segments_seen:
+      tokens: 57
+      token: 22
+      erc20: 3
+    providers_exposing: 67
+    providers_with_readable_schema: 62
+    operations:
+    - operation: GET collection
+      providers: 56
+      share: 0.836
+      tier: core
+    - operation: GET item
+      providers: 37
+      share: 0.552
+      tier: core
+    - operation: POST collection
+      providers: 15
+      share: 0.224
+      tier: extended
+    - operation: DELETE item
+      providers: 5
+      share: 0.075
+      tier: long-tail
+    - operation: UPDATE item
+      providers: 2
+      share: 0.03
+      tier: long-tail
+    properties:
+    - name: name
+      tier: core
+      providers: 41
+      share: 0.661
+      type: string
+      spellings:
+      - name
+    - name: symbol
+      tier: core
+      providers: 36
+      share: 0.581
+      type: string
+      spellings:
+      - symbol
+      - ticker
+    - name: decimals
+      tier: extended
+      providers: 29
+      share: 0.468
+      type: integer
+      spellings:
+      - decimals
+    - name: contract_address
+      tier: extended
+      providers: 26
+      share: 0.419
+      type: string
+      spellings:
+      - address
+      - token_address
+      - contract_address
+      - contractAddress
+      - mint
+      - tokenAddress
+    - name: id
+      tier: extended
+      providers: 21
+      share: 0.339
+      type: string
+      spellings:
+      - id
+      - token_id
+      - tokenId
+      - uuid
+    - name: chain
+      tier: extended
+      providers: 19
+      share: 0.306
+      type: string
+      spellings:
+      - chain
+      - chainId
+      - network
+      - chain_id
+    - name: created_at
+      tier: extended
+      providers: 13
+      share: 0.21
+      type: string
+      spellings:
+      - createdAt
+      - timestamp
+      - block_timestamp
+      - blockTime
+    long_tail_count: 525
+    long_tail_sample:
+    - metadata
+    - token
+    - total_supply
+    - type
+    - price
+    - price_usd
+    - updated_at
+    - attributes
+    - description
+    - image_url
+    - logo_uri
+    - owner
+    - tokens
+    - amount
+    - balance
+    - category
+    - collection
+    - contracts
+    - expires_at
+    - image
+    - market_cap
+    - market_cap_usd
+    - note
+    - scopes
+    - token_name
+    - active
+    - block_number
+    - categories
+    - checksum
+    - circulating_market_cap
+    - circulating_supply
+    - contract
+    - created_by
+    - created_timestamp
+    - currency_id
+    - deployments
+    - erc_type
+    - exchange_rate
+    - external_url
+    - filters

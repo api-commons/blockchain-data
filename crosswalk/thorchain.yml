@@ -1,0 +1,20 @@
+provider: thorchain
+apis_io: https://apis.io/providers/thorchain/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  block:
+    path_segment:
+    - block
+    properties:
+      gas_used: gas_used
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/thorchain-thornode-openapi.yaml#GET /thorchain/block
+  transaction:
+    path_segment:
+    - tx
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/thorchain-thornode-openapi.yaml#GET /thorchain/tx/{hash}

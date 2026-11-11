@@ -1,0 +1,30 @@
+provider: supra
+apis_io: https://apis.io/providers/supra/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  block:
+    path_segment:
+    - block
+    properties:
+      created_at: timestamp
+      number: height
+      hash: hash
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/supra-rpc-node-openapi-original.json#GET /rpc/v2/block
+    - openapi/_original/supra-rpc-node-openapi-original.json#GET /rpc/v2/block/{block_hash}
+    - openapi/_original/supra-rpc-node-openapi-original.json#GET /rpc/v2/consensus/block
+    - openapi/_original/supra-rpc-node-openapi-original.json#GET /rpc/v3/block
+    - openapi/_original/supra-rpc-node-openapi-original.json#GET /rpc/v3/block/{block_hash}
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      hash: hash
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/supra-rpc-node-openapi-original.json#GET /rpc/v2/accounts/{address}/transactions
+    - openapi/_original/supra-rpc-node-openapi-original.json#GET /rpc/v3/accounts/{address}/transactions
+    - openapi/_original/supra-rpc-node-openapi.yml#GET /rpc/v2/accounts/{address}/transactions
+    - openapi/_original/supra-rpc-node-openapi.yml#GET /rpc/v3/accounts/{address}/transactions

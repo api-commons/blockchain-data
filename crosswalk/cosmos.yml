@@ -1,0 +1,27 @@
+provider: cosmos
+apis_io: https://apis.io/providers/cosmos/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  block:
+    path_segment:
+    - blocks
+    - block
+    properties:
+      id: blockId
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/openapi.yml#GET /cosmos/base/tendermint/v1beta1/blocks/{height}
+    - openapi/_original/openapi.yml#GET /cosmos/tx/v1beta1/txs/block/{height}
+  transaction:
+    path_segment:
+    - txs
+    properties:
+      block_number: height
+      created_at: timestamp
+      gas_used: gasUsed
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/openapi.yml#GET /cosmos/tx/v1beta1/txs
+    - openapi/_original/openapi.yml#GET /cosmos/tx/v1beta1/txs/{hash}
+    - openapi/_original/openapi.yml#POST /cosmos/tx/v1beta1/txs

@@ -1,0 +1,12 @@
+provider: amazon-qldb
+apis_io: https://apis.io/providers/amazon-qldb/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  block:
+    path_segment:
+    - block
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/amazon-qldb-openapi-original.yaml#POST /ledgers/{name}/block

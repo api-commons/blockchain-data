@@ -1,0 +1,37 @@
+provider: dynamic-xyz
+apis_io: https://apis.io/providers/dynamic-xyz/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      hash: transactionHash
+      block_number: blockNumber
+      created_at: createdAt
+      from: fromAddress
+      id: transactionId
+      to: toAddress
+      block_hash: blockHash
+      chain: chainName
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/dynamic-xyz-openapi.yml#GET /sdk/{environmentId}/chains/{chainName}/transactions/{address}
+    - openapi/_original/dynamic-xyz-openapi.yml#GET /sdk/{environmentId}/exchange/{exchangeKey}/accounts/transactions
+  token:
+    path_segment:
+    - tokens
+    - token
+    properties:
+      name: name
+      symbol: symbol
+      id: id
+      created_at: createdAt
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/dynamic-xyz-openapi.yml#DELETE /environments/{environmentId}/tokens/{tokenId}
+    - openapi/_original/dynamic-xyz-openapi.yml#DELETE /user/tokens/{tokenId}
+    - openapi/_original/dynamic-xyz-openapi.yml#GET /chains/{chainName}/tokens
+    - openapi/_original/dynamic-xyz-openapi.yml#GET /environments/{environmentId}/tokens
+    - openapi/_original/dynamic-xyz-openapi.yml#GET /sdk/{environmentId}/waas/keyShares/backup/token

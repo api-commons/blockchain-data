@@ -1,0 +1,22 @@
+provider: neynar
+apis_io: https://apis.io/providers/neynar/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  block:
+    path_segment:
+    - block
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/neynar-farcaster-api.yaml#DELETE /v2/farcaster/block/
+    - openapi/_original/neynar-farcaster-api.yaml#POST /v2/farcaster/block/
+  token:
+    path_segment:
+    - token
+    properties:
+      contract_address: contract_address
+      chain: network
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/neynar-farcaster-api.yaml#POST /v2/farcaster/nft/metadata/token

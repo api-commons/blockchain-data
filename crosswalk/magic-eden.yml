@@ -1,0 +1,26 @@
+provider: magic-eden
+apis_io: https://apis.io/providers/magic-eden/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  transaction:
+    path_segment:
+    - tx
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/magic-eden-openapi.yaml#POST /v2/tx/{txId}
+  token:
+    path_segment:
+    - tokens
+    properties:
+      name: name
+      contract_address: tokenAddress
+      chain: chain
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/magic-eden-openapi.yaml#GET /v2/ord/btc/tokens
+    - openapi/_original/magic-eden-openapi.yaml#GET /v2/ord/btc/tokens/{tokenId}
+    - openapi/_original/magic-eden-openapi.yaml#GET /v2/tokens/{token_mint}
+    - openapi/_original/magic-eden-ordinals-openapi.yml#GET /v2/ord/btc/tokens
+    - openapi/_original/magic-eden-solana-openapi.yml#GET /tokens/{token_mint}

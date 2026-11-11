@@ -1,0 +1,13 @@
+provider: dapper-labs
+apis_io: https://apis.io/providers/dapper-labs/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  block:
+    path_segment:
+    - blocks
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/dapper-labs-flow-access-openapi-original.yml#GET /blocks
+    - openapi/_original/dapper-labs-flow-access-openapi-original.yml#GET /blocks/{id}

@@ -1,0 +1,24 @@
+provider: pocket-network
+apis_io: https://apis.io/providers/pocket-network/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  block:
+    path_segment:
+    - block
+    - blocks
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/pocket-network-cometbft-rpc-api-openapi.yml#GET /block
+    - openapi/_original/pocket-network-shannon-rpc-api-openapi.yml#GET /cosmos/base/tendermint/v1beta1/blocks/{height}
+  transaction:
+    path_segment:
+    - txs
+    - tx
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/pocket-network-cometbft-rpc-api-openapi.yml#GET /tx
+    - openapi/_original/pocket-network-shannon-rpc-api-openapi.yml#GET /cosmos/tx/v1beta1/txs/{hash}
+    - openapi/_original/pocket-network-shannon-rpc-api-openapi.yml#POST /cosmos/tx/v1beta1/txs

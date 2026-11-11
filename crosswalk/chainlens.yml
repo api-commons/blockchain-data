@@ -1,0 +1,40 @@
+provider: chainlens
+apis_io: https://apis.io/providers/chainlens/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  block:
+    path_segment:
+    - block
+    - blocks
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/chainlens-openapi.yml#DELETE /block/{blockHash}
+    - openapi/_original/chainlens-openapi.yml#GET /block/{blockHash}
+    - openapi/_original/chainlens-openapi.yml#GET /blocks
+    - openapi/_original/chainlens-openapi.yml#GET /blocks/{blockHash}
+    - openapi/_original/chainlens-openapi.yml#PATCH /block/{blockHash}
+  transaction:
+    path_segment:
+    - tx
+    - transactions
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/chainlens-openapi.yml#DELETE /tx/{transactionHash}
+    - openapi/_original/chainlens-openapi.yml#GET /accounts/{addressHash}/transactions
+    - openapi/_original/chainlens-openapi.yml#GET /blocks/{blockHash}/transactions
+    - openapi/_original/chainlens-openapi.yml#GET /tx/{transactionHash}
+    - openapi/_original/chainlens-openapi.yml#PATCH /tx/{transactionHash}
+  token:
+    path_segment:
+    - tokens
+    - token
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/chainlens-openapi.yml#GET /accounts/{addressHash}/tokens
+    - openapi/_original/chainlens-openapi.yml#GET /token/{addressHash}
+    - openapi/_original/chainlens-openapi.yml#GET /tokens
+    - openapi/_original/chainlens-openapi.yml#GET /tokens/{addressHash}

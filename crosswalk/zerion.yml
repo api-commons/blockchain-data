@@ -1,0 +1,14 @@
+provider: zerion
+apis_io: https://apis.io/providers/zerion/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      id: id
+      type: type
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/zerion-openapi-original.yml#GET /v1/wallets/{address}/transactions/

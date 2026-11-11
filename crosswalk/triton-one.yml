@@ -1,0 +1,15 @@
+provider: triton-one
+apis_io: https://apis.io/providers/triton-one/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  token:
+    path_segment:
+    - tokens
+    properties:
+      name: name
+      id: uuid
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/triton-one-customers-api-openapi.yml#GET /api/v1/tokens
+    - openapi/_original/triton-one-customers-api-openapi.yml#POST /api/v1/subscriptions/{subscriptionUuid}/tokens

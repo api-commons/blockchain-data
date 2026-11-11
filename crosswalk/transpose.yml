@@ -1,0 +1,28 @@
+provider: transpose
+apis_io: https://apis.io/providers/transpose/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  block:
+    path_segment:
+    - blocks
+    properties:
+      created_at: timestamp
+      number: block_number
+      hash: block_hash
+      gas_used: gas_used
+      transaction_count: transaction_count
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/openapi.yml#GET /block/blocks
+  token:
+    path_segment:
+    - tokens
+    properties:
+      name: name
+      symbol: symbol
+      decimals: decimals
+      contract_address: contract_address
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/openapi.yml#GET /token/tokens

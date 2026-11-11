@@ -1,0 +1,14 @@
+provider: looksrare
+apis_io: https://apis.io/providers/looksrare/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  token:
+    path_segment:
+    - tokens
+    properties:
+      name: name
+      id: id
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/looksrare-openapi.json#GET /v1/tokens

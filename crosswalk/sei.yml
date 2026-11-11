@@ -1,0 +1,33 @@
+provider: sei
+apis_io: https://apis.io/providers/sei/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  block:
+    path_segment:
+    - block
+    - blocks
+    properties:
+      id:
+      - block_id
+      - id
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/sei-cosmos-rest-api.yml#GET /cosmos/base/tendermint/v1beta1/blocks/{height}
+    - openapi/_original/sei-cosmos-rest-api.yml#GET /cosmos/tx/v1beta1/txs/block/{height}
+    - openapi/_original/sei-tendermint-rpc.yml#GET /block
+  transaction:
+    path_segment:
+    - txs
+    - tx
+    properties:
+      hash: hash
+      block_number: height
+      created_at: timestamp
+      gas_used: gas_used
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/sei-cosmos-rest-api.yml#GET /cosmos/tx/v1beta1/txs
+    - openapi/_original/sei-cosmos-rest-api.yml#GET /cosmos/tx/v1beta1/txs/{hash}
+    - openapi/_original/sei-cosmos-rest-api.yml#POST /cosmos/tx/v1beta1/txs
+    - openapi/_original/sei-tendermint-rpc.yml#GET /tx

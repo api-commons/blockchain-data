@@ -1,0 +1,13 @@
+provider: aelf-inc
+apis_io: https://apis.io/providers/aelf-inc/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  block:
+    path_segment:
+    - block
+    properties:
+      hash: BlockHash
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/aelf-inc-node-web-api-openapi.json#GET /api/blockChain/block

@@ -1,0 +1,13 @@
+provider: coingecko
+apis_io: https://apis.io/providers/coingecko/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  token:
+    path_segment:
+    - tokens
+    properties:
+      id: id
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/coingecko-onchain-dex-api-openapi.yml#GET /onchain/networks/{network}/tokens/{address}

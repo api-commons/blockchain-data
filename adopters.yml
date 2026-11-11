@@ -1,0 +1,596 @@
+context: blockchain-data
+generated: '2026-11-11'
+adopters:
+- provider: aelf-inc
+  apis_io: https://apis.io/providers/aelf-inc/
+  crosswalk: crosswalk/aelf-inc.yml
+  concepts:
+  - block
+- provider: aeternity
+  apis_io: https://apis.io/providers/aeternity/
+  crosswalk: crosswalk/aeternity.yml
+  concepts:
+  - block
+  - token
+- provider: agentexchange-work
+  apis_io: https://apis.io/providers/agentexchange-work/
+  crosswalk: crosswalk/agentexchange-work.yml
+  concepts:
+  - block
+  - token
+  - transaction
+- provider: akash
+  apis_io: https://apis.io/providers/akash/
+  crosswalk: crosswalk/akash.yml
+  concepts:
+  - block
+  - transaction
+- provider: aleo
+  apis_io: https://apis.io/providers/aleo/
+  crosswalk: crosswalk/aleo.yml
+  concepts:
+  - block
+- provider: algorand
+  apis_io: https://apis.io/providers/algorand/
+  crosswalk: crosswalk/algorand.yml
+  concepts:
+  - block
+  - transaction
+- provider: amazon-qldb
+  apis_io: https://apis.io/providers/amazon-qldb/
+  crosswalk: crosswalk/amazon-qldb.yml
+  concepts:
+  - block
+- provider: amberdata
+  apis_io: https://apis.io/providers/amberdata/
+  crosswalk: crosswalk/amberdata.yml
+  concepts:
+  - block
+  - transaction
+- provider: anchor-x402
+  apis_io: https://apis.io/providers/anchor-x402/
+  crosswalk: crosswalk/anchor-x402.yml
+  concepts:
+  - transaction
+- provider: ankr
+  apis_io: https://apis.io/providers/ankr/
+  crosswalk: crosswalk/ankr.yml
+  concepts:
+  - block
+- provider: aptos
+  apis_io: https://apis.io/providers/aptos/
+  crosswalk: crosswalk/aptos.yml
+  concepts:
+  - transaction
+- provider: arkham
+  apis_io: https://apis.io/providers/arkham/
+  crosswalk: crosswalk/arkham.yml
+  concepts:
+  - token
+  - transaction
+- provider: arweave
+  apis_io: https://apis.io/providers/arweave/
+  crosswalk: crosswalk/arweave.yml
+  concepts:
+  - transaction
+- provider: ava-labs
+  apis_io: https://apis.io/providers/ava-labs/
+  crosswalk: crosswalk/ava-labs.yml
+  concepts:
+  - block
+  - token
+  - transaction
+- provider: ava-protocol
+  apis_io: https://apis.io/providers/ava-protocol/
+  crosswalk: crosswalk/ava-protocol.yml
+  concepts:
+  - token
+- provider: avalanche
+  apis_io: https://apis.io/providers/avalanche/
+  crosswalk: crosswalk/avalanche.yml
+  concepts:
+  - block
+  - token
+  - transaction
+- provider: b3
+  apis_io: https://apis.io/providers/b3/
+  crosswalk: crosswalk/b3.yml
+  concepts:
+  - block
+  - token
+  - transaction
+- provider: barnbridge
+  apis_io: https://apis.io/providers/barnbridge/
+  crosswalk: crosswalk/barnbridge.yml
+  concepts:
+  - token
+- provider: bigchaindb
+  apis_io: https://apis.io/providers/bigchaindb/
+  crosswalk: crosswalk/bigchaindb.yml
+  concepts:
+  - block
+- provider: bitski
+  apis_io: https://apis.io/providers/bitski/
+  crosswalk: crosswalk/bitski.yml
+  concepts:
+  - token
+- provider: blockchair
+  apis_io: https://apis.io/providers/blockchair/
+  crosswalk: crosswalk/blockchair.yml
+  concepts:
+  - block
+- provider: blockfrost
+  apis_io: https://apis.io/providers/blockfrost/
+  crosswalk: crosswalk/blockfrost.yml
+  concepts:
+  - block
+  - transaction
+- provider: blockscout
+  apis_io: https://apis.io/providers/blockscout/
+  crosswalk: crosswalk/blockscout.yml
+  concepts:
+  - block
+  - token
+  - transaction
+- provider: breeze
+  apis_io: https://apis.io/providers/breeze/
+  crosswalk: crosswalk/breeze.yml
+  concepts:
+  - transaction
+- provider: cardano
+  apis_io: https://apis.io/providers/cardano/
+  crosswalk: crosswalk/cardano.yml
+  concepts:
+  - block
+  - transaction
+- provider: chainlens
+  apis_io: https://apis.io/providers/chainlens/
+  crosswalk: crosswalk/chainlens.yml
+  concepts:
+  - block
+  - token
+  - transaction
+- provider: coin-metrics
+  apis_io: https://apis.io/providers/coin-metrics/
+  crosswalk: crosswalk/coin-metrics.yml
+  concepts:
+  - block
+  - transaction
+- provider: coinbase
+  apis_io: https://apis.io/providers/coinbase/
+  crosswalk: crosswalk/coinbase.yml
+  concepts:
+  - transaction
+- provider: coingecko
+  apis_io: https://apis.io/providers/coingecko/
+  crosswalk: crosswalk/coingecko.yml
+  concepts:
+  - token
+- provider: cosmos
+  apis_io: https://apis.io/providers/cosmos/
+  crosswalk: crosswalk/cosmos.yml
+  concepts:
+  - block
+  - transaction
+- provider: crossmint
+  apis_io: https://apis.io/providers/crossmint/
+  crosswalk: crosswalk/crossmint.yml
+  concepts:
+  - token
+  - transaction
+- provider: cubist
+  apis_io: https://apis.io/providers/cubist/
+  crosswalk: crosswalk/cubist.yml
+  concepts:
+  - transaction
+- provider: dapper-labs
+  apis_io: https://apis.io/providers/dapper-labs/
+  crosswalk: crosswalk/dapper-labs.yml
+  concepts:
+  - block
+- provider: debank
+  apis_io: https://apis.io/providers/debank/
+  crosswalk: crosswalk/debank.yml
+  concepts:
+  - token
+- provider: dflow
+  apis_io: https://apis.io/providers/dflow/
+  crosswalk: crosswalk/dflow.yml
+  concepts:
+  - token
+- provider: dfns
+  apis_io: https://apis.io/providers/dfns/
+  crosswalk: crosswalk/dfns.yml
+  concepts:
+  - transaction
+- provider: dynamic-labs
+  apis_io: https://apis.io/providers/dynamic-labs/
+  crosswalk: crosswalk/dynamic-labs.yml
+  concepts:
+  - token
+  - transaction
+- provider: dynamic-xyz
+  apis_io: https://apis.io/providers/dynamic-xyz/
+  crosswalk: crosswalk/dynamic-xyz.yml
+  concepts:
+  - token
+  - transaction
+- provider: enso
+  apis_io: https://apis.io/providers/enso/
+  crosswalk: crosswalk/enso.yml
+  concepts:
+  - token
+- provider: euler
+  apis_io: https://apis.io/providers/euler/
+  crosswalk: crosswalk/euler.yml
+  concepts:
+  - token
+- provider: evedex
+  apis_io: https://apis.io/providers/evedex/
+  crosswalk: crosswalk/evedex.yml
+  concepts:
+  - block
+- provider: execution-market
+  apis_io: https://apis.io/providers/execution-market/
+  crosswalk: crosswalk/execution-market.yml
+  concepts:
+  - block
+- provider: flow-blockchain
+  apis_io: https://apis.io/providers/flow-blockchain/
+  crosswalk: crosswalk/flow-blockchain.yml
+  concepts:
+  - block
+- provider: footprint
+  apis_io: https://apis.io/providers/footprint/
+  crosswalk: crosswalk/footprint.yml
+  concepts:
+  - block
+  - token
+- provider: frax
+  apis_io: https://apis.io/providers/frax/
+  crosswalk: crosswalk/frax.yml
+  concepts:
+  - token
+- provider: gala-games
+  apis_io: https://apis.io/providers/gala-games/
+  crosswalk: crosswalk/gala-games.yml
+  concepts:
+  - block
+  - token
+- provider: gmx
+  apis_io: https://apis.io/providers/gmx/
+  crosswalk: crosswalk/gmx.yml
+  concepts:
+  - token
+- provider: gnosis-safe
+  apis_io: https://apis.io/providers/gnosis-safe/
+  crosswalk: crosswalk/gnosis-safe.yml
+  concepts:
+  - token
+- provider: gte
+  apis_io: https://apis.io/providers/gte/
+  crosswalk: crosswalk/gte.yml
+  concepts:
+  - token
+- provider: hedera
+  apis_io: https://apis.io/providers/hedera/
+  crosswalk: crosswalk/hedera.yml
+  concepts:
+  - block
+  - token
+- provider: helius
+  apis_io: https://apis.io/providers/helius/
+  crosswalk: crosswalk/helius.yml
+  concepts:
+  - transaction
+- provider: hiro
+  apis_io: https://apis.io/providers/hiro/
+  crosswalk: crosswalk/hiro.yml
+  concepts:
+  - block
+  - transaction
+- provider: hummingbot
+  apis_io: https://apis.io/providers/hummingbot/
+  crosswalk: crosswalk/hummingbot.yml
+  concepts:
+  - token
+- provider: imgauth-api-di-attestazione-opere-digitali
+  apis_io: https://apis.io/providers/imgauth-api-di-attestazione-opere-digitali/
+  crosswalk: crosswalk/imgauth-api-di-attestazione-opere-digitali.yml
+  concepts:
+  - token
+- provider: immutable
+  apis_io: https://apis.io/providers/immutable/
+  crosswalk: crosswalk/immutable.yml
+  concepts:
+  - token
+- provider: iota
+  apis_io: https://apis.io/providers/iota/
+  crosswalk: crosswalk/iota.yml
+  concepts:
+  - block
+- provider: kadena
+  apis_io: https://apis.io/providers/kadena/
+  crosswalk: crosswalk/kadena.yml
+  concepts:
+  - block
+- provider: kusama
+  apis_io: https://apis.io/providers/kusama/
+  crosswalk: crosswalk/kusama.yml
+  concepts:
+  - block
+- provider: layerzero
+  apis_io: https://apis.io/providers/layerzero/
+  crosswalk: crosswalk/layerzero.yml
+  concepts:
+  - token
+  - transaction
+- provider: ledger
+  apis_io: https://apis.io/providers/ledger/
+  crosswalk: crosswalk/ledger.yml
+  concepts:
+  - token
+- provider: lifi
+  apis_io: https://apis.io/providers/lifi/
+  crosswalk: crosswalk/lifi.yml
+  concepts:
+  - token
+- provider: lighter
+  apis_io: https://apis.io/providers/lighter/
+  crosswalk: crosswalk/lighter.yml
+  concepts:
+  - token
+  - transaction
+- provider: lightspark
+  apis_io: https://apis.io/providers/lightspark/
+  crosswalk: crosswalk/lightspark.yml
+  concepts:
+  - token
+- provider: linea
+  apis_io: https://apis.io/providers/linea/
+  crosswalk: crosswalk/linea.yml
+  concepts:
+  - token
+- provider: litecoin
+  apis_io: https://apis.io/providers/litecoin/
+  crosswalk: crosswalk/litecoin.yml
+  concepts:
+  - block
+  - transaction
+- provider: looksrare
+  apis_io: https://apis.io/providers/looksrare/
+  crosswalk: crosswalk/looksrare.yml
+  concepts:
+  - token
+- provider: madeonsol
+  apis_io: https://apis.io/providers/madeonsol/
+  crosswalk: crosswalk/madeonsol.yml
+  concepts:
+  - token
+- provider: magic-eden
+  apis_io: https://apis.io/providers/magic-eden/
+  crosswalk: crosswalk/magic-eden.yml
+  concepts:
+  - token
+  - transaction
+- provider: mesh
+  apis_io: https://apis.io/providers/mesh/
+  crosswalk: crosswalk/mesh.yml
+  concepts:
+  - token
+- provider: meter
+  apis_io: https://apis.io/providers/meter/
+  crosswalk: crosswalk/meter.yml
+  concepts:
+  - block
+- provider: moirailabs-com
+  apis_io: https://apis.io/providers/moirailabs-com/
+  crosswalk: crosswalk/moirailabs-com.yml
+  concepts:
+  - token
+- provider: moralis
+  apis_io: https://apis.io/providers/moralis/
+  crosswalk: crosswalk/moralis.yml
+  concepts:
+  - block
+  - token
+- provider: nano
+  apis_io: https://apis.io/providers/nano/
+  crosswalk: crosswalk/nano.yml
+  concepts:
+  - block
+- provider: near
+  apis_io: https://apis.io/providers/near/
+  crosswalk: crosswalk/near.yml
+  concepts:
+  - block
+  - token
+  - transaction
+- provider: neynar
+  apis_io: https://apis.io/providers/neynar/
+  crosswalk: crosswalk/neynar.yml
+  concepts:
+  - block
+  - token
+- provider: odos
+  apis_io: https://apis.io/providers/odos/
+  crosswalk: crosswalk/odos.yml
+  concepts:
+  - token
+- provider: one-inch
+  apis_io: https://apis.io/providers/one-inch/
+  crosswalk: crosswalk/one-inch.yml
+  concepts:
+  - token
+- provider: opensea
+  apis_io: https://apis.io/providers/opensea/
+  crosswalk: crosswalk/opensea.yml
+  concepts:
+  - token
+- provider: orca
+  apis_io: https://apis.io/providers/orca/
+  crosswalk: crosswalk/orca.yml
+  concepts:
+  - token
+- provider: orderly-network
+  apis_io: https://apis.io/providers/orderly-network/
+  crosswalk: crosswalk/orderly-network.yml
+  concepts:
+  - token
+- provider: origin-protocol
+  apis_io: https://apis.io/providers/origin-protocol/
+  crosswalk: crosswalk/origin-protocol.yml
+  concepts:
+  - token
+- provider: oumla-ltd
+  apis_io: https://apis.io/providers/oumla-ltd/
+  crosswalk: crosswalk/oumla-ltd.yml
+  concepts:
+  - token
+  - transaction
+- provider: pancakeswap
+  apis_io: https://apis.io/providers/pancakeswap/
+  crosswalk: crosswalk/pancakeswap.yml
+  concepts:
+  - token
+- provider: paraswap
+  apis_io: https://apis.io/providers/paraswap/
+  crosswalk: crosswalk/paraswap.yml
+  concepts:
+  - token
+- provider: pendle
+  apis_io: https://apis.io/providers/pendle/
+  crosswalk: crosswalk/pendle.yml
+  concepts:
+  - token
+- provider: pocket-network
+  apis_io: https://apis.io/providers/pocket-network/
+  crosswalk: crosswalk/pocket-network.yml
+  concepts:
+  - block
+  - transaction
+- provider: polkadot
+  apis_io: https://apis.io/providers/polkadot/
+  crosswalk: crosswalk/polkadot.yml
+  concepts:
+  - block
+  - token
+- provider: quant
+  apis_io: https://apis.io/providers/quant/
+  crosswalk: crosswalk/quant.yml
+  concepts:
+  - token
+- provider: ripple-labs
+  apis_io: https://apis.io/providers/ripple-labs/
+  crosswalk: crosswalk/ripple-labs.yml
+  concepts:
+  - transaction
+- provider: securitize
+  apis_io: https://apis.io/providers/securitize/
+  crosswalk: crosswalk/securitize.yml
+  concepts:
+  - token
+- provider: sei
+  apis_io: https://apis.io/providers/sei/
+  crosswalk: crosswalk/sei.yml
+  concepts:
+  - block
+  - transaction
+- provider: shapeshift
+  apis_io: https://apis.io/providers/shapeshift/
+  crosswalk: crosswalk/shapeshift.yml
+  concepts:
+  - token
+  - transaction
+- provider: solidus-labs
+  apis_io: https://apis.io/providers/solidus-labs/
+  crosswalk: crosswalk/solidus-labs.yml
+  concepts:
+  - token
+- provider: stellar
+  apis_io: https://apis.io/providers/stellar/
+  crosswalk: crosswalk/stellar.yml
+  concepts:
+  - transaction
+- provider: story-protocol
+  apis_io: https://apis.io/providers/story-protocol/
+  crosswalk: crosswalk/story-protocol.yml
+  concepts:
+  - token
+- provider: supra
+  apis_io: https://apis.io/providers/supra/
+  crosswalk: crosswalk/supra.yml
+  concepts:
+  - block
+  - transaction
+- provider: surf
+  apis_io: https://apis.io/providers/surf/
+  crosswalk: crosswalk/surf.yml
+  concepts:
+  - token
+  - transaction
+- provider: tatum
+  apis_io: https://apis.io/providers/tatum/
+  crosswalk: crosswalk/tatum.yml
+  concepts:
+  - block
+- provider: tendermint
+  apis_io: https://apis.io/providers/tendermint/
+  crosswalk: crosswalk/tendermint.yml
+  concepts:
+  - block
+  - transaction
+- provider: tezos
+  apis_io: https://apis.io/providers/tezos/
+  crosswalk: crosswalk/tezos.yml
+  concepts:
+  - block
+  - token
+- provider: thirdweb
+  apis_io: https://apis.io/providers/thirdweb/
+  crosswalk: crosswalk/thirdweb.yml
+  concepts:
+  - token
+- provider: thorchain
+  apis_io: https://apis.io/providers/thorchain/
+  crosswalk: crosswalk/thorchain.yml
+  concepts:
+  - block
+  - transaction
+- provider: tooloracle-io
+  apis_io: https://apis.io/providers/tooloracle-io/
+  crosswalk: crosswalk/tooloracle-io.yml
+  concepts:
+  - token
+- provider: top-group
+  apis_io: https://apis.io/providers/top-group/
+  crosswalk: crosswalk/top-group.yml
+  concepts:
+  - block
+  - transaction
+- provider: transpose
+  apis_io: https://apis.io/providers/transpose/
+  crosswalk: crosswalk/transpose.yml
+  concepts:
+  - block
+  - token
+- provider: triton-one
+  apis_io: https://apis.io/providers/triton-one/
+  crosswalk: crosswalk/triton-one.yml
+  concepts:
+  - token
+- provider: tzero
+  apis_io: https://apis.io/providers/tzero/
+  crosswalk: crosswalk/tzero.yml
+  concepts:
+  - token
+- provider: waodao
+  apis_io: https://apis.io/providers/waodao/
+  crosswalk: crosswalk/waodao.yml
+  concepts:
+  - token
+- provider: zerion
+  apis_io: https://apis.io/providers/zerion/
+  crosswalk: crosswalk/zerion.yml
+  concepts:
+  - transaction

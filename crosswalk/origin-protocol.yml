@@ -1,0 +1,16 @@
+provider: origin-protocol
+apis_io: https://apis.io/providers/origin-protocol/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  token:
+    path_segment:
+    - token
+    properties:
+      id: id
+      chain: network
+      created_at: timestamp
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/origin-protocol-openapi.json#GET /api/v2/coingecko/ohlcvs/{network}/token/{token}
+    - openapi/_original/origin-protocol-openapi.json#GET /api/v2/coingecko/pools/{network}/token/{token}

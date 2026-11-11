@@ -1,0 +1,16 @@
+provider: helius
+apis_io: https://apis.io/providers/helius/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      hash: signature
+      created_at: timestamp
+      fee: fee
+      type: type
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/helius-openapi.json#GET /v0/addresses/{address}/transactions

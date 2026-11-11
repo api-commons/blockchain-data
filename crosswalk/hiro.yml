@@ -1,0 +1,41 @@
+provider: hiro
+apis_io: https://apis.io/providers/hiro/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  block:
+    path_segment:
+    - blocks
+    - block
+    properties:
+      created_at: block_time
+      number:
+      - block_height
+      - height
+      hash:
+      - block_hash
+      - hash
+      transaction_count: tx_count
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/hiro-signer-metrics-api-openapi.yaml#GET /signer-metrics/v1/blocks
+    - openapi/_original/hiro-signer-metrics-api-openapi.yaml#GET /signer-metrics/v1/blocks/{height_or_hash}
+    - openapi/_original/hiro-stacks-blockchain-api-openapi.yaml#GET /extended/v1/block/
+    - openapi/_original/hiro-stacks-blockchain-api-openapi.yaml#GET /extended/v1/block/{hash}
+    - openapi/_original/hiro-stacks-blockchain-api-openapi.yaml#GET /extended/v1/tx/block/{block_hash}
+  transaction:
+    path_segment:
+    - tx
+    - transactions
+    - txs
+    properties:
+      block_number: block_height
+      created_at: block_time
+      block_hash: block_hash
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/hiro-stacks-blockchain-api-openapi.yaml#GET /extended/v1/microblock/unanchored/txs
+    - openapi/_original/hiro-stacks-blockchain-api-openapi.yaml#GET /extended/v1/tx/
+    - openapi/_original/hiro-stacks-blockchain-api-openapi.yaml#GET /extended/v1/tx/{tx_id}
+    - openapi/_original/hiro-stacks-blockchain-api-openapi.yaml#GET /extended/v1/{pox}/tx/{tx_id}
+    - openapi/_original/hiro-stacks-blockchain-api-openapi.yaml#GET /extended/v2/addresses/{address}/transactions

@@ -1,0 +1,7995 @@
+{
+ "cohort_size": 374,
+ "unreadable": [],
+ "concepts": {
+  "block": {
+   "aelf-inc": {
+    "segments": [
+     "block"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "BlockHash": "string",
+     "Header": "object",
+     "Body": "object",
+     "BlockSize": "integer"
+    },
+    "evidence": [
+     "openapi/_original/aelf-inc-node-web-api-openapi.json#GET /api/blockChain/block"
+    ]
+   },
+   "aeternity": {
+    "segments": [
+     "blocks"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "count": "integer",
+     "start_date": "string",
+     "end_date": "string",
+     "next": "string",
+     "prev": "string"
+    },
+    "evidence": [
+     "openapi/_original/aeternity-middleware-openapi.yml#GET /stats/blocks",
+     "openapi/_original/aeternity-middleware-v3-openapi.json#GET /stats/blocks"
+    ]
+   },
+   "agentexchange-work": {
+    "segments": [
+     "block"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "block_number": "number",
+     "timestamp": "number",
+     "age_seconds": "number",
+     "tx_count": "number",
+     "utilization": "number",
+     "base_fee_gwei": "number",
+     "congested": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/agentexchange-work-api-store-openapi.json#GET /chain/block"
+    ]
+   },
+   "akash": {
+    "segments": [
+     "blocks"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "block_meta": "object",
+     "block": "object",
+     "block_id": "object",
+     "height": "number",
+     "proposer": "object",
+     "transactionCount": "number",
+     "totalTransactionCount": "number",
+     "datetime": "string",
+     "hash": "string",
+     "gasUsed": "number",
+     "gasWanted": "number",
+     "transactions": "array"
+    },
+    "evidence": [
+     "openapi/_original/akash-blockchain-rest-api.yaml#GET /blocks/{height}",
+     "openapi/_original/akash-blockchain-rest-api.yaml#GET /cosmos/base/tendermint/v1beta1/blocks/{height}",
+     "openapi/_original/akash-console-deployment-api.json#GET /v1/blocks",
+     "openapi/_original/akash-console-deployment-api.json#GET /v1/blocks/{height}"
+    ]
+   },
+   "aleo": {
+    "segments": [
+     "block"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "type": "string",
+     "id": "string",
+     "execution": "object",
+     "deployment": "object"
+    },
+    "evidence": [
+     "openapi/_original/aleo-node-api-openapi.yml#GET /{network}/block/{height}",
+     "openapi/_original/aleo-node-api-openapi.yml#GET /{network}/latest/block"
+    ]
+   },
+   "algorand": {
+    "segments": [
+     "blocks"
+    ],
+    "operations": [
+     "GET item"
+    ],
+    "properties": {
+     "block": "object",
+     "cert": "object",
+     "bonus": "integer",
+     "fees-collected": "integer",
+     "genesis-hash": "string",
+     "genesis-id": "string",
+     "participation-updates": "object",
+     "previous-block-hash": "string",
+     "previous-block-hash-512": "string",
+     "proposer": "string",
+     "proposer-payout": "integer",
+     "rewards": "object",
+     "round": "integer",
+     "seed": "string",
+     "state-proof-tracking": "array",
+     "timestamp": "integer",
+     "transactions": "array",
+     "transactions-root": "string",
+     "transactions-root-sha256": "string",
+     "transactions-root-sha512": "string",
+     "txn-counter": "integer",
+     "upgrade-state": "object",
+     "upgrade-vote": "object"
+    },
+    "evidence": [
+     "openapi/_original/algorand-algod-openapi.json#GET /v2/blocks/{round}",
+     "openapi/_original/algorand-indexer-openapi.json#GET /v2/blocks/{round-number}"
+    ]
+   },
+   "amazon-qldb": {
+    "segments": [
+     "block"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "Block": null,
+     "Proof": null,
+     "BlockAddress": "object",
+     "DigestTipAddress": "object"
+    },
+    "evidence": [
+     "openapi/_original/amazon-qldb-openapi-original.yaml#POST /ledgers/{name}/block"
+    ]
+   },
+   "amberdata": {
+    "segments": [
+     "blocks"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "status": "integer",
+     "title": "string",
+     "description": "string",
+     "payload": "object"
+    },
+    "evidence": [
+     "openapi/_original/amberdata-openapi.yml#GET /blockchains/{blockchainId}/blocks"
+    ]
+   },
+   "ankr": {
+    "segments": [
+     "blocks"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "jsonrpc": "string",
+     "id": "integer",
+     "result": "object",
+     "method": "string",
+     "params": "object"
+    },
+    "evidence": [
+     "openapi/_original/ankr-advanced-api-openapi.yml#POST /query/blocks"
+    ]
+   },
+   "ava-labs": {
+    "segments": [
+     "blocks"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "chainId": "string",
+     "blockNumber": "string",
+     "blockTimestamp": "number",
+     "blockHash": "string",
+     "txCount": "number",
+     "baseFee": "string",
+     "gasUsed": "string",
+     "gasLimit": "string",
+     "gasCost": "string",
+     "parentHash": "string",
+     "feesSpent": "string",
+     "cumulativeTransactions": "string",
+     "blockType": "string",
+     "transactions": "array",
+     "blockSizeBytes": "number",
+     "l1ValidatorsAccruedFees": "number",
+     "activeL1Validators": "number",
+     "currentSupply": "string",
+     "proposerDetails": "object"
+    },
+    "evidence": [
+     "openapi/_original/ava-labs-data-api-openapi.yml#GET /v1/blocks",
+     "openapi/_original/ava-labs-data-api-openapi.yml#GET /v1/chains/{chainId}/blocks",
+     "openapi/_original/ava-labs-data-api-openapi.yml#GET /v1/chains/{chainId}/blocks/{blockId}",
+     "openapi/_original/ava-labs-data-api-openapi.yml#GET /v1/networks/{network}/blockchains/{blockchainId}/blocks",
+     "openapi/_original/ava-labs-data-api-openapi.yml#GET /v1/networks/{network}/blockchains/{blockchainId}/blocks/{blockId}",
+     "openapi/_original/ava-labs-data-api-openapi.yml#GET /v1/networks/{network}/blockchains/{blockchainId}/nodes/{nodeId}/blocks"
+    ]
+   },
+   "avalanche": {
+    "segments": [
+     "blocks"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "chainId": "string",
+     "blockNumber": "string",
+     "blockTimestamp": "number",
+     "blockTimestampMilliseconds": "number",
+     "blockMinDelayExcess": "number",
+     "blockHash": "string",
+     "txCount": "number",
+     "baseFee": "string",
+     "gasUsed": "string",
+     "gasLimit": "string",
+     "gasCost": "string",
+     "parentHash": "string",
+     "feesSpent": "string",
+     "cumulativeTransactions": "string",
+     "blockType": "string",
+     "transactions": "array",
+     "blockSizeBytes": "number",
+     "l1ValidatorsAccruedFees": "number",
+     "activeL1Validators": "number",
+     "currentSupply": "string",
+     "proposerDetails": "object"
+    },
+    "evidence": [
+     "openapi/_original/data-api.json#GET /v1/blocks",
+     "openapi/_original/data-api.json#GET /v1/chains/{chainId}/blocks",
+     "openapi/_original/data-api.json#GET /v1/chains/{chainId}/blocks/{blockId}",
+     "openapi/_original/data-api.json#GET /v1/networks/{network}/blockchains/{blockchainId}/blocks",
+     "openapi/_original/data-api.json#GET /v1/networks/{network}/blockchains/{blockchainId}/blocks/{blockId}",
+     "openapi/_original/data-api.json#GET /v1/networks/{network}/blockchains/{blockchainId}/nodes/{nodeId}/blocks"
+    ]
+   },
+   "b3": {
+    "segments": [
+     "blocks"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "base_fee_per_gas": "string",
+     "burnt_fees": "string",
+     "burnt_fees_percentage": "number",
+     "difficulty": "string",
+     "extra_data": "string",
+     "gas_limit": "string",
+     "gas_target_percentage": "number",
+     "gas_used": "string",
+     "gas_used_percentage": "number",
+     "hash": "string",
+     "height": "integer",
+     "miner": "object",
+     "nonce": "string",
+     "parent_hash": "string",
+     "priority_fee": "string",
+     "rewards": "array",
+     "size": "integer",
+     "state_root": "string",
+     "timestamp": "string",
+     "total_difficulty": "string",
+     "transaction_count": "integer",
+     "transaction_fees": "string",
+     "type": "string",
+     "uncles_hashes": "array",
+     "withdrawals_count": "integer",
+     "chain_id": "number",
+     "block_number": "number",
+     "block_hash": "string",
+     "block_timestamp": "number",
+     "sha3_uncles": "string",
+     "mix_hash": "string",
+     "transactions_root": "string",
+     "receipts_root": "string",
+     "logs_bloom": "string",
+     "withdrawals_root": "string"
+    },
+    "evidence": [
+     "openapi/_original/b3-data-api-openapi.json#GET /blockscout/blocks",
+     "openapi/_original/b3-data-api-openapi.json#GET /blockscout/blocks/{block_number_or_hash}",
+     "openapi/_original/b3-data-api-openapi.json#GET /blockscout/main-page/blocks",
+     "openapi/_original/b3-data-api-openapi.json#GET /insights/v1/blocks"
+    ]
+   },
+   "bigchaindb": {
+    "segments": [
+     "blocks"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/bigchaindb-http-openapi.yml#GET /api/v1/blocks",
+     "openapi/_original/bigchaindb-http-openapi.yml#GET /api/v1/blocks/{block_height}"
+    ]
+   },
+   "blockchair": {
+    "segments": [
+     "block",
+     "blocks"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "data": "object",
+     "context": "object"
+    },
+    "evidence": [
+     "openapi/_original/blockchair-openapi.yml#GET /{chain}/blocks",
+     "openapi/_original/blockchair-openapi.yml#GET /{chain}/dashboards/block/{id}",
+     "openapi/_original/blockchair-openapi.yml#GET /{chain}/dashboards/blocks/{ids}",
+     "openapi/_original/blockchair-openapi.yml#GET /{chain}/raw/block/{id}"
+    ]
+   },
+   "blockfrost": {
+    "segments": [
+     "blocks"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "time": "integer",
+     "height": "integer",
+     "hash": "string",
+     "slot": "integer",
+     "epoch": "integer",
+     "epoch_slot": "integer",
+     "slot_leader": "string",
+     "size": "integer",
+     "tx_count": "integer",
+     "output": "string",
+     "fees": "string",
+     "block_vrf": "string",
+     "op_cert": "string",
+     "op_cert_counter": "string",
+     "previous_block": "string",
+     "next_block": "string",
+     "confirmations": "integer"
+    },
+    "evidence": [
+     "openapi/_original/blockfrost-openapi.yaml#GET /blocks/{hash_or_number}",
+     "openapi/_original/blockfrost-openapi.yaml#GET /epochs/{number}/blocks",
+     "openapi/_original/blockfrost-openapi.yaml#GET /epochs/{number}/blocks/{pool_id}",
+     "openapi/_original/blockfrost-openapi.yaml#GET /pools/{pool_id}/blocks",
+     "openapi/_original/openapi.yml#GET /blocks/{hash_or_number}",
+     "openapi/_original/openapi.yml#GET /epochs/{number}/blocks",
+     "openapi/_original/openapi.yml#GET /epochs/{number}/blocks/{pool_id}",
+     "openapi/_original/openapi.yml#GET /pools/{pool_id}/blocks"
+    ]
+   },
+   "blockscout": {
+    "segments": [
+     "blocks"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "base_fee_per_gas": "string",
+     "burnt_fees": "string",
+     "burnt_fees_percentage": "number",
+     "difficulty": "string",
+     "extra_data": "string",
+     "gas_limit": "string",
+     "gas_target_percentage": "number",
+     "gas_used": "string",
+     "gas_used_percentage": "number",
+     "hash": "string",
+     "height": "integer",
+     "miner": "object",
+     "nonce": "string",
+     "parent_hash": "string",
+     "priority_fee": "string",
+     "rewards": "array",
+     "size": "integer",
+     "state_root": "string",
+     "timestamp": "string",
+     "total_difficulty": "string",
+     "transactions_count": "integer",
+     "transaction_fees": "string",
+     "type": "string",
+     "uncles_hashes": "array",
+     "withdrawals_count": "integer"
+    },
+    "evidence": [
+     "openapi/_original/blockscout-openapi.yml#GET /blocks",
+     "openapi/_original/blockscout-openapi.yml#GET /blocks/{block_number_or_hash}",
+     "openapi/_original/blockscout-openapi.yml#GET /main-page/blocks"
+    ]
+   },
+   "cardano": {
+    "segments": [
+     "blocks"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "time": "integer",
+     "height": "integer",
+     "hash": "string",
+     "slot": "integer",
+     "epoch": "integer",
+     "epoch_slot": "integer",
+     "slot_leader": "string",
+     "size": "integer",
+     "tx_count": "integer",
+     "output": "string",
+     "fees": "string",
+     "block_vrf": "string",
+     "op_cert": "string",
+     "op_cert_counter": "string",
+     "previous_block": "string",
+     "next_block": "string",
+     "confirmations": "integer"
+    },
+    "evidence": [
+     "openapi/_original/blockfrost-cardano-api-openapi.yml#GET /blocks/{hash_or_number}",
+     "openapi/_original/blockfrost-cardano-api-openapi.yml#GET /epochs/{number}/blocks",
+     "openapi/_original/blockfrost-cardano-api-openapi.yml#GET /epochs/{number}/blocks/{pool_id}",
+     "openapi/_original/blockfrost-cardano-api-openapi.yml#GET /pools/{pool_id}/blocks"
+    ]
+   },
+   "chainlens": {
+    "segments": [
+     "block",
+     "blocks"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST item",
+     "PUT item"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/chainlens-openapi.yml#DELETE /block/{blockHash}",
+     "openapi/_original/chainlens-openapi.yml#GET /block/{blockHash}",
+     "openapi/_original/chainlens-openapi.yml#GET /blocks",
+     "openapi/_original/chainlens-openapi.yml#GET /blocks/{blockHash}",
+     "openapi/_original/chainlens-openapi.yml#PATCH /block/{blockHash}",
+     "openapi/_original/chainlens-openapi.yml#POST /block/{blockHash}",
+     "openapi/_original/chainlens-openapi.yml#PUT /block/{blockHash}"
+    ]
+   },
+   "coin-metrics": {
+    "segments": [
+     "blocks"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "asset": "string",
+     "min_time": "string",
+     "max_time": "string",
+     "experimental": "boolean",
+     "block_hash": "string",
+     "parent_block_hash": "string",
+     "height": "string",
+     "consensus_time": "string",
+     "miner_time": "string",
+     "nonce": "string",
+     "extra_data": "string",
+     "n_transactions": "string",
+     "n_balance_updates": "string",
+     "version": "string",
+     "difficulty": "string",
+     "physical_size": "string",
+     "consensus_size": "string",
+     "consensus_size_limit": "string",
+     "stale": "string",
+     "transactions": "array",
+     "balance_updates": "array"
+    },
+    "evidence": [
+     "openapi/_original/coin-metrics-api-v4-openapi.json#GET /blockchain-v2/{asset}/blocks",
+     "openapi/_original/coin-metrics-api-v4-openapi.json#GET /blockchain-v2/{asset}/blocks/{block_hash}",
+     "openapi/_original/coin-metrics-api-v4-openapi.json#GET /catalog-all-v2/blockchain-v2/blocks",
+     "openapi/_original/coin-metrics-api-v4-openapi.json#GET /catalog-v2/blockchain-v2/blocks"
+    ]
+   },
+   "cosmos": {
+    "segments": [
+     "blocks",
+     "block"
+    ],
+    "operations": [
+     "GET item"
+    ],
+    "properties": {
+     "blockId": "object",
+     "block": "object",
+     "sdkBlock": "object",
+     "body": "object",
+     "authInfo": "object",
+     "signatures": "array"
+    },
+    "evidence": [
+     "openapi/_original/openapi.yml#GET /cosmos/base/tendermint/v1beta1/blocks/{height}",
+     "openapi/_original/openapi.yml#GET /cosmos/tx/v1beta1/txs/block/{height}"
+    ]
+   },
+   "dapper-labs": {
+    "segments": [
+     "blocks"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "header": "object",
+     "payload": "object",
+     "execution_result": "object",
+     "_expandable": "object",
+     "_links": "object",
+     "block_status": "string"
+    },
+    "evidence": [
+     "openapi/_original/dapper-labs-flow-access-openapi-original.yml#GET /blocks",
+     "openapi/_original/dapper-labs-flow-access-openapi-original.yml#GET /blocks/{id}"
+    ]
+   },
+   "evedex": {
+    "segments": [
+     "blocks",
+     "block"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "title": "string",
+     "filter": "object",
+     "limit": "number",
+     "blocked": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/evedex-academy-openapi.json#GET /api/course/blocks",
+     "openapi/_original/evedex-auth-openapi.json#POST /auth/user/{authId}/block"
+    ]
+   },
+   "execution-market": {
+    "segments": [
+     "block"
+    ],
+    "operations": [
+     "DELETE item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "blocked_user_id": "string",
+     "created_at": "string"
+    },
+    "evidence": [
+     "openapi/_original/execution-market-openapi.json#DELETE /api/v1/users/block/{blocked_user_id}",
+     "openapi/_original/execution-market-openapi.json#POST /api/v1/users/block",
+     "openapi/_original/execution-market-openapi.yml#DELETE /api/v1/users/block/{blocked_user_id}",
+     "openapi/_original/execution-market-openapi.yml#POST /api/v1/users/block"
+    ]
+   },
+   "flow-blockchain": {
+    "segments": [
+     "blocks"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "header": "object",
+     "payload": "object",
+     "execution_result": "object",
+     "_expandable": "object",
+     "_links": "object",
+     "block_status": "string"
+    },
+    "evidence": [
+     "openapi/_original/access.yaml#GET /blocks",
+     "openapi/_original/access.yaml#GET /blocks/{id}"
+    ]
+   },
+   "footprint": {
+    "segments": [
+     "blocks"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "block_number": "integer",
+     "block_hash": "string",
+     "block_timestamp": "string",
+     "transaction_count": "integer",
+     "gas_used": "integer",
+     "gas_limit": "integer"
+    },
+    "evidence": [
+     "openapi/_original/openapi.yml#GET /api/v1/chain/{chain}/blocks"
+    ]
+   },
+   "gala-games": {
+    "segments": [
+     "blocks"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "block": "object",
+     "channel": "string",
+     "number": "string",
+     "parsedBlock": "object"
+    },
+    "evidence": [
+     "openapi/_original/gala-games-block-explorer-openapi.json#GET /v1/explorer/blocks",
+     "openapi/_original/gala-games-block-explorer-openapi.json#GET /v1/explorer/blocks/{channel}"
+    ]
+   },
+   "hedera": {
+    "segments": [
+     "blocks"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "count": "integer",
+     "gas_used": [
+      "integer",
+      "null"
+     ],
+     "hapi_version": [
+      "string",
+      "null"
+     ],
+     "hash": "string",
+     "logs_bloom": [
+      "string",
+      "null"
+     ],
+     "name": "string",
+     "number": "integer",
+     "previous_hash": "string",
+     "size": [
+      "integer",
+      "null"
+     ],
+     "timestamp": "object"
+    },
+    "evidence": [
+     "openapi/_original/openapi.json#GET /api/v1/blocks",
+     "openapi/_original/openapi.json#GET /api/v1/blocks/{hashOrNumber}"
+    ]
+   },
+   "hiro": {
+    "segments": [
+     "blocks",
+     "block"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "block_height": "integer",
+     "block_hash": "string",
+     "block_time": "integer",
+     "index_block_hash": "string",
+     "burn_block_height": "integer",
+     "tenure_height": "integer",
+     "signer_data": null,
+     "tx_id": "string",
+     "nonce": "integer",
+     "fee_rate": "string",
+     "sender_address": "string",
+     "sponsor_nonce": "integer",
+     "sponsored": "boolean",
+     "sponsor_address": "string",
+     "post_condition_mode": null,
+     "post_conditions": "array",
+     "anchor_mode": null,
+     "block_time_iso": "string",
+     "burn_block_time": "integer",
+     "burn_block_time_iso": "string",
+     "parent_burn_block_time": "integer",
+     "parent_burn_block_time_iso": "string",
+     "canonical": "boolean",
+     "tx_index": "integer",
+     "tx_status": null,
+     "tx_result": "object",
+     "event_count": "integer",
+     "parent_block_hash": "string",
+     "is_unanchored": "boolean",
+     "microblock_hash": "string",
+     "microblock_sequence": "integer",
+     "microblock_canonical": "boolean",
+     "execution_cost_read_count": "integer",
+     "execution_cost_read_length": "integer",
+     "execution_cost_runtime": "integer",
+     "execution_cost_write_count": "integer",
+     "execution_cost_write_length": "integer",
+     "vm_error": null,
+     "events": "array",
+     "tx_type": "string",
+     "token_transfer": "object",
+     "height": "integer",
+     "hash": "string",
+     "burn_block_hash": "string",
+     "miner_txid": "string",
+     "txs": "array",
+     "parent_microblock_hash": "string",
+     "parent_microblock_sequence": "integer",
+     "microblocks_accepted": "array",
+     "microblocks_streamed": "array",
+     "microblock_tx_count": "object",
+     "limit": "integer",
+     "offset": "integer",
+     "total": "integer",
+     "next_cursor": null,
+     "prev_cursor": null,
+     "cursor": null,
+     "results": "array",
+     "parent_index_block_hash": "string",
+     "tx_count": "integer"
+    },
+    "evidence": [
+     "openapi/_original/hiro-signer-metrics-api-openapi.yaml#GET /signer-metrics/v1/blocks",
+     "openapi/_original/hiro-signer-metrics-api-openapi.yaml#GET /signer-metrics/v1/blocks/{height_or_hash}",
+     "openapi/_original/hiro-stacks-blockchain-api-openapi.yaml#GET /extended/v1/block/",
+     "openapi/_original/hiro-stacks-blockchain-api-openapi.yaml#GET /extended/v1/block/{hash}",
+     "openapi/_original/hiro-stacks-blockchain-api-openapi.yaml#GET /extended/v1/tx/block/{block_hash}",
+     "openapi/_original/hiro-stacks-blockchain-api-openapi.yaml#GET /extended/v2/block-tenures/{tenure_height}/blocks",
+     "openapi/_original/hiro-stacks-blockchain-api-openapi.yaml#GET /extended/v2/blocks/",
+     "openapi/_original/hiro-stacks-blockchain-api-openapi.yaml#GET /extended/v2/blocks/{height_or_hash}",
+     "openapi/_original/hiro-stacks-blockchain-api-openapi.yaml#GET /extended/v2/burn-blocks/{height_or_hash}/blocks",
+     "openapi/_original/hiro-stacks-node-rpc-api-openapi.yaml#GET /v2/blocks/{block_id}",
+     "openapi/_original/hiro-stacks-node-rpc-api-openapi.yaml#GET /v3/blocks/{block_id}",
+     "openapi/_original/hiro-stacks-node-rpc-api-openapi.yaml#GET /v3/tenures/blocks/{consensus_hash}"
+    ]
+   },
+   "iota": {
+    "segments": [
+     "blocks",
+     "block"
+    ],
+    "operations": [
+     "GET item"
+    ],
+    "properties": {
+     "blockIndex": "integer",
+     "gasBurned": "string",
+     "gasFeeCharged": "string",
+     "numOffLedgerRequests": "integer",
+     "numSuccessfulRequests": "integer",
+     "timestamp": "string",
+     "totalRequests": "integer",
+     "contractID": "integer",
+     "payload": "string",
+     "topic": "string"
+    },
+    "evidence": [
+     "openapi/_original/iota-evm-wasp-openapi.yaml#GET /v1/chain/core/blocklog/blocks/{blockIndex}",
+     "openapi/_original/iota-evm-wasp-openapi.yaml#GET /v1/chain/core/blocklog/events/block/{blockIndex}"
+    ]
+   },
+   "kadena": {
+    "segments": [
+     "block"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "header": "object",
+     "payloadWithOutputs": "object",
+     "limit": "integer",
+     "next": null,
+     "items": null
+    },
+    "evidence": [
+     "openapi/_original/kadena-chainweb-openapi-original.yml#GET /chain/{chain}/block"
+    ]
+   },
+   "kusama": {
+    "segments": [
+     "blocks"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "number": "string",
+     "hash": "string",
+     "parentHash": "string",
+     "stateRoot": "string",
+     "extrinsicRoot": "string",
+     "authorId": "string",
+     "logs": "array",
+     "onInitialize": "object",
+     "extrinsics": "array",
+     "onFinalize": "object",
+     "finalized": "boolean",
+     "rcBlockHash": "string",
+     "rcBlockNumber": "string",
+     "ahTimestamp": "string",
+     "horizontalMessages": "object",
+     "downwardMessages": "array",
+     "upwardMessages": "array"
+    },
+    "evidence": [
+     "openapi/_original/kusama-sidecar-openapi.yaml#GET /blocks",
+     "openapi/_original/kusama-sidecar-openapi.yaml#GET /blocks/{blockId}",
+     "openapi/_original/kusama-sidecar-openapi.yaml#GET /rc/blocks",
+     "openapi/_original/kusama-sidecar-openapi.yaml#GET /rc/blocks/{blockId}"
+    ]
+   },
+   "litecoin": {
+    "segments": [
+     "blocks",
+     "block"
+    ],
+    "operations": [
+     "GET item"
+    ],
+    "properties": {
+     "hash": "string",
+     "confirmations": "integer",
+     "size": "integer",
+     "strippedsize": "integer",
+     "weight": "integer",
+     "height": "integer",
+     "version": "integer",
+     "versionHex": "string",
+     "merkleroot": "string",
+     "tx": "array",
+     "time": "integer",
+     "mediantime": "integer",
+     "nonce": "integer",
+     "bits": "string",
+     "difficulty": "number",
+     "chainwork": "string",
+     "nTx": "integer",
+     "previousblockhash": "string",
+     "nextblockhash": "string",
+     "id": "string",
+     "timestamp": "integer",
+     "tx_count": "integer",
+     "merkle_root": "string",
+     "reward": "integer",
+     "coinbaseTx": "object",
+     "totalFees": "integer",
+     "avgFee": "integer",
+     "avgFeeRate": "integer",
+     "pool": "object"
+    },
+    "evidence": [
+     "openapi/_original/litecoin-core-rest.yml#GET /rest/block/{blockHash}.json",
+     "openapi/_original/litecoin-space-rest.yml#GET /block/{hash}",
+     "openapi/_original/litecoin-space-rest.yml#GET /blocks/{startHeight}",
+     "openapi/_original/litecoin-space-rest.yml#GET /v1/blocks/{startHeight}",
+     "openapi/_original/litecoin-space-rest.yml#GET /v1/mining/pool/{slug}/blocks/{blockHeight}"
+    ]
+   },
+   "meter": {
+    "segments": [
+     "blocks",
+     "block"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "number": "integer",
+     "id": "string",
+     "size": "integer",
+     "parentID": "string",
+     "timestamp": "integer",
+     "gasLimit": "integer",
+     "beneficiary": "string",
+     "gasUsed": "integer",
+     "totalScore": "integer",
+     "txsRoot": "string",
+     "stateRoot": "string",
+     "receiptsRoot": "string",
+     "signer": "string",
+     "transactions": "array",
+     "isTrunk": "boolean",
+     "obsolete": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/meter-openapi-original.yml#GET /blocks/{revision}",
+     "openapi/_original/meter-openapi-original.yml#GET /subscriptions/block"
+    ]
+   },
+   "moralis": {
+    "segments": [
+     "block"
+    ],
+    "operations": [
+     "GET item"
+    ],
+    "properties": {
+     "timestamp": "string",
+     "number": "string",
+     "hash": "string",
+     "parent_hash": "string",
+     "nonce": "string",
+     "sha3_uncles": "string",
+     "logs_bloom": "string",
+     "transactions_root": "string",
+     "state_root": "string",
+     "receipts_root": "string",
+     "miner": "string",
+     "difficulty": "string",
+     "total_difficulty": "string",
+     "size": "string",
+     "extra_data": "string",
+     "gas_limit": "string",
+     "gas_used": "string",
+     "transaction_count": "string",
+     "transactions": "array"
+    },
+    "evidence": [
+     "openapi/_original/moralis-evm-api-openapi.json#GET /block/{block_number_or_hash}"
+    ]
+   },
+   "nano": {
+    "segments": [
+     "blocks"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "blocks": "object",
+     "action": "string",
+     "hashes": "array",
+     "json_block": "string"
+    },
+    "evidence": [
+     "openapi/_original/openapi.yml#POST /blocks"
+    ]
+   },
+   "near": {
+    "segments": [
+     "blocks",
+     "block"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "balance_burnt": "string",
+     "bandwidth_requests": null,
+     "chunk_hash": "string",
+     "congestion_info": null,
+     "encoded_length": "integer",
+     "encoded_merkle_root": "string",
+     "gas_limit": "integer",
+     "gas_used": "integer",
+     "height_created": "integer",
+     "height_included": "integer",
+     "outcome_root": "string",
+     "outgoing_receipts_root": "string",
+     "prev_block_hash": "string",
+     "prev_state_root": "string",
+     "proposed_split": null,
+     "rent_paid": null,
+     "shard_id": "integer",
+     "signature": "string",
+     "tx_root": "string",
+     "validator_proposals": "array",
+     "validator_reward": null,
+     "id": "string",
+     "jsonrpc": "string",
+     "method": "string",
+     "params": "object"
+    },
+    "evidence": [
+     "openapi/_original/near-rpc-api.json#POST /block",
+     "openapi/_original/nearblocks-api.json#GET /v1/blocks",
+     "openapi/_original/nearblocks-api.json#GET /v1/blocks/{hash}",
+     "openapi/_original/nearblocks-api.json#GET /v1/search/blocks",
+     "openapi/_original/openapi.yml#POST /block"
+    ]
+   },
+   "neynar": {
+    "segments": [
+     "block"
+    ],
+    "operations": [
+     "DELETE collection",
+     "POST collection"
+    ],
+    "properties": {
+     "message": "string",
+     "success": "boolean",
+     "blocked_fid": "integer",
+     "signer_uuid": "string"
+    },
+    "evidence": [
+     "openapi/_original/neynar-farcaster-api.yaml#DELETE /v2/farcaster/block/",
+     "openapi/_original/neynar-farcaster-api.yaml#POST /v2/farcaster/block/"
+    ]
+   },
+   "pocket-network": {
+    "segments": [
+     "block",
+     "blocks"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/pocket-network-cometbft-rpc-api-openapi.yml#GET /block",
+     "openapi/_original/pocket-network-shannon-rpc-api-openapi.yml#GET /cosmos/base/tendermint/v1beta1/blocks/{height}"
+    ]
+   },
+   "polkadot": {
+    "segments": [
+     "blocks",
+     "block"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "code": "integer",
+     "data": null,
+     "generated_at": "integer",
+     "message": "string",
+     "account_display": "object",
+     "additional_meta": "object",
+     "block_num": "integer",
+     "block_timestamp": "integer",
+     "event_count": "integer",
+     "events": "array",
+     "extrinsics": "array",
+     "extrinsics_count": "integer",
+     "extrinsics_root": "string",
+     "finalized": "boolean",
+     "hash": "string",
+     "logs": "array",
+     "max_proof_size": "integer",
+     "max_ref_time": "integer",
+     "parent_hash": "string",
+     "proof_size": "integer",
+     "ref_time": "integer",
+     "spec_version": "integer",
+     "state_root": "string",
+     "validator": "string",
+     "block_hash": "string",
+     "only_head": "boolean",
+     "page": "integer",
+     "row": "integer",
+     "after_id": "integer",
+     "author": "string",
+     "block_range": "string",
+     "number": "string",
+     "parentHash": "string",
+     "stateRoot": "string",
+     "extrinsicRoot": "string",
+     "authorId": "string",
+     "onInitialize": "object",
+     "onFinalize": "object",
+     "rcBlockHash": "string",
+     "rcBlockNumber": "string",
+     "ahTimestamp": "string",
+     "horizontalMessages": "object",
+     "downwardMessages": "array",
+     "upwardMessages": "array"
+    },
+    "evidence": [
+     "openapi/_original/polkadot-rest-api-openapi.json#GET /v1/blocks",
+     "openapi/_original/polkadot-rest-api-openapi.json#GET /v1/blocks/{blockId}",
+     "openapi/_original/polkadot-rest-api-openapi.json#GET /v1/rc/blocks",
+     "openapi/_original/polkadot-rest-api-openapi.json#GET /v1/rc/blocks/{blockId}",
+     "openapi/_original/subscan-swagger.yaml#POST /api/scan/block",
+     "openapi/_original/subscan-swagger.yaml#POST /api/scan/evm/block",
+     "openapi/_original/subscan-swagger.yaml#POST /api/scan/evm/blocks",
+     "openapi/_original/subscan-swagger.yaml#POST /api/v2/scan/blocks",
+     "openapi/_original/substrate-api-sidecar-openapi.yaml#GET /blocks",
+     "openapi/_original/substrate-api-sidecar-openapi.yaml#GET /blocks/{blockId}",
+     "openapi/_original/substrate-api-sidecar-openapi.yaml#GET /rc/blocks",
+     "openapi/_original/substrate-api-sidecar-openapi.yaml#GET /rc/blocks/{blockId}"
+    ]
+   },
+   "sei": {
+    "segments": [
+     "block",
+     "blocks"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "block_id": "object",
+     "block": "object",
+     "body": "object",
+     "auth_info": "object",
+     "signatures": "array",
+     "id": "integer",
+     "jsonrpc": "string"
+    },
+    "evidence": [
+     "openapi/_original/sei-cosmos-rest-api.yml#GET /cosmos/base/tendermint/v1beta1/blocks/{height}",
+     "openapi/_original/sei-cosmos-rest-api.yml#GET /cosmos/tx/v1beta1/txs/block/{height}",
+     "openapi/_original/sei-tendermint-rpc.yml#GET /block"
+    ]
+   },
+   "supra": {
+    "segments": [
+     "block"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "author": "string",
+     "hash": "string",
+     "height": null,
+     "parent": "string",
+     "timestamp": "object",
+     "view": "object",
+     "header": "object",
+     "execution_statistics": null,
+     "block": "object",
+     "batches": "object"
+    },
+    "evidence": [
+     "openapi/_original/supra-rpc-node-openapi-original.json#GET /rpc/v2/block",
+     "openapi/_original/supra-rpc-node-openapi-original.json#GET /rpc/v2/block/{block_hash}",
+     "openapi/_original/supra-rpc-node-openapi-original.json#GET /rpc/v2/consensus/block",
+     "openapi/_original/supra-rpc-node-openapi-original.json#GET /rpc/v3/block",
+     "openapi/_original/supra-rpc-node-openapi-original.json#GET /rpc/v3/block/{block_hash}",
+     "openapi/_original/supra-rpc-node-openapi-original.json#GET /rpc/v4/consensus/block",
+     "openapi/_original/supra-rpc-node-openapi.yml#GET /rpc/v2/block",
+     "openapi/_original/supra-rpc-node-openapi.yml#GET /rpc/v2/block/{block_hash}",
+     "openapi/_original/supra-rpc-node-openapi.yml#GET /rpc/v2/consensus/block",
+     "openapi/_original/supra-rpc-node-openapi.yml#GET /rpc/v3/block",
+     "openapi/_original/supra-rpc-node-openapi.yml#GET /rpc/v3/block/{block_hash}",
+     "openapi/_original/supra-rpc-node-openapi.yml#GET /rpc/v4/consensus/block"
+    ]
+   },
+   "tatum": {
+    "segments": [
+     "block"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/tatum-openapi.yml#GET /v4/data/blockchains/block"
+    ]
+   },
+   "tendermint": {
+    "segments": [
+     "block"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "id": "integer",
+     "jsonrpc": "string",
+     "block_id": "object",
+     "block": "object"
+    },
+    "evidence": [
+     "openapi/_original/tendermint-rpc-openapi-original.yml#GET /block"
+    ]
+   },
+   "tezos": {
+    "segments": [
+     "blocks"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "cycle": "integer",
+     "level": "integer",
+     "hash": "string",
+     "timestamp": "string",
+     "proto": "integer",
+     "payloadRound": "integer",
+     "blockRound": "integer",
+     "attestationPower": "integer",
+     "attestationCommittee": "integer",
+     "deposit": "integer",
+     "rewardDelegated": "integer",
+     "rewardStakedOwn": "integer",
+     "rewardStakedEdge": "integer",
+     "rewardStakedShared": "integer",
+     "bonusDelegated": "integer",
+     "bonusStakedOwn": "integer",
+     "bonusStakedEdge": "integer",
+     "bonusStakedShared": "integer",
+     "fees": "integer",
+     "nonceRevealed": "boolean",
+     "proposer": null,
+     "producer": null,
+     "software": null,
+     "lbToggle": "boolean",
+     "lbToggleEma": "integer",
+     "attestations": "array",
+     "preattestations": "array",
+     "proposals": "array",
+     "ballots": "array",
+     "activations": "array",
+     "dalEntrapmentEvidenceOps": "array",
+     "doubleBaking": "array",
+     "doubleConsensus": "array",
+     "nonceRevelations": "array",
+     "vdfRevelations": "array",
+     "delegations": "array",
+     "originations": "array",
+     "transactions": "array",
+     "reveals": "array",
+     "registerConstants": "array",
+     "setDepositsLimits": "array",
+     "transferTicketOps": "array",
+     "txRollupCommitOps": "array",
+     "txRollupDispatchTicketsOps": "array",
+     "txRollupFinalizeCommitmentOps": "array",
+     "txRollupOriginationOps": "array",
+     "txRollupRejectionOps": "array",
+     "txRollupRemoveCommitmentOps": "array",
+     "txRollupReturnBondOps": "array",
+     "txRollupSubmitBatchOps": "array",
+     "increasePaidStorageOps": "array",
+     "updateSecondaryKeyOps": "array",
+     "drainDelegateOps": "array",
+     "srAddMessagesOps": "array",
+     "srCementOps": "array",
+     "srExecuteOps": "array",
+     "srOriginateOps": "array",
+     "srPublishOps": "array",
+     "srRecoverBondOps": "array",
+     "srRefuteOps": "array",
+     "stakingOps": "array",
+     "setDelegateParametersOps": "array",
+     "dalPublishCommitmentOps": "array",
+     "migrations": "array",
+     "revelationPenalties": "array",
+     "attestationRewards": "array",
+     "dalAttestationRewards": "array",
+     "autostakingOps": "array",
+     "quote": null,
+     "validations": "integer",
+     "aiToggle": "boolean",
+     "aiToggleEma": "integer",
+     "updateConsensusKeyOps": "array",
+     "endorsements": "array",
+     "preendorsements": "array",
+     "doubleEndorsing": "array",
+     "doublePreendorsing": "array",
+     "endorsingRewards": "array"
+    },
+    "evidence": [
+     "openapi/_original/openapi.json#GET /v1/blocks",
+     "openapi/_original/openapi.json#GET /v1/blocks/{hash}",
+     "openapi/_original/openapi.json#GET /v1/blocks/{level}",
+     "openapi/_original/openapi.json#GET /v1/blocks/{timestamp}"
+    ]
+   },
+   "thorchain": {
+    "segments": [
+     "block"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "code": "integer",
+     "data": "string",
+     "log": "string",
+     "info": "string",
+     "gas_wanted": "string",
+     "gas_used": "string",
+     "events": "array",
+     "codespace": "string"
+    },
+    "evidence": [
+     "openapi/_original/thorchain-thornode-openapi.yaml#GET /thorchain/block"
+    ]
+   },
+   "top-group": {
+    "segments": [
+     "blocks"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "workchain_id": "integer",
+     "shard": "string",
+     "seqno": "integer",
+     "master_ref": "string",
+     "tx_quantity": "integer",
+     "utime": "integer",
+     "shards_blocks": "array",
+     "parent": "array",
+     "value_flow": "object",
+     "root_hash": "string",
+     "file_hash": "string",
+     "global_id": "integer",
+     "version": "integer",
+     "after_merge": "boolean",
+     "before_split": "boolean",
+     "after_split": "boolean",
+     "want_split": "boolean",
+     "want_merge": "boolean",
+     "key_block": "boolean",
+     "gen_utime": "integer",
+     "start_lt": "integer",
+     "end_lt": "integer",
+     "vert_seqno": "integer",
+     "gen_catchain_seqno": "integer",
+     "min_ref_mc_seqno": "integer",
+     "prev_key_block_seqno": "integer",
+     "gen_software_version": "integer",
+     "gen_software_capabilities": "integer",
+     "prev_refs": "array",
+     "in_msg_descr_length": "integer",
+     "out_msg_descr_length": "integer",
+     "rand_seed": "string",
+     "created_by": "string"
+    },
+    "evidence": [
+     "openapi/_original/top-group-tonapi-openapi.yml#GET /v2/blockchain/blocks/{block_id}",
+     "openapi/_original/top-group-tonapi-openapi.yml#GET /v2/blockchain/masterchain/{masterchain_seqno}/blocks",
+     "openapi/_original/top-group-tonapi-openapi.yml#GET /v2/blockchain/reduced/blocks"
+    ]
+   },
+   "transpose": {
+    "segments": [
+     "blocks"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "block_number": "integer",
+     "block_hash": "string",
+     "timestamp": "string",
+     "miner": "string",
+     "transaction_count": "integer",
+     "gas_used": "integer",
+     "base_fee_per_gas": "string"
+    },
+    "evidence": [
+     "openapi/_original/openapi.yml#GET /block/blocks"
+    ]
+   }
+  },
+  "transaction": {
+   "agentexchange-work": {
+    "segments": [
+     "tx"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "status": "string",
+     "block": "number",
+     "confirmations": "number"
+    },
+    "evidence": [
+     "openapi/_original/agentexchange-work-api-store-openapi.json#GET /chain/tx"
+    ]
+   },
+   "akash": {
+    "segments": [
+     "txs",
+     "tx"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "log": "string",
+     "gas_wanted": "string",
+     "gas_used": "string",
+     "tags": "array",
+     "check_tx": "object",
+     "deliver_tx": "object",
+     "hash": "string",
+     "height": "integer",
+     "tx": "object",
+     "mode": "string",
+     "txs": "array",
+     "tx_responses": "array",
+     "pagination": "object",
+     "txhash": "string",
+     "codespace": "string",
+     "code": "integer",
+     "data": "string",
+     "raw_log": "string",
+     "logs": "array",
+     "info": "string",
+     "timestamp": "string",
+     "tx_bytes": "string",
+     "tx_response": "object",
+     "transactionHash": "string",
+     "rawLog": "string",
+     "userId": "string",
+     "messages": "array"
+    },
+    "evidence": [
+     "openapi/_original/akash-blockchain-rest-api.yaml#GET /cosmos/tx/v1beta1/txs",
+     "openapi/_original/akash-blockchain-rest-api.yaml#GET /cosmos/tx/v1beta1/txs/{hash}",
+     "openapi/_original/akash-blockchain-rest-api.yaml#GET /txs",
+     "openapi/_original/akash-blockchain-rest-api.yaml#GET /txs/{hash}",
+     "openapi/_original/akash-blockchain-rest-api.yaml#POST /cosmos/tx/v1beta1/txs",
+     "openapi/_original/akash-blockchain-rest-api.yaml#POST /txs",
+     "openapi/_original/akash-console-deployment-api.json#POST /v1/tx"
+    ]
+   },
+   "algorand": {
+    "segments": [
+     "transactions"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "application-transaction": "object",
+     "asset-config-transaction": "object",
+     "asset-freeze-transaction": "object",
+     "asset-transfer-transaction": "object",
+     "auth-addr": "string",
+     "close-rewards": "integer",
+     "closing-amount": "integer",
+     "confirmed-round": "integer",
+     "created-application-index": "integer",
+     "created-asset-index": "integer",
+     "fee": "integer",
+     "first-valid": "integer",
+     "genesis-hash": "string",
+     "genesis-id": "string",
+     "global-state-delta": "array",
+     "group": "string",
+     "heartbeat-transaction": "object",
+     "id": "string",
+     "inner-txns": "array",
+     "intra-round-offset": "integer",
+     "keyreg-transaction": "object",
+     "last-valid": "integer",
+     "lease": "string",
+     "local-state-delta": "array",
+     "logs": "array",
+     "note": "string",
+     "payment-transaction": "object",
+     "receiver-rewards": "integer",
+     "rekey-to": "string",
+     "round-time": "integer",
+     "sender": "string",
+     "sender-rewards": "integer",
+     "signature": "object",
+     "state-proof-transaction": "object",
+     "tx-type": "string"
+    },
+    "evidence": [
+     "openapi/_original/algorand-indexer-openapi.json#GET /v2/accounts/{account-id}/transactions"
+    ]
+   },
+   "amberdata": {
+    "segments": [
+     "transactions"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "status": "integer",
+     "title": "string",
+     "description": "string",
+     "payload": "object"
+    },
+    "evidence": [
+     "openapi/_original/amberdata-blockchain-openapi.yaml#GET /addresses/{hash}/transactions",
+     "openapi/_original/amberdata-openapi.yml#GET /blockchains/{blockchainId}/addresses/{address}/transactions"
+    ]
+   },
+   "anchor-x402": {
+    "segments": [
+     "tx"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "chain": "string",
+     "tx_hash": "string",
+     "block_number": null,
+     "timestamp": null,
+     "from_address": null,
+     "to_address": null,
+     "value_wei": null,
+     "value_eth": null,
+     "gas_used": null,
+     "status": null,
+     "input_calldata_hex": null,
+     "native_currency": null,
+     "slot": null,
+     "block_time": null,
+     "fee_lamports": null,
+     "signers": null,
+     "program_calls": null
+    },
+    "evidence": [
+     "openapi/_original/anchor-x402-openapi.json#POST /v1/decode/tx"
+    ]
+   },
+   "aptos": {
+    "segments": [
+     "transactions"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "type": "string",
+     "hash": "string",
+     "sender": "string",
+     "sequence_number": "string",
+     "max_gas_amount": "string",
+     "gas_unit_price": "string",
+     "expiration_timestamp_secs": "string",
+     "payload": "object",
+     "signature": "object",
+     "replay_protection_nonce": "string",
+     "txn_limits_request": "object"
+    },
+    "evidence": [
+     "openapi/_original/aptos-fullnode-rest-api-openapi.yaml#GET /accounts/{address}/transactions"
+    ]
+   },
+   "arkham": {
+    "segments": [
+     "tx"
+    ],
+    "operations": [
+     "GET item"
+    ],
+    "properties": {
+     "assetId": "string",
+     "blockID": "string",
+     "blockNumber": "integer",
+     "blockTimestamp": "string",
+     "chain": "string",
+     "fromAddress": "object",
+     "fromIsContract": "boolean",
+     "historicalUSD": "number",
+     "id": "string",
+     "toAddress": "object",
+     "toIsContract": "boolean",
+     "tokenAddress": "string",
+     "tokenDecimals": "integer",
+     "tokenId": "string",
+     "tokenName": "string",
+     "tokenSymbol": "string",
+     "transactionHash": "string",
+     "unitValue": "number"
+    },
+    "evidence": [
+     "openapi/_original/arkham-openapi-original.json#GET /transfers/tx/{hash}",
+     "openapi/_original/arkham-openapi-original.json#GET /tx/{hash}"
+    ]
+   },
+   "arweave": {
+    "segments": [
+     "tx"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "owner": "string",
+     "payer": "string",
+     "dataCaches": "array",
+     "fastFinalityIndexes": "array",
+     "deadlineHeight": "integer",
+     "timestamp": "integer",
+     "version": "string",
+     "signature": "string",
+     "public": "string",
+     "x402Payment": "object",
+     "data": "string",
+     "contentType": "string",
+     "tags": "array"
+    },
+    "evidence": [
+     "openapi/_original/arweave-openapi.json#POST /tx"
+    ]
+   },
+   "ava-labs": {
+    "segments": [
+     "transactions"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "nativeTransaction": null,
+     "erc20Transfers": "array",
+     "erc721Transfers": "array",
+     "erc1155Transfers": "array",
+     "internalTransactions": "array",
+     "networkTokenDetails": "object",
+     "teleporterMessageInfo": null,
+     "blockNumber": "string",
+     "blockTimestamp": "number",
+     "blockHash": "string",
+     "chainId": "string",
+     "blockIndex": "number",
+     "txHash": "string",
+     "txStatus": "string",
+     "txType": "number",
+     "gasLimit": "string",
+     "gasUsed": "string",
+     "gasPrice": "string",
+     "nonce": "string",
+     "from": "object",
+     "to": "object",
+     "method": "object",
+     "value": "string"
+    },
+    "evidence": [
+     "openapi/_original/ava-labs-data-api-openapi.yml#GET /v1/chains/{chainId}/addresses/{address}/transactions",
+     "openapi/_original/ava-labs-data-api-openapi.yml#GET /v1/chains/{chainId}/blocks/{blockId}/transactions",
+     "openapi/_original/ava-labs-data-api-openapi.yml#GET /v1/chains/{chainId}/transactions",
+     "openapi/_original/ava-labs-data-api-openapi.yml#GET /v1/chains/{chainId}/transactions/{txHash}"
+    ]
+   },
+   "avalanche": {
+    "segments": [
+     "transactions"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "nativeTransaction": null,
+     "erc20Transfers": "array",
+     "erc721Transfers": "array",
+     "erc1155Transfers": "array",
+     "internalTransactions": "array",
+     "networkTokenDetails": "object",
+     "teleporterMessageInfo": null,
+     "blockNumber": "string",
+     "blockTimestamp": "number",
+     "blockTimestampMilliseconds": "number",
+     "blockMinDelayExcess": "number",
+     "blockHash": "string",
+     "chainId": "string",
+     "blockIndex": "number",
+     "txHash": "string",
+     "txStatus": "string",
+     "txType": "number",
+     "gasLimit": "string",
+     "gasUsed": "string",
+     "gasPrice": "string",
+     "nonce": "string",
+     "from": "object",
+     "to": "object",
+     "method": "object",
+     "value": "string"
+    },
+    "evidence": [
+     "openapi/_original/data-api.json#GET /v1/chains/{chainId}/addresses/{address}/transactions",
+     "openapi/_original/data-api.json#GET /v1/chains/{chainId}/blocks/{blockId}/transactions",
+     "openapi/_original/data-api.json#GET /v1/chains/{chainId}/transactions",
+     "openapi/_original/data-api.json#GET /v1/chains/{chainId}/transactions/{txHash}",
+     "openapi/_original/data-api.json#GET /v2/chains/{chainId}/addresses/{address}/transactions"
+    ]
+   },
+   "b3": {
+    "segments": [
+     "transactions"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "timestamp": "string",
+     "fee": "object",
+     "gas_limit": "integer",
+     "block_number": "integer",
+     "status": "string",
+     "method": "string",
+     "confirmations": "integer",
+     "type": "integer",
+     "exchange_rate": "string",
+     "to": "object",
+     "transaction_burnt_fee": "string",
+     "max_fee_per_gas": "string",
+     "result": "string",
+     "hash": "string",
+     "gas_price": "string",
+     "priority_fee": "string",
+     "base_fee_per_gas": "string",
+     "from": "object",
+     "token_transfers": "array",
+     "transaction_types": "array",
+     "gas_used": "string",
+     "created_contract": "object",
+     "position": "integer",
+     "nonce": "integer",
+     "has_error_in_internal_transactions": "boolean",
+     "actions": "array",
+     "decoded_input": "object",
+     "token_transfers_overflow": "boolean",
+     "raw_input": "string",
+     "value": "string",
+     "max_priority_fee_per_gas": "string",
+     "revert_reason": "string",
+     "confirmation_duration": "object",
+     "transaction_tag": "string",
+     "chain_id": "string",
+     "block_hash": "string",
+     "block_timestamp": "number",
+     "transaction_index": "number",
+     "from_address": "string",
+     "to_address": "string",
+     "gas": "number",
+     "function_selector": "string",
+     "data": "string",
+     "transaction_type": "number",
+     "r": "string",
+     "s": "string",
+     "v": "string",
+     "access_list_json": "string",
+     "authorization_list_json": "string",
+     "contract_address": "string",
+     "cumulative_gas_used": "number",
+     "effective_gas_price": "string",
+     "blob_gas_used": "number",
+     "blob_gas_price": "string",
+     "logs_bloom": "string",
+     "decoded": "object"
+    },
+    "evidence": [
+     "openapi/_original/b3-data-api-openapi.json#GET /blockscout/addresses/{address_hash}/transactions",
+     "openapi/_original/b3-data-api-openapi.json#GET /blockscout/blocks/{block_number_or_hash}/transactions",
+     "openapi/_original/b3-data-api-openapi.json#GET /insights/v1/wallets/{wallet_address}/transactions"
+    ]
+   },
+   "blockfrost": {
+    "segments": [
+     "txs",
+     "transactions"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "hash": "string",
+     "block": "string",
+     "block_height": "integer",
+     "block_time": "integer",
+     "slot": "integer",
+     "index": "integer",
+     "output_amount": "array",
+     "fees": "string",
+     "deposit": "string",
+     "size": "integer",
+     "invalid_before": "string",
+     "invalid_hereafter": "string",
+     "utxo_count": "integer",
+     "withdrawal_count": "integer",
+     "mir_cert_count": "integer",
+     "delegation_count": "integer",
+     "stake_cert_count": "integer",
+     "pool_update_count": "integer",
+     "pool_retire_count": "integer",
+     "asset_mint_or_burn_count": "integer",
+     "redeemer_count": "integer",
+     "valid_contract": "boolean",
+     "treasury_donation": "string",
+     "address": "string",
+     "tx_hash": "string",
+     "tx_index": "integer"
+    },
+    "evidence": [
+     "openapi/_original/blockfrost-openapi.yaml#GET /accounts/{stake_address}/transactions",
+     "openapi/_original/blockfrost-openapi.yaml#GET /addresses/{address}/transactions",
+     "openapi/_original/blockfrost-openapi.yaml#GET /addresses/{address}/txs",
+     "openapi/_original/blockfrost-openapi.yaml#GET /assets/{asset}/txs",
+     "openapi/_original/blockfrost-openapi.yaml#GET /blocks/latest/txs",
+     "openapi/_original/blockfrost-openapi.yaml#GET /blocks/{hash_or_number}/txs",
+     "openapi/_original/blockfrost-openapi.yaml#GET /txs/{hash}",
+     "openapi/_original/openapi.yml#GET /addresses/{address}/transactions",
+     "openapi/_original/openapi.yml#GET /addresses/{address}/txs",
+     "openapi/_original/openapi.yml#GET /assets/{asset}/txs",
+     "openapi/_original/openapi.yml#GET /blocks/latest/txs",
+     "openapi/_original/openapi.yml#GET /blocks/{hash_or_number}/txs"
+    ]
+   },
+   "blockscout": {
+    "segments": [
+     "transactions"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "timestamp": "string",
+     "fee": "object",
+     "gas_limit": "integer",
+     "block_number": "integer",
+     "status": "string",
+     "method": "string",
+     "confirmations": "integer",
+     "type": "integer",
+     "exchange_rate": "string",
+     "to": "object",
+     "transaction_burnt_fee": "string",
+     "max_fee_per_gas": "string",
+     "result": "string",
+     "hash": "string",
+     "gas_price": "string",
+     "priority_fee": "string",
+     "base_fee_per_gas": "string",
+     "from": "object",
+     "token_transfers": "array",
+     "transaction_types": "array",
+     "gas_used": "string",
+     "created_contract": "object",
+     "position": "integer",
+     "nonce": "integer",
+     "has_error_in_internal_transactions": "boolean",
+     "actions": "array",
+     "decoded_input": "object",
+     "token_transfers_overflow": "boolean",
+     "raw_input": "string",
+     "value": "string",
+     "max_priority_fee_per_gas": "string",
+     "revert_reason": "string",
+     "confirmation_duration": "object",
+     "transaction_tag": "string"
+    },
+    "evidence": [
+     "openapi/_original/blockscout-openapi.yml#GET /addresses/{address_hash}/transactions",
+     "openapi/_original/blockscout-openapi.yml#GET /blocks/{block_number_or_hash}/transactions"
+    ]
+   },
+   "breeze": {
+    "segments": [
+     "tx"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "all": [
+      "boolean",
+      "null"
+     ],
+     "amount": [
+      "integer",
+      "null"
+     ],
+     "base_asset": [
+      "string",
+      "null"
+     ],
+     "fund_id": [
+      "string",
+      "null"
+     ],
+     "is_agent": [
+      "boolean",
+      "null"
+     ],
+     "payer_key": [
+      "string",
+      "null"
+     ],
+     "strategy_id": [
+      "string",
+      "null"
+     ],
+     "user_key": [
+      "string",
+      "null"
+     ],
+     "user_token_account": [
+      "string",
+      "null"
+     ],
+     "create_wsol_ata": [
+      "boolean",
+      "null"
+     ],
+     "detect_wsol_ata": [
+      "boolean",
+      "null"
+     ],
+     "exclude_fees": [
+      "boolean",
+      "null"
+     ],
+     "no_balance_checks": [
+      "boolean",
+      "null"
+     ],
+     "unwrap_wsol_ata": [
+      "boolean",
+      "null"
+     ]
+    },
+    "evidence": [
+     "openapi/_original/breeze-openapi-original.json#POST /deposit/tx",
+     "openapi/_original/breeze-openapi-original.json#POST /withdraw/tx"
+    ]
+   },
+   "cardano": {
+    "segments": [
+     "txs",
+     "transactions"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "hash": "string",
+     "block": "string",
+     "block_height": "integer",
+     "block_time": "integer",
+     "slot": "integer",
+     "index": "integer",
+     "output_amount": "array",
+     "fees": "string",
+     "deposit": "string",
+     "size": "integer",
+     "invalid_before": "string",
+     "invalid_hereafter": "string",
+     "utxo_count": "integer",
+     "withdrawal_count": "integer",
+     "mir_cert_count": "integer",
+     "delegation_count": "integer",
+     "stake_cert_count": "integer",
+     "pool_update_count": "integer",
+     "pool_retire_count": "integer",
+     "asset_mint_or_burn_count": "integer",
+     "redeemer_count": "integer",
+     "valid_contract": "boolean",
+     "treasury_donation": "string",
+     "address": "string",
+     "tx_hash": "string",
+     "tx_index": "integer"
+    },
+    "evidence": [
+     "openapi/_original/blockfrost-cardano-api-openapi.yml#GET /accounts/{stake_address}/transactions",
+     "openapi/_original/blockfrost-cardano-api-openapi.yml#GET /addresses/{address}/transactions",
+     "openapi/_original/blockfrost-cardano-api-openapi.yml#GET /addresses/{address}/txs",
+     "openapi/_original/blockfrost-cardano-api-openapi.yml#GET /assets/{asset}/txs",
+     "openapi/_original/blockfrost-cardano-api-openapi.yml#GET /blocks/latest/txs",
+     "openapi/_original/blockfrost-cardano-api-openapi.yml#GET /blocks/{hash_or_number}/txs",
+     "openapi/_original/blockfrost-cardano-api-openapi.yml#GET /txs/{hash}"
+    ]
+   },
+   "chainlens": {
+    "segments": [
+     "tx",
+     "transactions"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST item",
+     "PUT item"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/chainlens-openapi.yml#DELETE /tx/{transactionHash}",
+     "openapi/_original/chainlens-openapi.yml#GET /accounts/{addressHash}/transactions",
+     "openapi/_original/chainlens-openapi.yml#GET /blocks/{blockHash}/transactions",
+     "openapi/_original/chainlens-openapi.yml#GET /tx/{transactionHash}",
+     "openapi/_original/chainlens-openapi.yml#PATCH /tx/{transactionHash}",
+     "openapi/_original/chainlens-openapi.yml#POST /tx/{transactionHash}",
+     "openapi/_original/chainlens-openapi.yml#PUT /tx/{transactionHash}"
+    ]
+   },
+   "coin-metrics": {
+    "segments": [
+     "transactions"
+    ],
+    "operations": [
+     "GET item"
+    ],
+    "properties": {
+     "txid": "string",
+     "consensus_time": "string",
+     "miner_time": "string",
+     "tx_position": "string",
+     "min_chain_sequence_number": "string",
+     "max_chain_sequence_number": "string",
+     "n_balance_updates": "string",
+     "amount": "string",
+     "stale": "string",
+     "block_hash": "string",
+     "height": "string",
+     "version": "string",
+     "physical_size": "string",
+     "consensus_size": "string",
+     "fee": "string",
+     "chain_sequence_number": "string",
+     "account": "string",
+     "account_creation_height": "string",
+     "change": "string",
+     "rebasing_numerator": "string",
+     "rebasing_denominator": "string",
+     "rebasing_rounding_mode": "string",
+     "previous_balance": "string",
+     "new_balance": "string",
+     "transaction_sequence_number": "string",
+     "n_debits": "string",
+     "n_credits": "string",
+     "previous_debit_height": "string",
+     "previous_credit_height": "string",
+     "previous_chain_sequence_number": "string",
+     "sub_account": "object",
+     "denomination": "string"
+    },
+    "evidence": [
+     "openapi/_original/coin-metrics-api-v4-openapi.json#GET /blockchain-v2/{asset}/blocks/{block_hash}/transactions/{txid}"
+    ]
+   },
+   "coinbase": {
+    "segments": [
+     "transactions"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "activity_id": "string",
+     "amount": "string",
+     "destination_type": "string",
+     "idempotency_key": "string",
+     "currency_symbol": "string"
+    },
+    "evidence": [
+     "openapi/_original/coinbase-prime-openapi.yml#POST /portfolios/{portfolio_id}/wallets/{wallet_id}/transactions"
+    ]
+   },
+   "cosmos": {
+    "segments": [
+     "txs"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "txs": "array",
+     "txResponses": "array",
+     "pagination": "object",
+     "total": "string",
+     "height": "string",
+     "txhash": "string",
+     "codespace": "string",
+     "code": "integer",
+     "data": "string",
+     "rawLog": "string",
+     "logs": "array",
+     "info": "string",
+     "gasWanted": "string",
+     "gasUsed": "string",
+     "tx": "object",
+     "timestamp": "string",
+     "events": "array",
+     "txBytes": "string",
+     "mode": "string",
+     "txResponse": "object"
+    },
+    "evidence": [
+     "openapi/_original/openapi.yml#GET /cosmos/tx/v1beta1/txs",
+     "openapi/_original/openapi.yml#GET /cosmos/tx/v1beta1/txs/{hash}",
+     "openapi/_original/openapi.yml#POST /cosmos/tx/v1beta1/txs"
+    ]
+   },
+   "crossmint": {
+    "segments": [
+     "transactions"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "approvals": "object",
+     "chainType": "string",
+     "completedAt": null,
+     "createdAt": null,
+     "error": null,
+     "fees": "object",
+     "id": "string",
+     "onChain": "object",
+     "params": "object",
+     "sendParams": "object",
+     "status": "string",
+     "walletType": "string"
+    },
+    "evidence": [
+     "openapi/_original/crossmint-openapi.yml#GET /2025-06-09/wallets/me{walletLocator}/transactions",
+     "openapi/_original/crossmint-openapi.yml#GET /2025-06-09/wallets/me{walletLocator}/transactions/{transactionId}",
+     "openapi/_original/crossmint-openapi.yml#GET /2025-06-09/wallets/{walletLocator}/transactions",
+     "openapi/_original/crossmint-openapi.yml#GET /2025-06-09/wallets/{walletLocator}/transactions/{transactionId}",
+     "openapi/_original/crossmint-openapi.yml#POST /2025-06-09/wallets/me{walletLocator}/transactions",
+     "openapi/_original/crossmint-openapi.yml#POST /2025-06-09/wallets/{walletLocator}/transactions"
+    ]
+   },
+   "cubist": {
+    "segments": [
+     "tx"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "date": "integer",
+     "exp_epoch": "integer",
+     "historical_tx_org_id": "string",
+     "key_id": "string",
+     "mfa_status": null,
+     "operation": "string",
+     "request": "object",
+     "request_id": "string",
+     "result": null,
+     "role_id": null,
+     "user_id": null,
+     "last_evaluated_key": "string"
+    },
+    "evidence": [
+     "openapi/_original/cubist-cubesigner-openapi-original.json#GET /v0/org/{org_id}/keys/{key_id}/tx",
+     "openapi/_original/cubist-cubesigner-openapi-original.json#GET /v0/org/{org_id}/roles/{role_id}/tx"
+    ]
+   },
+   "dfns": {
+    "segments": [
+     "transactions"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "walletId": "string",
+     "network": "string",
+     "requester": "object",
+     "requestBody": null,
+     "status": "string",
+     "reason": "string",
+     "txHash": "string",
+     "fee": "string",
+     "approvalId": "string",
+     "dateRequested": "string",
+     "datePolicyResolved": "string",
+     "dateBroadcasted": "string",
+     "dateConfirmed": "string",
+     "externalId": "string",
+     "replacementId": "string",
+     "details": "object",
+     "kind": "string",
+     "transaction": null
+    },
+    "evidence": [
+     "openapi/_original/dfns-openapi.yml#GET /wallets/{walletId}/transactions",
+     "openapi/_original/dfns-openapi.yml#GET /wallets/{walletId}/transactions/{transactionId}",
+     "openapi/_original/dfns-openapi.yml#POST /wallets/{walletId}/transactions"
+    ]
+   },
+   "dynamic-labs": {
+    "segments": [
+     "transactions"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "transactionId": "string",
+     "transactionHash": "string",
+     "status": "string",
+     "amount": "number",
+     "currency": "string",
+     "createdAt": "string",
+     "blockNumber": "number",
+     "transactionTimestamp": "string",
+     "blockHash": "string",
+     "blockExplorerUrls": "array",
+     "fromAddress": "string",
+     "toAddress": "string",
+     "labels": "array",
+     "assetTransfers": "array",
+     "chainName": "string",
+     "networkId": "number"
+    },
+    "evidence": [
+     "openapi/_original/dynamic-xyz-sdk-api-openapi.yml#GET /sdk/{environmentId}/chains/{chainName}/transactions/{address}",
+     "openapi/_original/dynamic-xyz-sdk-api-openapi.yml#GET /sdk/{environmentId}/exchange/{exchangeKey}/accounts/transactions"
+    ]
+   },
+   "dynamic-xyz": {
+    "segments": [
+     "transactions"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "transactionId": "string",
+     "transactionHash": "string",
+     "status": "string",
+     "amount": "number",
+     "currency": "string",
+     "createdAt": "string",
+     "blockNumber": "number",
+     "transactionTimestamp": "string",
+     "blockHash": "string",
+     "blockExplorerUrls": "array",
+     "fromAddress": "string",
+     "toAddress": "string",
+     "labels": "array",
+     "assetTransfers": "array",
+     "chainName": "string",
+     "networkId": "number"
+    },
+    "evidence": [
+     "openapi/_original/dynamic-xyz-openapi.yml#GET /sdk/{environmentId}/chains/{chainName}/transactions/{address}",
+     "openapi/_original/dynamic-xyz-openapi.yml#GET /sdk/{environmentId}/exchange/{exchangeKey}/accounts/transactions"
+    ]
+   },
+   "helius": {
+    "segments": [
+     "transactions"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "description": "string",
+     "type": "string",
+     "source": "string",
+     "fee": "integer",
+     "feePayer": "string",
+     "signature": "string",
+     "slot": "integer",
+     "timestamp": "integer",
+     "nativeTransfers": "array",
+     "tokenTransfers": "array",
+     "accountData": "array",
+     "transactionError": "object",
+     "instructions": "array",
+     "events": "object"
+    },
+    "evidence": [
+     "openapi/_original/helius-openapi.json#GET /v0/addresses/{address}/transactions"
+    ]
+   },
+   "hiro": {
+    "segments": [
+     "tx",
+     "transactions",
+     "txs"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "tx_id": "string",
+     "nonce": "integer",
+     "fee_rate": "string",
+     "sender_address": "string",
+     "sponsor_nonce": "integer",
+     "sponsored": "boolean",
+     "sponsor_address": "string",
+     "post_condition_mode": null,
+     "post_conditions": "array",
+     "anchor_mode": null,
+     "block_hash": "string",
+     "block_height": "integer",
+     "block_time": "number",
+     "block_time_iso": "string",
+     "burn_block_time": "integer",
+     "burn_block_height": "integer",
+     "burn_block_time_iso": "string",
+     "parent_burn_block_time": "integer",
+     "parent_burn_block_time_iso": "string",
+     "canonical": "boolean",
+     "tx_index": "integer",
+     "tx_status": null,
+     "tx_result": "object",
+     "event_count": "integer",
+     "parent_block_hash": "string",
+     "is_unanchored": "boolean",
+     "microblock_hash": "string",
+     "microblock_sequence": "integer",
+     "microblock_canonical": "boolean",
+     "execution_cost_read_count": "integer",
+     "execution_cost_read_length": "integer",
+     "execution_cost_runtime": "integer",
+     "execution_cost_write_count": "integer",
+     "execution_cost_write_length": "integer",
+     "vm_error": null,
+     "events": "array",
+     "tx_type": "string",
+     "token_transfer": "object",
+     "tx": null,
+     "stx_sent": "string",
+     "stx_received": "string"
+    },
+    "evidence": [
+     "openapi/_original/hiro-stacks-blockchain-api-openapi.yaml#GET /extended/v1/microblock/unanchored/txs",
+     "openapi/_original/hiro-stacks-blockchain-api-openapi.yaml#GET /extended/v1/tx/",
+     "openapi/_original/hiro-stacks-blockchain-api-openapi.yaml#GET /extended/v1/tx/{tx_id}",
+     "openapi/_original/hiro-stacks-blockchain-api-openapi.yaml#GET /extended/v1/{pox}/tx/{tx_id}",
+     "openapi/_original/hiro-stacks-blockchain-api-openapi.yaml#GET /extended/v2/addresses/{address}/transactions",
+     "openapi/_original/hiro-stacks-blockchain-api-openapi.yaml#GET /extended/v2/blocks/{height_or_hash}/transactions"
+    ]
+   },
+   "layerzero": {
+    "segments": [
+     "tx"
+    ],
+    "operations": [
+     "GET item"
+    ],
+    "properties": {
+     "pathway": "object",
+     "source": "object",
+     "destination": null,
+     "verification": "object",
+     "guid": "string",
+     "config": "object",
+     "status": "object",
+     "created": "string",
+     "updated": "string"
+    },
+    "evidence": [
+     "openapi/_original/scan-mainnet.json#GET /messages/tx/{tx}",
+     "openapi/_original/scan-testnet.json#GET /messages/tx/{tx}"
+    ]
+   },
+   "lighter": {
+    "segments": [
+     "tx"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "code": "integer",
+     "message": "string",
+     "hash": "string",
+     "type": "integer",
+     "info": "string",
+     "event_info": "string",
+     "status": "integer",
+     "transaction_index": "integer",
+     "l1_address": "string",
+     "account_index": "integer",
+     "nonce": "integer",
+     "expire_at": "integer",
+     "block_height": "integer",
+     "queued_at": "integer",
+     "executed_at": "integer",
+     "sequence_index": "integer",
+     "parent_hash": "string",
+     "api_key_index": "integer",
+     "transaction_time": "integer",
+     "committed_at": "integer",
+     "verified_at": "integer"
+    },
+    "evidence": [
+     "openapi/_original/lighter-openapi.json#GET /api/v1/tx"
+    ]
+   },
+   "litecoin": {
+    "segments": [
+     "tx",
+     "txs"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "txid": "string",
+     "hash": "string",
+     "size": "integer",
+     "vsize": "integer",
+     "weight": "integer",
+     "version": "integer",
+     "locktime": "integer",
+     "vin": "array",
+     "vout": "array",
+     "blockhash": "string",
+     "confirmations": "integer",
+     "time": "integer",
+     "blocktime": "integer",
+     "sigops": "integer",
+     "fee": "integer",
+     "status": "object"
+    },
+    "evidence": [
+     "openapi/_original/litecoin-core-rest.yml#GET /rest/tx/{txHash}.json",
+     "openapi/_original/litecoin-space-rest.yml#GET /address/{address}/txs",
+     "openapi/_original/litecoin-space-rest.yml#GET /block/{hash}/txs/{startIndex}",
+     "openapi/_original/litecoin-space-rest.yml#GET /tx/{txid}",
+     "openapi/_original/litecoin-space-rest.yml#POST /tx"
+    ]
+   },
+   "magic-eden": {
+    "segments": [
+     "tx"
+    ],
+    "operations": [
+     "POST item"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/magic-eden-openapi.yaml#POST /v2/tx/{txId}"
+    ]
+   },
+   "near": {
+    "segments": [
+     "tx"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "receipts": "array",
+     "receipts_outcome": "array",
+     "status": null,
+     "transaction": null,
+     "transaction_outcome": null,
+     "final_execution_status": null,
+     "id": "string",
+     "jsonrpc": "string",
+     "method": "string",
+     "params": "object"
+    },
+    "evidence": [
+     "openapi/_original/near-rpc-api.json#POST /tx",
+     "openapi/_original/openapi.yml#POST /tx"
+    ]
+   },
+   "oumla-ltd": {
+    "segments": [
+     "tx"
+    ],
+    "operations": [
+     "GET item"
+    ],
+    "properties": {
+     "blockHash": "string",
+     "blockNumber": "string",
+     "contractAddress": "string",
+     "cumulativeGasUsed": "string",
+     "effectiveGasPrice": "string",
+     "from": "string",
+     "gasUsed": "string",
+     "logs": "array",
+     "logsBloom": "string",
+     "status": "number",
+     "to": "string",
+     "transactionHash": "string",
+     "transactionIndex": "number",
+     "type": "number"
+    },
+    "evidence": [
+     "openapi/_original/oumla-ltd-openapi-original.json#GET /api/v1/contract-interactions/network/{networkId}/tx/{txId}"
+    ]
+   },
+   "pocket-network": {
+    "segments": [
+     "txs",
+     "tx"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "tx_bytes": "string",
+     "mode": "string"
+    },
+    "evidence": [
+     "openapi/_original/pocket-network-cometbft-rpc-api-openapi.yml#GET /tx",
+     "openapi/_original/pocket-network-shannon-rpc-api-openapi.yml#GET /cosmos/tx/v1beta1/txs/{hash}",
+     "openapi/_original/pocket-network-shannon-rpc-api-openapi.yml#POST /cosmos/tx/v1beta1/txs"
+    ]
+   },
+   "ripple-labs": {
+    "segments": [
+     "transactions"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "id": "string",
+     "walletId": "string",
+     "vaultId": "string",
+     "createdBy": "string",
+     "createdAt": "string",
+     "updatedAt": "string",
+     "attributes": "object",
+     "status": null,
+     "action": null,
+     "externalId": "string",
+     "correlationId": "string",
+     "asset": "object",
+     "feeAsset": "object",
+     "blockchain": "string",
+     "destinationAddress": "string",
+     "destination": "object",
+     "originAddress": "string",
+     "origin": "object",
+     "qty": "string",
+     "feeQtyLimit": "string",
+     "sequence": "string",
+     "encodedTransaction": "string",
+     "signOnly": "boolean",
+     "config": "object",
+     "freezeInfo": null,
+     "feeQty": "string",
+     "hash": "string",
+     "signature": "string",
+     "transactionType": "string",
+     "reasons": "array",
+     "canonicalSignature": "string",
+     "signedTransaction": "string",
+     "proposedAssetChanges": "array",
+     "confirmedAssetChanges": "array",
+     "expiresAt": "string",
+     "problems": "array",
+     "signingPayloads": "array"
+    },
+    "evidence": [
+     "openapi/_original/ripple-labs-palisade-wallet-openapi-original.yml#GET /v2/vaults/{vaultId}/wallets/{walletId}/transactions",
+     "openapi/_original/ripple-labs-palisade-wallet-openapi-original.yml#GET /v2/vaults/{vaultId}/wallets/{walletId}/transactions/{transactionId}"
+    ]
+   },
+   "sei": {
+    "segments": [
+     "txs",
+     "tx"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "txs": "array",
+     "tx_responses": "array",
+     "pagination": "object",
+     "height": "string",
+     "txhash": "string",
+     "codespace": "string",
+     "code": "integer",
+     "data": "string",
+     "raw_log": "string",
+     "logs": "array",
+     "info": "string",
+     "gas_wanted": "string",
+     "gas_used": "string",
+     "tx": "object",
+     "timestamp": "string",
+     "events": "array",
+     "tx_bytes": "string",
+     "mode": "string",
+     "tx_response": "object",
+     "hash": "string",
+     "index": "integer",
+     "tx_result": "object"
+    },
+    "evidence": [
+     "openapi/_original/sei-cosmos-rest-api.yml#GET /cosmos/tx/v1beta1/txs",
+     "openapi/_original/sei-cosmos-rest-api.yml#GET /cosmos/tx/v1beta1/txs/{hash}",
+     "openapi/_original/sei-cosmos-rest-api.yml#POST /cosmos/tx/v1beta1/txs",
+     "openapi/_original/sei-tendermint-rpc.yml#GET /tx"
+    ]
+   },
+   "shapeshift": {
+    "segments": [
+     "txs",
+     "tx"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "txid": "string",
+     "blockHash": "string",
+     "blockHeight": "number",
+     "timestamp": "number",
+     "vin": "array",
+     "vout": "array",
+     "confirmations": "number",
+     "value": "string",
+     "fee": "string",
+     "hex": "string",
+     "from": "string",
+     "to": "string",
+     "gasLimit": "string",
+     "gasUsed": "string",
+     "gasPrice": "string",
+     "status": "number",
+     "inputData": "string",
+     "tokenTransfers": "array",
+     "internalTxs": "array",
+     "description": "string",
+     "type": "string",
+     "source": "string",
+     "feePayer": "string",
+     "signature": "string",
+     "slot": "number",
+     "nativeTransfers": "array",
+     "accountData": "array",
+     "transactionError": null,
+     "instructions": "array",
+     "events": "object"
+    },
+    "evidence": [
+     "openapi/_original/shapeshift-bitcoin-openapi.json#GET /api/v1/account/{pubkey}/txs",
+     "openapi/_original/shapeshift-bitcoin-openapi.json#GET /api/v1/tx/{txid}",
+     "openapi/_original/shapeshift-ethereum-openapi.json#GET /api/v1/account/{pubkey}/txs",
+     "openapi/_original/shapeshift-ethereum-openapi.json#GET /api/v1/tx/{txid}",
+     "openapi/_original/shapeshift-solana-openapi.json#GET /api/v1/account/{pubkey}/txs",
+     "openapi/_original/shapeshift-solana-openapi.json#GET /api/v1/tx/{txid}"
+    ]
+   },
+   "stellar": {
+    "segments": [
+     "transactions"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "_links": "object",
+     "memo": "string",
+     "id": "string",
+     "paging_token": "string",
+     "successful": "boolean",
+     "hash": "string",
+     "ledger": "integer",
+     "created_at": "string",
+     "source_account": "string",
+     "account_muxed": "string",
+     "account_muxed_id": "string",
+     "source_account_sequence": "string",
+     "fee_account": "string",
+     "fee_account_muxed": "string",
+     "fee_account_muxed_id": "string",
+     "fee_charged": "string",
+     "max_fee": "string",
+     "operation_count": "integer",
+     "envelope_xdr": "string",
+     "result_xdr": "string",
+     "result_meta_xdr": "string",
+     "fee_meta_xdr": "string",
+     "memo_type": "string",
+     "signatures": "array",
+     "preconditions": "object",
+     "fee_bump_transaction": "object",
+     "inner_transaction": "object"
+    },
+    "evidence": [
+     "openapi/_original/stellar-horizon-api.yml#GET /accounts/{account_id}/transactions"
+    ]
+   },
+   "supra": {
+    "segments": [
+     "transactions"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "authenticator": "object",
+     "block_header": null,
+     "hash": "string",
+     "header": "object",
+     "payload": "object",
+     "output": null,
+     "status": "string",
+     "txn_type": "string"
+    },
+    "evidence": [
+     "openapi/_original/supra-rpc-node-openapi-original.json#GET /rpc/v2/accounts/{address}/transactions",
+     "openapi/_original/supra-rpc-node-openapi-original.json#GET /rpc/v3/accounts/{address}/transactions",
+     "openapi/_original/supra-rpc-node-openapi.yml#GET /rpc/v2/accounts/{address}/transactions",
+     "openapi/_original/supra-rpc-node-openapi.yml#GET /rpc/v3/accounts/{address}/transactions"
+    ]
+   },
+   "surf": {
+    "segments": [
+     "tx"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "accessList": [
+      "array",
+      "null"
+     ],
+     "blobVersionedHashes": [
+      "array",
+      "null"
+     ],
+     "blockHash": [
+      "string",
+      "null"
+     ],
+     "blockNumber": [
+      "string",
+      "null"
+     ],
+     "chainId": "string",
+     "from": "string",
+     "from_label": "object",
+     "gas": "string",
+     "gasPrice": "string",
+     "hash": "string",
+     "input": "string",
+     "maxFeePerBlobGas": "string",
+     "maxFeePerGas": "string",
+     "maxPriorityFeePerGas": "string",
+     "nonce": "string",
+     "r": "string",
+     "s": "string",
+     "to": [
+      "string",
+      "null"
+     ],
+     "to_label": "object",
+     "transactionIndex": [
+      "string",
+      "null"
+     ],
+     "type": "string",
+     "v": "string",
+     "value": "string",
+     "yParity": "string"
+    },
+    "evidence": [
+     "openapi/_original/surf-openapi-original.json#GET /gateway/v1/onchain/tx"
+    ]
+   },
+   "tendermint": {
+    "segments": [
+     "tx"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "hash": "string",
+     "height": "string",
+     "index": "integer",
+     "tx_result": "object",
+     "tx": "string"
+    },
+    "evidence": [
+     "openapi/_original/tendermint-rpc-openapi-original.yml#GET /tx"
+    ]
+   },
+   "thorchain": {
+    "segments": [
+     "tx"
+    ],
+    "operations": [
+     "GET item"
+    ],
+    "properties": {
+     "observed_tx": "object",
+     "consensus_height": "integer",
+     "finalised_height": "integer",
+     "outbound_height": "integer",
+     "keysign_metric": "object"
+    },
+    "evidence": [
+     "openapi/_original/thorchain-thornode-openapi.yaml#GET /thorchain/tx/{hash}"
+    ]
+   },
+   "top-group": {
+    "segments": [
+     "transactions"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "hash": "string",
+     "lt": "integer",
+     "account": "object",
+     "success": "boolean",
+     "utime": "integer",
+     "orig_status": "string",
+     "end_status": "string",
+     "total_fees": "integer",
+     "end_balance": "integer",
+     "transaction_type": "string",
+     "state_update_old": "string",
+     "state_update_new": "string",
+     "in_msg": "object",
+     "out_msgs": "array",
+     "block": "string",
+     "prev_trans_hash": "string",
+     "prev_trans_lt": "integer",
+     "compute_phase": "object",
+     "storage_phase": "object",
+     "credit_phase": "object",
+     "action_phase": "object",
+     "bounce_phase": "string",
+     "aborted": "boolean",
+     "destroyed": "boolean",
+     "raw": "string"
+    },
+    "evidence": [
+     "openapi/_original/top-group-tonapi-openapi.yml#GET /v2/blockchain/accounts/{account_id}/transactions",
+     "openapi/_original/top-group-tonapi-openapi.yml#GET /v2/blockchain/blocks/{block_id}/transactions"
+    ]
+   },
+   "zerion": {
+    "segments": [
+     "transactions"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "type": "string",
+     "id": "string",
+     "attributes": "object",
+     "relationships": "object"
+    },
+    "evidence": [
+     "openapi/_original/zerion-openapi-original.yml#GET /v1/wallets/{address}/transactions/"
+    ]
+   }
+  },
+  "token": {
+   "aeternity": {
+    "segments": [
+     "tokens"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "contract_id": "string",
+     "owner_id": "string",
+     "token_id": "integer",
+     "next": "string",
+     "prev": "string",
+     "log_idx": "integer",
+     "tx_hash": "string",
+     "metadata": "object"
+    },
+    "evidence": [
+     "openapi/_original/aeternity-middleware-openapi.yml#GET /accounts/{accountId}/aex141/tokens",
+     "openapi/_original/aeternity-middleware-openapi.yml#GET /aex141/{contractId}/templates/{templateId}/tokens",
+     "openapi/_original/aeternity-middleware-openapi.yml#GET /aex141/{contractId}/tokens",
+     "openapi/_original/aeternity-middleware-openapi.yml#GET /aex141/{contractId}/tokens/{tokenId}",
+     "openapi/_original/aeternity-middleware-v3-openapi.json#GET /accounts/{accountId}/aex141/tokens",
+     "openapi/_original/aeternity-middleware-v3-openapi.json#GET /aex141/{contractId}/templates/{templateId}/tokens",
+     "openapi/_original/aeternity-middleware-v3-openapi.json#GET /aex141/{contractId}/tokens",
+     "openapi/_original/aeternity-middleware-v3-openapi.json#GET /aex141/{contractId}/tokens/{tokenId}"
+    ]
+   },
+   "agentexchange-work": {
+    "segments": [
+     "token"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "recommendation": "string",
+     "security": "object",
+     "market": "object",
+     "name": "string",
+     "symbol": "string",
+     "decimals": "number",
+     "total_supply": "number",
+     "is_erc20": "boolean",
+     "decimals_assumed": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/agentexchange-work-api-store-openapi.json#GET /chain/token",
+     "openapi/_original/agentexchange-work-api-store-openapi.json#GET /connect/token"
+    ]
+   },
+   "anchor-x402": {
+    "segments": [
+     "token"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "symbol": null,
+     "name": null,
+     "contract": null,
+     "chain": null,
+     "usd": "number",
+     "usd_24h_change_pct": null,
+     "market_cap_usd": null,
+     "source": "string",
+     "fetched_at": "integer",
+     "age_seconds": "integer"
+    },
+    "evidence": [
+     "openapi/_original/anchor-x402-openapi.json#POST /v1/price/token"
+    ]
+   },
+   "arkham": {
+    "segments": [
+     "token"
+    ],
+    "operations": [
+     "GET item"
+    ],
+    "properties": {
+     "deployments": "array",
+     "identifier": "object",
+     "name": "string",
+     "price": "number",
+     "price24hAgo": "number",
+     "symbol": "string",
+     "tvTicker": "string"
+    },
+    "evidence": [
+     "openapi/_original/arkham-openapi-original.json#GET /intelligence/token/{id}"
+    ]
+   },
+   "ava-labs": {
+    "segments": [
+     "tokens"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "address": "string",
+     "name": "string",
+     "symbol": "string",
+     "ercType": "string",
+     "tokenId": "string",
+     "tokenUri": "string",
+     "metadata": "object",
+     "ownerAddress": "string"
+    },
+    "evidence": [
+     "openapi/_original/ava-labs-data-api-openapi.yml#GET /v1/chains/{chainId}/nfts/collections/{address}/tokens",
+     "openapi/_original/ava-labs-data-api-openapi.yml#GET /v1/chains/{chainId}/nfts/collections/{address}/tokens/{tokenId}"
+    ]
+   },
+   "ava-protocol": {
+    "segments": [
+     "tokens"
+    ],
+    "operations": [
+     "GET item"
+    ],
+    "properties": {
+     "found": "boolean",
+     "address": "string",
+     "chainId": "integer",
+     "name": "string",
+     "symbol": "string",
+     "decimals": "integer",
+     "source": "string"
+    },
+    "evidence": [
+     "openapi/_original/ava-protocol-avs-openapi-original.yml#GET /tokens/{address}"
+    ]
+   },
+   "avalanche": {
+    "segments": [
+     "tokens"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "address": "string",
+     "name": "string",
+     "symbol": "string",
+     "ercType": "string",
+     "tokenId": "string",
+     "tokenUri": "string",
+     "metadata": "object",
+     "ownerAddress": "string"
+    },
+    "evidence": [
+     "openapi/_original/data-api.json#GET /v1/chains/{chainId}/nfts/collections/{address}/tokens",
+     "openapi/_original/data-api.json#GET /v1/chains/{chainId}/nfts/collections/{address}/tokens/{tokenId}"
+    ]
+   },
+   "b3": {
+    "segments": [
+     "tokens",
+     "erc20"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "token_instance": "object",
+     "value": "string",
+     "token_id": "string",
+     "token": "object",
+     "circulating_market_cap": "string",
+     "icon_url": "string",
+     "name": "string",
+     "decimals": "string",
+     "symbol": "string",
+     "address": "string",
+     "type": "string",
+     "holders": "string",
+     "exchange_rate": "string",
+     "total_supply": "string",
+     "chain_id": "number",
+     "token_address": "string",
+     "balance": "string",
+     "price_data": "object"
+    },
+    "evidence": [
+     "openapi/_original/b3-data-api-openapi.json#GET /blockscout/addresses/{address_hash}/tokens",
+     "openapi/_original/b3-data-api-openapi.json#GET /blockscout/tokens",
+     "openapi/_original/b3-data-api-openapi.json#GET /blockscout/tokens/{address_hash}",
+     "openapi/_original/b3-data-api-openapi.json#GET /insights/v1/tokens",
+     "openapi/_original/b3-data-api-openapi.json#GET /insights/v1/tokens/erc20/{ownerAddress}"
+    ]
+   },
+   "barnbridge": {
+    "segments": [
+     "tokens"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "status": "integer",
+     "data": null,
+     "meta": "object"
+    },
+    "evidence": [
+     "openapi/_original/openapi.yml#GET /api/governance/treasury/tokens"
+    ]
+   },
+   "bitski": {
+    "segments": [
+     "tokens"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "auctions": "array",
+     "contracts": "array",
+     "redemptionCodes": "array",
+     "tokens": "array",
+     "auctionContractId": "string",
+     "endsAt": "string",
+     "id": "string",
+     "startsAt": "string",
+     "status": "string",
+     "tokenId": "string",
+     "initialOwner": "string",
+     "token": "object",
+     "transaction": null
+    },
+    "evidence": [
+     "openapi/_original/bitski-nft-service-openapi-original.json#GET /v1/apps/{app_id}/tokens",
+     "openapi/_original/bitski-nft-service-openapi-original.json#GET /v1/apps/{app_id}/tokens/{token_id}",
+     "openapi/_original/bitski-nft-service-openapi-original.json#PATCH /v1/apps/{app_id}/tokens/{token_id}",
+     "openapi/_original/bitski-nft-service-openapi-original.json#POST /v1/apps/{app_id}/tokens"
+    ]
+   },
+   "blockscout": {
+    "segments": [
+     "tokens"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "token_instance": "object",
+     "value": "string",
+     "token_id": "string",
+     "token": "object",
+     "circulating_market_cap": "string",
+     "icon_url": "string",
+     "name": "string",
+     "decimals": "string",
+     "symbol": "string",
+     "address_hash": "string",
+     "type": "string",
+     "holders_count": "string",
+     "exchange_rate": "string",
+     "total_supply": "string"
+    },
+    "evidence": [
+     "openapi/_original/blockscout-openapi.yml#GET /addresses/{address_hash}/tokens",
+     "openapi/_original/blockscout-openapi.yml#GET /tokens",
+     "openapi/_original/blockscout-openapi.yml#GET /tokens/{address_hash}"
+    ]
+   },
+   "chainlens": {
+    "segments": [
+     "tokens",
+     "token"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/chainlens-openapi.yml#GET /accounts/{addressHash}/tokens",
+     "openapi/_original/chainlens-openapi.yml#GET /token/{addressHash}",
+     "openapi/_original/chainlens-openapi.yml#GET /tokens",
+     "openapi/_original/chainlens-openapi.yml#GET /tokens/{addressHash}"
+    ]
+   },
+   "coinbase": {
+    "segments": [
+     "token"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "token": "string",
+     "address": "string",
+     "blockchains": "array",
+     "assets": "array",
+     "supported_networks": "array"
+    },
+    "evidence": [
+     "openapi/_original/coinbase-onramp-openapi.yml#POST /token"
+    ]
+   },
+   "coinflow": {
+    "segments": [
+     "token"
+    ],
+    "operations": [
+     "POST collection",
+     "POST item"
+    ],
+    "properties": {
+     "paymentId": "string",
+     "email": "string",
+     "phone": "string",
+     "customPayInFees": "array",
+     "customerInfo": null,
+     "webhookInfo": "object",
+     "feePercentage": "number",
+     "fixedFee": "object",
+     "subtotal": null,
+     "jwtToken": "string",
+     "rent": "object",
+     "transactionData": null,
+     "stellarTransaction": "string",
+     "settlementType": "string",
+     "destinationAuthKey": "string",
+     "customerUsdcTransferData": "object",
+     "customerUsdcTransferDataV2": "object",
+     "userLocation": "object",
+     "overrideChargebackProtectionDecision": "boolean",
+     "doNotReviewChargebackProtection": "boolean",
+     "merchantId": "string",
+     "token": "string",
+     "chargebackProtectionData": "array",
+     "redemptionCheck": "boolean",
+     "authOnly": "boolean",
+     "threeDsChallengePreference": "string",
+     "presentment": "string",
+     "returnUrl": "string",
+     "cancelUrl": "string",
+     "simulateAuthorizationFailure": "boolean",
+     "simulateCaptureFailure": "boolean",
+     "simulateRefundFailure": "boolean",
+     "authentication3DS": null,
+     "chargebackProtectionAccountType": "string",
+     "accountFundingTransaction": "object",
+     "statementDescriptor": "string",
+     "address": "object",
+     "account": "string",
+     "sortCode": "string",
+     "expires": "string",
+     "amount": "object",
+     "accountHolderName": "string",
+     "reference": "string",
+     "account_number": "string",
+     "wireRoutingNumber": "string",
+     "recipientName": "string",
+     "memo": "string",
+     "accountNumber": "string",
+     "planCode": "string"
+    },
+    "evidence": [
+     "openapi/_original/coinflow-openapi-original.json#POST /checkout/iban/token",
+     "openapi/_original/coinflow-openapi-original.json#POST /checkout/interac/token",
+     "openapi/_original/coinflow-openapi-original.json#POST /checkout/paypal/token/{merchantId}",
+     "openapi/_original/coinflow-openapi-original.json#POST /checkout/token/{merchantId}",
+     "openapi/_original/coinflow-openapi-original.json#POST /checkout/venmo/token/{merchantId}",
+     "openapi/_original/coinflow-openapi-original.json#POST /checkout/wire/token",
+     "openapi/_original/coinflow-openapi-original.json#POST /subscription/{merchantId}/subscribers/token"
+    ]
+   },
+   "coingecko": {
+    "segments": [
+     "tokens"
+    ],
+    "operations": [
+     "GET item"
+    ],
+    "properties": {
+     "id": "string",
+     "type": "string",
+     "attributes": "object"
+    },
+    "evidence": [
+     "openapi/_original/coingecko-onchain-dex-api-openapi.yml#GET /onchain/networks/{network}/tokens/{address}"
+    ]
+   },
+   "crossmint": {
+    "segments": [
+     "tokens"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "creditCardPayment": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/crossmint-openapi.yml#GET /2024-09-26/tokens",
+     "openapi/_original/crossmint-openapi.yml#GET /2024-09-26/tokens/{tokenLocator}",
+     "openapi/_original/crossmint-openapi.yml#GET /v1-alpha2/tokens",
+     "openapi/_original/crossmint-openapi.yml#GET /v1-alpha2/tokens/{tokenLocator}"
+    ]
+   },
+   "crunchdao": {
+    "segments": [
+     "tokens"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "id": "integer",
+     "project": "object",
+     "plain": "string",
+     "type": "string",
+     "createdAt": "string",
+     "validUntil": "string",
+     "lastUsedAt": "string",
+     "cloneToken": "string"
+    },
+    "evidence": [
+     "openapi/_original/crunchdao-tournament-openapi.json#POST /v3/competitions/{competitionIdentifier}/projects/{userLogin}/{projectIdentifier}/tokens"
+    ]
+   },
+   "cubist": {
+    "segments": [
+     "tokens"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "expiration": "integer",
+     "org_id": "string",
+     "refresh_token": "string",
+     "session_info": "object",
+     "token": "string",
+     "auth_lifetime": "integer",
+     "grace_lifetime": "integer",
+     "refresh_lifetime": "integer",
+     "session_lifetime": "integer",
+     "client": "object",
+     "os_info": "object",
+     "purpose": "string",
+     "scopes": "array"
+    },
+    "evidence": [
+     "openapi/_original/cubist-cubesigner-openapi-original.json#POST /v0/org/{org_id}/roles/{role_id}/tokens"
+    ]
+   },
+   "debank": {
+    "segments": [
+     "token"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "id": "string",
+     "chain": "string",
+     "name": "string",
+     "symbol": "string",
+     "display_symbol": "string",
+     "optimized_symbol": "string",
+     "decimals": "integer",
+     "logo_url": "string",
+     "is_verified": "boolean",
+     "is_core": "boolean",
+     "price": "number",
+     "time_at": "integer",
+     "amount": "number",
+     "raw_amount": "integer"
+    },
+    "evidence": [
+     "openapi/_original/debank-pro-openapi-original.json#GET /cloud/token",
+     "openapi/_original/debank-pro-openapi-original.json#GET /v1/token",
+     "openapi/_original/debank-pro-openapi-original.json#GET /v1/user/token",
+     "openapi/_original/debank-pro-openapi.yml#GET /cloud/token",
+     "openapi/_original/debank-pro-openapi.yml#GET /v1/token",
+     "openapi/_original/debank-pro-openapi.yml#GET /v1/user/token"
+    ]
+   },
+   "dflow": {
+    "segments": [
+     "tokens"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/dflow-openapi-original.json#GET /tokens"
+    ]
+   },
+   "dynamic-labs": {
+    "segments": [
+     "tokens",
+     "token"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "string",
+     "token": "string",
+     "createdAt": "string",
+     "expiresAt": "string",
+     "symbol": "string",
+     "tokenAddresses": "array",
+     "checksum": "string",
+     "createdBy": "object",
+     "note": "string",
+     "projectEnvironmentId": "string",
+     "projectEnvironment": "object",
+     "scopes": "array",
+     "rawToken": "string",
+     "active": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/dynamic-labs-openapi.yml#DELETE /environments/{environmentId}/tokens/{tokenId}",
+     "openapi/_original/dynamic-labs-openapi.yml#GET /environments/{environmentId}/tokens",
+     "openapi/_original/dynamic-labs-openapi.yml#POST /environments/{environmentId}/tokens",
+     "openapi/_original/dynamic-xyz-chains-api-openapi.yml#GET /chains/{chainName}/tokens",
+     "openapi/_original/dynamic-xyz-sdk-api-openapi.yml#GET /sdk/{environmentId}/waas/keyShares/backup/token",
+     "openapi/_original/dynamic-xyz-tokens-api-openapi.yml#DELETE /environments/{environmentId}/tokens/{tokenId}",
+     "openapi/_original/dynamic-xyz-tokens-api-openapi.yml#GET /environments/{environmentId}/tokens",
+     "openapi/_original/dynamic-xyz-tokens-api-openapi.yml#POST /environments/{environmentId}/tokens",
+     "openapi/_original/dynamic-xyz-userapitokens-api-openapi.yml#DELETE /user/tokens/{tokenId}",
+     "openapi/_original/dynamic-xyz-userapitokens-api-openapi.yml#GET /user/tokens",
+     "openapi/_original/dynamic-xyz-userapitokens-api-openapi.yml#POST /user/tokens"
+    ]
+   },
+   "dynamic-xyz": {
+    "segments": [
+     "tokens",
+     "token"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "checksum": "string",
+     "createdBy": "object",
+     "createdAt": "string",
+     "note": "string",
+     "projectEnvironmentId": "string",
+     "projectEnvironment": "object",
+     "scopes": "array",
+     "rawToken": "string",
+     "active": "boolean",
+     "name": "string",
+     "symbol": "string",
+     "tokenAddresses": "array",
+     "token": "string"
+    },
+    "evidence": [
+     "openapi/_original/dynamic-xyz-openapi.yml#DELETE /environments/{environmentId}/tokens/{tokenId}",
+     "openapi/_original/dynamic-xyz-openapi.yml#DELETE /user/tokens/{tokenId}",
+     "openapi/_original/dynamic-xyz-openapi.yml#GET /chains/{chainName}/tokens",
+     "openapi/_original/dynamic-xyz-openapi.yml#GET /environments/{environmentId}/tokens",
+     "openapi/_original/dynamic-xyz-openapi.yml#GET /sdk/{environmentId}/waas/keyShares/backup/token",
+     "openapi/_original/dynamic-xyz-openapi.yml#GET /user/tokens",
+     "openapi/_original/dynamic-xyz-openapi.yml#POST /environments/{environmentId}/tokens",
+     "openapi/_original/dynamic-xyz-openapi.yml#POST /user/tokens"
+    ]
+   },
+   "enso": {
+    "segments": [
+     "tokens"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "meta": null,
+     "address": "string",
+     "chainId": "number",
+     "type": "string",
+     "decimals": "number",
+     "symbol": "string",
+     "name": "string",
+     "logosUri": "array",
+     "underlyingTokens": "array",
+     "project": "string",
+     "protocol": "string",
+     "depositType": "number",
+     "redeemType": "number",
+     "apy": "number",
+     "apyBase": "number",
+     "apyReward": "number",
+     "borrowApyBase": "number",
+     "borrowApyReward": "number",
+     "tvl": "number",
+     "primaryAddress": "string"
+    },
+    "evidence": [
+     "openapi/_original/enso-openapi-original.json#GET /api/v1/tokens"
+    ]
+   },
+   "euler": {
+    "segments": [
+     "tokens"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "chainId": "integer",
+     "address": "string",
+     "name": "string",
+     "symbol": "string",
+     "decimals": "integer",
+     "logoURI": "string",
+     "priceUsd": "number",
+     "metadata": "object",
+     "groups": "array",
+     "tags": "array"
+    },
+    "evidence": [
+     "openapi/_original/euler-v3-data-api.json#GET /v3/tokens"
+    ]
+   },
+   "footprint": {
+    "segments": [
+     "tokens",
+     "token"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "token_address": "string",
+     "token_symbol": "string",
+     "token_name": "string",
+     "chain": "string",
+     "price_usd": "number",
+     "market_cap_usd": "number",
+     "total_supply": "number",
+     "circulating_supply": "number",
+     "holder_count": "integer",
+     "updated_at": "string",
+     "wallet_address": "string",
+     "eligible": "boolean",
+     "current_balance": "number",
+     "required_balance": "number",
+     "checked_at": "string"
+    },
+    "evidence": [
+     "openapi/_original/openapi.yml#GET /api/v1/tokens/{token_address}",
+     "openapi/_original/openapi.yml#GET /api/v1/wallet/{wallet_address}/eligibility/token"
+    ]
+   },
+   "frax": {
+    "segments": [
+     "tokens"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "address": "string",
+     "name": "string",
+     "decimals": "number",
+     "symbol": "string",
+     "chain": "string",
+     "tvl": "number",
+     "price": "number",
+     "volumeAdd24H": "number",
+     "volumeAdd7D": "number",
+     "volumeAddAllTime": "number",
+     "volumeRemove24H": "number",
+     "volumeRemove7D": "number",
+     "volumeRemoveAllTime": "number",
+     "volumeSwap24H": "number",
+     "volumeSwap7D": "number",
+     "volumeSwapAllTime": "number",
+     "fees24H": "number",
+     "fees7D": "number",
+     "feesAllTime": "number",
+     "swapTransactionCount24H": "number",
+     "swapTransactionCount7D": "number",
+     "swapTransactionCountAllTime": "number",
+     "liquidityTransactionCount24H": "number",
+     "liquidityTransactionCount7D": "number",
+     "liquidityTransactionCountAllTime": "number"
+    },
+    "evidence": [
+     "openapi/_original/frax-finance-v2.json#GET /v2/fraxswap/tokens",
+     "openapi/_original/frax-finance-v2.json#GET /v2/fraxswap/tokens/{tokenAddress}"
+    ]
+   },
+   "gala-games": {
+    "segments": [
+     "tokens"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "collection": "string",
+     "category": "string",
+     "type": "string",
+     "additionalKey": "string",
+     "swappable": "boolean",
+     "trending": "boolean",
+     "symbol": "string",
+     "name": "string",
+     "priceSymbol": "string",
+     "decimals": "integer",
+     "currentPrices": "object"
+    },
+    "evidence": [
+     "openapi/_original/gala-games-galaconnect-openapi.json#GET /v1/tokens"
+    ]
+   },
+   "gmx": {
+    "segments": [
+     "tokens"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "searchAliases": "array",
+     "isStaking": "boolean",
+     "isPlatformTradingToken": "boolean",
+     "isPlatformToken": "boolean",
+     "isV1Available": "boolean",
+     "isChartDisabled": "boolean",
+     "isTempHidden": "boolean",
+     "isSynthetic": "boolean",
+     "isStable": "boolean",
+     "isShortable": "boolean",
+     "isWrapped": "boolean",
+     "isNative": "boolean",
+     "isUsdg": "boolean",
+     "contractVersion": "string",
+     "isPermitDisabled": "boolean",
+     "isPermitSupported": "boolean",
+     "categories": "array",
+     "imageUrl": "string",
+     "reservesUrl": "string",
+     "explorerUrl": "string",
+     "explorerSymbol": "string",
+     "metamaskSymbol": "string",
+     "wrappedAddress": "string",
+     "visualPrefix": "string",
+     "visualMultiplier": "number",
+     "address": "string",
+     "decimals": "number",
+     "baseSymbol": "string",
+     "assetSymbol": "string",
+     "symbol": "string",
+     "name": "string"
+    },
+    "evidence": [
+     "openapi/_original/openapi.json#GET /tokens"
+    ]
+   },
+   "gnosis-safe": {
+    "segments": [
+     "tokens"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "type": "string",
+     "address": "string",
+     "name": "string",
+     "symbol": "string",
+     "decimals": "integer",
+     "logoUri": "string",
+     "trusted": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/gnosis-safe-transaction-service-openapi.json#GET /tx-service/eth/api/v1/tokens/",
+     "openapi/_original/gnosis-safe-transaction-service-openapi.json#GET /tx-service/eth/api/v1/tokens/{address}/"
+    ]
+   },
+   "gte": {
+    "segments": [
+     "tokens"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "address": "string",
+     "decimals": "integer",
+     "name": "string",
+     "symbol": "string",
+     "totalSupply": "number",
+     "logoUri": "string",
+     "priceUsd": "number",
+     "volume1HrUsd": "number",
+     "volume24HrUsd": "number",
+     "marketCapUsd": "number",
+     "createdAt": "integer",
+     "numHolders": "integer",
+     "creator": "string",
+     "description": "string",
+     "displayMarkets": "array",
+     "socials": "object"
+    },
+    "evidence": [
+     "openapi/_original/gte-openapi-original.yml#GET /tokens",
+     "openapi/_original/gte-openapi-original.yml#GET /tokens/{token_address}"
+    ]
+   },
+   "hedera": {
+    "segments": [
+     "tokens"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "automatic_association": "boolean",
+     "balance": "integer",
+     "created_timestamp": "string",
+     "decimals": "integer",
+     "freeze_status": "string",
+     "kyc_status": "string",
+     "token_id": [
+      "string",
+      "null"
+     ],
+     "amount": "integer",
+     "amount_granted": "integer",
+     "owner": [
+      "string",
+      "null"
+     ],
+     "spender": [
+      "string",
+      "null"
+     ],
+     "timestamp": "object",
+     "admin_key": [
+      "object",
+      "null"
+     ],
+     "metadata": "string",
+     "name": "string",
+     "symbol": "string",
+     "type": "string",
+     "auto_renew_account": [
+      "string",
+      "null"
+     ],
+     "auto_renew_period": [
+      "integer",
+      "null"
+     ],
+     "deleted": [
+      "boolean",
+      "null"
+     ],
+     "expiry_timestamp": [
+      "integer",
+      "null"
+     ],
+     "fee_schedule_key": [
+      "object",
+      "null"
+     ],
+     "freeze_default": "boolean",
+     "freeze_key": [
+      "object",
+      "null"
+     ],
+     "initial_supply": "string",
+     "kyc_key": [
+      "object",
+      "null"
+     ],
+     "max_supply": "string",
+     "metadata_key": null,
+     "modified_timestamp": "string",
+     "memo": "string",
+     "pause_key": [
+      "object",
+      "null"
+     ],
+     "pause_status": "string",
+     "supply_key": [
+      "object",
+      "null"
+     ],
+     "supply_type": "string",
+     "total_supply": "string",
+     "treasury_account_id": [
+      "string",
+      "null"
+     ],
+     "wipe_key": [
+      "object",
+      "null"
+     ],
+     "custom_fees": "object"
+    },
+    "evidence": [
+     "openapi/_original/openapi.json#GET /api/v1/accounts/{idOrAliasOrEvmAddress}/allowances/tokens",
+     "openapi/_original/openapi.json#GET /api/v1/accounts/{idOrAliasOrEvmAddress}/tokens",
+     "openapi/_original/openapi.json#GET /api/v1/tokens",
+     "openapi/_original/openapi.json#GET /api/v1/tokens/{tokenId}"
+    ]
+   },
+   "hummingbot": {
+    "segments": [
+     "tokens"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "token": "object",
+     "chain": "string",
+     "network": "string",
+     "chainId": "number",
+     "name": "string",
+     "symbol": "string",
+     "address": "string",
+     "decimals": "number",
+     "geckoData": "object",
+     "message": "string",
+     "requiresRestart": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/hummingbot-gateway-openapi-original.json#DELETE /tokens/{address}",
+     "openapi/_original/hummingbot-gateway-openapi-original.json#GET /tokens/",
+     "openapi/_original/hummingbot-gateway-openapi-original.json#GET /tokens/{symbolOrAddress}",
+     "openapi/_original/hummingbot-gateway-openapi-original.json#POST /tokens/"
+    ]
+   },
+   "imgauth-api-di-attestazione-opere-digitali": {
+    "segments": [
+     "token"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "status": "string",
+     "token": "string"
+    },
+    "evidence": [
+     "openapi/_original/imgauth-api-di-attestazione-opere-digitali-openapi-original.json#GET /api/agent/token"
+    ]
+   },
+   "immutable": {
+    "segments": [
+     "tokens"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "chain": "object",
+     "contract_address": "string",
+     "root_contract_address": "string",
+     "root_chain_id": "string",
+     "bridge_used": "string",
+     "symbol": "string",
+     "decimals": "integer",
+     "image_url": "string",
+     "name": "string",
+     "verification_status": "string",
+     "updated_at": "string",
+     "is_canonical": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/immutable-zkevm-openapi.json#GET /v1/chains/{chain_name}/tokens",
+     "openapi/_original/immutable-zkevm-openapi.json#GET /v1/chains/{chain_name}/tokens/{contract_address}"
+    ]
+   },
+   "layerzero": {
+    "segments": [
+     "tokens"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "isSupported": "boolean",
+     "chainKey": "string",
+     "address": "string",
+     "decimals": "number",
+     "symbol": "string",
+     "name": "string"
+    },
+    "evidence": [
+     "openapi/_original/vt-api.json#GET /tokens"
+    ]
+   },
+   "ledger": {
+    "segments": [
+     "tokens"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "account_name": "string",
+     "associated_token_account": "string",
+     "available": "integer",
+     "contract_address": "string",
+     "creation_transaction_hash": "string",
+     "parent_id": "integer",
+     "pending": "integer",
+     "status": "string",
+     "ticker": "string",
+     "name": "string",
+     "parent_currency": "string",
+     "units": "array"
+    },
+    "evidence": [
+     "openapi/_original/ledger-enterprise-vault-openapi-original.yml#GET /accounts/{account_id}/tokens",
+     "openapi/_original/ledger-enterprise-vault-openapi-original.yml#GET /currencies/tokens",
+     "openapi/_original/ledger-enterprise-vault-openapi-original.yml#GET /currencies/{currency_name}/tokens/{contract_address}",
+     "openapi/_original/ledger-enterprise-vault-openapi.yml#GET /accounts/{account_id}/tokens",
+     "openapi/_original/ledger-enterprise-vault-openapi.yml#GET /currencies/tokens",
+     "openapi/_original/ledger-enterprise-vault-openapi.yml#GET /currencies/{currency_name}/tokens/{contract_address}"
+    ]
+   },
+   "lifi": {
+    "segments": [
+     "tokens",
+     "token"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "address": "string",
+     "decimals": "number",
+     "symbol": "string",
+     "chainId": "number",
+     "coinKey": "string",
+     "name": "string",
+     "logoURI": "string",
+     "priceUSD": "string"
+    },
+    "evidence": [
+     "openapi/_original/lifi-openapi-original.yml#GET /v1/token",
+     "openapi/_original/lifi-openapi-original.yml#GET /v1/tokens"
+    ]
+   },
+   "lighter": {
+    "segments": [
+     "tokens"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "token_id": "integer",
+     "api_token": "string",
+     "name": "string",
+     "account_index": "integer",
+     "expiry": "integer",
+     "sub_account_access": "boolean",
+     "revoked": "boolean",
+     "scopes": "string"
+    },
+    "evidence": [
+     "openapi/_original/lighter-openapi.json#GET /api/v1/tokens"
+    ]
+   },
+   "lightspark": {
+    "segments": [
+     "tokens"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "string",
+     "permissions": "array",
+     "clientId": "string",
+     "clientSecret": "string",
+     "expiresAt": "string",
+     "createdAt": "string",
+     "updatedAt": "string"
+    },
+    "evidence": [
+     "openapi/_original/lightspark-openapi.yml#DELETE /tokens/{tokenId}",
+     "openapi/_original/lightspark-openapi.yml#GET /tokens",
+     "openapi/_original/lightspark-openapi.yml#GET /tokens/{tokenId}",
+     "openapi/_original/lightspark-openapi.yml#POST /tokens"
+    ]
+   },
+   "linea": {
+    "segments": [
+     "tokens"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "name": "string",
+     "symbol": "string",
+     "decimals": "number",
+     "logo": "object",
+     "contractAddress": "string",
+     "currentPrice": "object",
+     "priceUpdatedAt": "object",
+     "last24hVariation": "object",
+     "info": null
+    },
+    "evidence": [
+     "openapi/_original/linea-openapi.yml#GET /tokens",
+     "openapi/_original/linea-openapi.yml#GET /tokens/{contractAddress}"
+    ]
+   },
+   "looksrare": {
+    "segments": [
+     "tokens"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "id": "string",
+     "collection": "object",
+     "name": "string",
+     "description": "string",
+     "image": "string",
+     "animationURI": "string",
+     "attributes": "array"
+    },
+    "evidence": [
+     "openapi/_original/looksrare-openapi.json#GET /v1/tokens"
+    ]
+   },
+   "madeonsol": {
+    "segments": [
+     "tokens",
+     "token"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "chain": "string",
+     "tokens": "array",
+     "count": "integer",
+     "sort": "string",
+     "since": "string",
+     "next_since": "string",
+     "note": "string",
+     "after": "string",
+     "has_more": "boolean",
+     "cursor": "string",
+     "next_cursor": "string",
+     "next_after": "string",
+     "scan": "object",
+     "token_address": "string",
+     "symbol": "string",
+     "name": "string",
+     "decimals": "integer",
+     "launchpad": "string",
+     "is_graduated": "boolean",
+     "graduated_pool": "string",
+     "graduated_at": "string",
+     "deployer_address": "string",
+     "deployer_identity_status": "string",
+     "first_seen_at": "string",
+     "token_age_minutes": "integer",
+     "price_usd": "number",
+     "price_native": "number",
+     "price_observed_at": "string",
+     "price_age_seconds": "integer",
+     "price_is_stale": "boolean",
+     "price_updated_at": "string",
+     "market_cap_usd": "number",
+     "fdv_usd": "number",
+     "peak_mc_usd": "number",
+     "peak_mc_at": "string",
+     "drawdown_from_peak_pct": "integer",
+     "total_supply_raw": "string",
+     "liquidity_usd": "number",
+     "liquidity_basis": "string",
+     "liquidity_note": "string",
+     "primary_dex": "string",
+     "primary_pool": "string",
+     "last_trade_time": "string",
+     "deployer": "object",
+     "deployer_other_tokens": "array",
+     "kol_activity": "object",
+     "degraded_fields": "array",
+     "pools": "array",
+     "is_deployer": "boolean",
+     "address": "string",
+     "total": "integer",
+     "limit": "integer",
+     "offset": "integer",
+     "sort_scope": "string",
+     "found": "boolean",
+     "status": "string",
+     "hint": "string",
+     "addresses": "array",
+     "mints": "array",
+     "token_mint": "string",
+     "summary": "object",
+     "kols": "array",
+     "delay": "string",
+     "delay_seconds": "integer",
+     "as_of": "string",
+     "delay_note": "string",
+     "upgrade": "string",
+     "coverage": "object",
+     "wallet": "string",
+     "token": "object",
+     "buyer_quality": "object",
+     "deployer_profile": "object",
+     "include_errors": "object",
+     "included": "array",
+     "pagination": "object",
+     "filters": "object",
+     "deprecations": "array",
+     "mint": "string",
+     "price_sol": "number",
+     "market_cap": "number",
+     "vwap_price_usd": "number",
+     "vwap_price_sol": "number",
+     "primary_pool_address": "string",
+     "is_token_2022": "boolean",
+     "transfer_fee_bps": "integer",
+     "mint_authority_revoked": "boolean",
+     "freeze_authority_revoked": "boolean",
+     "burn_detected": "boolean",
+     "token_supply_burn_detected": "boolean",
+     "lp_burn_status": "string",
+     "liquidity_to_mc_ratio": "number",
+     "volume_24h_usd": "number",
+     "volume_24h_sol": "number",
+     "trades_24h": "integer",
+     "price_source": "string",
+     "last_trade_at": "string",
+     "age_seconds": "integer",
+     "is_blacklisted": "boolean",
+     "blacklist_category": "string",
+     "launch_cohort_sol": "number",
+     "launch_cohort_size": "integer",
+     "deployer_identity": "object",
+     "mc_change_pct": "object",
+     "volume_usd": "object",
+     "mev_volume_pct": "object",
+     "history_age_seconds": "integer",
+     "expires_at": "string",
+     "next_refresh_at": "string",
+     "rotated": "boolean",
+     "lifetime": "string",
+     "ws_url": "string",
+     "dex_ws_url": "string",
+     "usage": "string",
+     "subscribe_example": "object",
+     "channels": "array",
+     "token_prices": "object",
+     "rhc_token_prices": "object",
+     "named_subscriptions": "object"
+    },
+    "evidence": [
+     "openapi/_original/madeonsol-api-openapi.json#GET /deployer-hunter/{wallet}/tokens",
+     "openapi/_original/madeonsol-api-openapi.json#GET /kol/tokens/{mint}",
+     "openapi/_original/madeonsol-api-openapi.json#GET /rhc/deployer-hunter/{address}/tokens",
+     "openapi/_original/madeonsol-api-openapi.json#GET /rhc/token/{address}",
+     "openapi/_original/madeonsol-api-openapi.json#GET /rhc/tokens",
+     "openapi/_original/madeonsol-api-openapi.json#GET /rhc/tokens/{address}",
+     "openapi/_original/madeonsol-api-openapi.json#GET /token/{mint}",
+     "openapi/_original/madeonsol-api-openapi.json#GET /tokens",
+     "openapi/_original/madeonsol-api-openapi.json#POST /rhc/token/batch",
+     "openapi/_original/madeonsol-api-openapi.json#POST /stream/token",
+     "openapi/_original/madeonsol-api-openapi.json#POST /token/batch",
+     "openapi/_original/madeonsol.json#GET /api/x402/rhc/tokens/{mint}"
+    ]
+   },
+   "magic-eden": {
+    "segments": [
+     "tokens"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "data": "object",
+     "chain": "string",
+     "collection": "object",
+     "contentURI": "string",
+     "contentType": "string",
+     "contentBody": "string",
+     "contentPreviewURI": "string",
+     "sat": "number",
+     "satName": "string",
+     "satRarity": "string",
+     "genesisTransaction": "string",
+     "genesisTransactionBlockTime": "string",
+     "genesisTransactionBlockHeight": "number",
+     "genesisTransactionBlockHash": "string",
+     "inscriptionNumber": "number",
+     "meta": "object",
+     "owner": "string",
+     "collectionSymbol": "string",
+     "location": "string",
+     "locationBlockHeight": "number",
+     "locationBlockTime": "string",
+     "locationBlockHash": "string",
+     "outputValue": "number",
+     "output": "string",
+     "mempoolTxId": "string",
+     "mempoolTxTimestamp": "string",
+     "listed": "boolean",
+     "listedAt": "string",
+     "listedPrice": "number",
+     "listedMakerFeeBp": "number",
+     "listedSellerReceiverAddress": "string",
+     "listedForMint": "boolean",
+     "brc20TransferAmt": "number",
+     "brc20ListedUnitPrice": "number",
+     "domain": "string",
+     "mintAddress": "string",
+     "supply": "number",
+     "delegate": "string",
+     "collectionName": "string",
+     "name": "string",
+     "updateAuthority": "string",
+     "primarySaleHappened": "boolean",
+     "sellerFeeBasisPoints": "number",
+     "image": "string",
+     "tokenStandard": "number",
+     "animationUrl": "string",
+     "externalUrl": "string",
+     "attributes": "array",
+     "properties": "object",
+     "listStatus": "string",
+     "price": "number",
+     "tokenAddress": "string",
+     "isCompressed": "boolean",
+     "priceInfo": "object"
+    },
+    "evidence": [
+     "openapi/_original/magic-eden-openapi.yaml#GET /v2/ord/btc/tokens",
+     "openapi/_original/magic-eden-openapi.yaml#GET /v2/ord/btc/tokens/{tokenId}",
+     "openapi/_original/magic-eden-openapi.yaml#GET /v2/tokens/{token_mint}",
+     "openapi/_original/magic-eden-ordinals-openapi.yml#GET /v2/ord/btc/tokens",
+     "openapi/_original/magic-eden-solana-openapi.yml#GET /tokens/{token_mint}",
+     "openapi/_original/magic-eden-solana-openapi.yml#GET /wallets/{wallet_address}/tokens"
+    ]
+   },
+   "manifold": {
+    "segments": [
+     "token"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "access_token": "string",
+     "expires_in": "integer",
+     "clientId": "string",
+     "code": "string",
+     "clientSecret": "string",
+     "signature": "string"
+    },
+    "evidence": [
+     "openapi/_original/manifold-oauth2-authentication-api.yml#POST /token"
+    ]
+   },
+   "mesh": {
+    "segments": [
+     "tokens"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "status": null,
+     "message": "string",
+     "displayMessage": "string",
+     "errorType": "string",
+     "errorData": null,
+     "content": null
+    },
+    "evidence": [
+     "openapi/_original/mesh-integration-api-openapi.json#GET /api/v1/transfers/managed/tokens"
+    ]
+   },
+   "moirailabs-com": {
+    "segments": [
+     "tokens"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/moirailabs-com-openapi.json#GET /analytics/tokens",
+     "openapi/_original/moirailabs-com-openapi.yml#GET /analytics/tokens"
+    ]
+   },
+   "moralis": {
+    "segments": [
+     "tokens",
+     "erc20",
+     "token"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "token_address": "string",
+     "name": "string",
+     "symbol": "string",
+     "logo": "string",
+     "thumbnail": "string",
+     "decimals": "integer",
+     "balance": "string",
+     "possible_spam": "boolean",
+     "verified_contract": "boolean",
+     "usd_price": "string",
+     "usd_price_24hr_percent_change": "string",
+     "usd_price_24hr_usd_change": "string",
+     "usd_value_24hr_usd_change": "string",
+     "usd_value": "number",
+     "portfolio_percentage": "number",
+     "balance_formatted": "string",
+     "native_token": "boolean",
+     "total_supply": "string",
+     "total_supply_formatted": "string",
+     "percentage_relative_to_total_supply": "number",
+     "metadata": "object",
+     "metrics": "object",
+     "chain": "string",
+     "chains": "array",
+     "filters": "array",
+     "sortBy": "object",
+     "categories": "object",
+     "timeFramesToReturn": "array",
+     "metricsToReturn": "array",
+     "excludeMetadata": "boolean",
+     "limit": "number",
+     "chain_id": "string",
+     "token_name": "string",
+     "token_symbol": "string",
+     "token_logo": "string",
+     "block_number": "number",
+     "block_timestamp": "string",
+     "links": "object",
+     "rating": "number",
+     "total_number_of_rating": "number",
+     "total_liquidity_locked_in_percent": "number",
+     "total_supply_locked_in_percent": "number",
+     "price_usd": "number",
+     "token_age_in_days": "number",
+     "on_chain_strength_index": "number",
+     "security_score": "number",
+     "market_cap": "number",
+     "fully_diluted_valuation": "number",
+     "twitter_followers": "number",
+     "holders_change": "object",
+     "liquidity_change_usd": "object",
+     "experienced_net_buyers_change": "object",
+     "volume_change_usd": "object",
+     "net_volume_change_usd": "object",
+     "price_percent_change_usd": "object"
+    },
+    "evidence": [
+     "openapi/_original/moralis-evm-api-openapi.json#GET /discovery/token",
+     "openapi/_original/moralis-evm-api-openapi.json#GET /wallets/{address}/tokens",
+     "openapi/_original/moralis-evm-api-openapi.json#GET /{address}/erc20",
+     "openapi/_original/moralis-evm-api-openapi.json#POST /discovery/tokens"
+    ]
+   },
+   "near": {
+    "segments": [
+     "tokens"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/nearblocks-api.json#GET /v1/nfts/{contract}/tokens",
+     "openapi/_original/nearblocks-api.json#GET /v1/nfts/{contract}/tokens/{token}",
+     "openapi/_original/nearblocks-api.json#GET /v1/search/tokens"
+    ]
+   },
+   "neynar": {
+    "segments": [
+     "token"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "tokens": "array",
+     "contract_address": "string",
+     "network": "string"
+    },
+    "evidence": [
+     "openapi/_original/neynar-farcaster-api.yaml#POST /v2/farcaster/nft/metadata/token"
+    ]
+   },
+   "odos": {
+    "segments": [
+     "tokens",
+     "token"
+    ],
+    "operations": [
+     "GET item"
+    ],
+    "properties": {
+     "deprecated": null,
+     "traceId": null,
+     "tokenMap": "object",
+     "currencyId": "string",
+     "tokenPrices": "object"
+    },
+    "evidence": [
+     "openapi/_original/openapi.json#GET /info/tokens/{chain_id}",
+     "openapi/_original/openapi.json#GET /pricing/token/{chain_id}"
+    ]
+   },
+   "one-inch": {
+    "segments": [
+     "tokens"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/one-inch-openapi.yml#GET /swap/v6.0/{chain}/tokens"
+    ]
+   },
+   "opensea": {
+    "segments": [
+     "tokens",
+     "token"
+    ],
+    "operations": [
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "contracts": "array"
+    },
+    "evidence": [
+     "openapi/_original/opensea-api.json#GET /api/v2/chain/{chain}/token/{address}",
+     "openapi/_original/opensea-api.json#POST /api/v2/tokens/batch"
+    ]
+   },
+   "orca": {
+    "segments": [
+     "tokens",
+     "token"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "circulatingSupply": "string",
+     "description": "string",
+     "imageUrl": "string",
+     "name": "string",
+     "price": "string",
+     "stats": "object",
+     "symbol": "string",
+     "totalSupply": "string",
+     "address": "string",
+     "decimals": "integer",
+     "extensions": "string",
+     "freezeAuthority": "string",
+     "isInitialized": "boolean",
+     "metadata": "string",
+     "mintAuthority": "string",
+     "priceUsdc": "number",
+     "supply": "integer",
+     "tags": "string",
+     "tokenProgram": "string",
+     "updatedAt": "string",
+     "updatedEpoch": "integer"
+    },
+    "evidence": [
+     "openapi/_original/orca-openapi-original.json#GET /protocol/token",
+     "openapi/_original/orca-openapi-original.json#GET /tokens",
+     "openapi/_original/orca-openapi-original.json#GET /tokens/{mint_address}"
+    ]
+   },
+   "orderly-network": {
+    "segments": [
+     "token"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "success": "boolean",
+     "timestamp": "integer",
+     "token": "string",
+     "base_weight": "number",
+     "discount_factor": "number",
+     "haircut": "number",
+     "user_max_qty": "number",
+     "is_collateral": "boolean",
+     "decimals": "number",
+     "minimum_withdraw_amount": "number",
+     "on_chain_swap": "boolean",
+     "token_hash": "string",
+     "chain_details": "array"
+    },
+    "evidence": [
+     "openapi/_original/orderly-network-openapi-original.yml#GET /v1/public/token"
+    ]
+   },
+   "origin-protocol": {
+    "segments": [
+     "token"
+    ],
+    "operations": [
+     "GET item"
+    ],
+    "properties": {
+     "id": "string",
+     "type": "string",
+     "attributes": "object",
+     "relationships": "object",
+     "pool": "string",
+     "network": "string",
+     "base_token": "string",
+     "quote_token": "string",
+     "timestamp": "integer",
+     "open": "number",
+     "high": "number",
+     "low": "number",
+     "close": "number",
+     "volume": "number"
+    },
+    "evidence": [
+     "openapi/_original/origin-protocol-openapi.json#GET /api/v2/coingecko/ohlcvs/{network}/token/{token}",
+     "openapi/_original/origin-protocol-openapi.json#GET /api/v2/coingecko/pools/{network}/token/{token}"
+    ]
+   },
+   "oumla-ltd": {
+    "segments": [
+     "tokens"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "status": "string",
+     "type": "string",
+     "displayName": "string",
+     "tokenMetadata": "object",
+     "networkId": "string",
+     "addressId": "string",
+     "clientShare": "string",
+     "createParams": "object",
+     "deploymentId": "string",
+     "useGasless": "boolean",
+     "fee": "string",
+     "feeLevel": "string",
+     "collectionId": "string",
+     "name": "string",
+     "symbol": "string",
+     "network": "string",
+     "contractAddress": "string",
+     "recipientAddress": "string",
+     "mintTransactionHash": "string",
+     "burnTransactionHash": "string",
+     "mintedAt": "string",
+     "burnedAt": "string",
+     "metadata": "object",
+     "mintRecord": "object",
+     "burnRecord": "object",
+     "metaData": "object",
+     "amount": "string",
+     "createdAt": "string",
+     "updatedAt": "string",
+     "transactionHash": "string",
+     "tokenId": "string",
+     "success": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/oumla-ltd-openapi-original.json#DELETE /api/v1/tokenization/tokens/{id}",
+     "openapi/_original/oumla-ltd-openapi-original.json#GET /api/v1/tokenization/collection/tokens",
+     "openapi/_original/oumla-ltd-openapi-original.json#GET /api/v1/tokenization/collections/{id}/tokens/{tokenId}",
+     "openapi/_original/oumla-ltd-openapi-original.json#GET /api/v1/tokenization/tokens",
+     "openapi/_original/oumla-ltd-openapi-original.json#GET /api/v1/tokenization/tokens/{id}",
+     "openapi/_original/oumla-ltd-openapi-original.json#POST /api/v1/tokenization/tokens"
+    ]
+   },
+   "pancakeswap": {
+    "segments": [
+     "tokens"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "updated_at": "integer",
+     "data": "object",
+     "name": "string",
+     "symbol": "string",
+     "price": "string",
+     "price_BNB": "string"
+    },
+    "evidence": [
+     "openapi/_original/openapi.yml#GET /v2/tokens",
+     "openapi/_original/openapi.yml#GET /v2/tokens/{address}"
+    ]
+   },
+   "paraswap": {
+    "segments": [
+     "tokens"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "symbol": "string",
+     "address": "string",
+     "name": "string",
+     "decimals": "integer",
+     "img": "string",
+     "network": "number",
+     "newToken": "boolean",
+     "connectors": "array",
+     "tokenType": "string"
+    },
+    "evidence": [
+     "openapi/_original/paraswap-market-api-v5.json#GET /tokens",
+     "openapi/_original/paraswap-market-api-v5.json#GET /tokens/{network}"
+    ]
+   },
+   "pendle": {
+    "segments": [
+     "tokens"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "tokensMintSy": "array",
+     "tokensRedeemSy": "array",
+     "tokensIn": "array",
+     "tokensOut": "array"
+    },
+    "evidence": [
+     "openapi/_original/openapi.json#GET /v1/sdk/{chainId}/markets/{market}/tokens"
+    ]
+   },
+   "polkadot": {
+    "segments": [
+     "tokens",
+     "token"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "contract": "string",
+     "category": "string",
+     "contracts": "array",
+     "order": "string",
+     "order_field": "string",
+     "page": "integer",
+     "row": "integer",
+     "search": "string",
+     "code": "integer",
+     "data": null,
+     "generated_at": "integer",
+     "message": "string",
+     "currency_id": "string",
+     "price": "string",
+     "symbol": "string",
+     "unique_id": "string",
+     "key": "string",
+     "detail": "object",
+     "token": "array",
+     "decimals": "integer",
+     "extends": "object",
+     "is_native": "boolean",
+     "market_cap": "string",
+     "metadata": null,
+     "name": "string",
+     "total_issuance": "string",
+     "transfer_count": "integer",
+     "include_extends": "boolean",
+     "provider": "string"
+    },
+    "evidence": [
+     "openapi/_original/subscan-swagger.yaml#GET /api/scan/token",
+     "openapi/_original/subscan-swagger.yaml#POST /api/scan/evm/token",
+     "openapi/_original/subscan-swagger.yaml#POST /api/scan/evm/tokens",
+     "openapi/_original/subscan-swagger.yaml#POST /api/scan/search/tokens",
+     "openapi/_original/subscan-swagger.yaml#POST /api/v2/scan/tokens"
+    ]
+   },
+   "quant": {
+    "segments": [
+     "tokens"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "tokens": "array",
+     "tokenConfig": "object"
+    },
+    "evidence": [
+     "openapi/_original/quant-overledger-server-openapi.yml#GET /swaps/tokens"
+    ]
+   },
+   "securitize": {
+    "segments": [
+     "tokens"
+    ],
+    "operations": [
+     "GET item",
+     "PATCH item"
+    ],
+    "properties": {
+     "tokenValue": "number",
+     "decimals": "number",
+     "tokenName": "string",
+     "tokenDescription": "string",
+     "isTokenRepresentsDebt": "boolean",
+     "isDeployed": "boolean",
+     "tokenIconUrl": "string",
+     "tokenVideoUrl": "string",
+     "enableFundraise": "boolean",
+     "enableTokenLifecycleManagement": "boolean",
+     "isInvestorPays": "boolean",
+     "tokenIconKey": "string"
+    },
+    "evidence": [
+     "openapi/_original/securitize-domains-openapi-original.json#GET /v1/domains/{domainId}/tokens/{tokenId}",
+     "openapi/_original/securitize-domains-openapi-original.json#PATCH /v1/domains/{domainId}/tokens/{tokenId}"
+    ]
+   },
+   "shapeshift": {
+    "segments": [
+     "token"
+    ],
+    "operations": [
+     "GET item"
+    ],
+    "properties": {
+     "id": "string",
+     "decimals": "number",
+     "name": "string",
+     "symbol": "string",
+     "type": "string"
+    },
+    "evidence": [
+     "openapi/_original/shapeshift-solana-openapi.json#GET /api/v1/token/{id}"
+    ]
+   },
+   "solidus-labs": {
+    "segments": [
+     "tokens"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "category": "string",
+     "timestamp": "string",
+     "tx_hash": "string"
+    },
+    "evidence": [
+     "openapi/_original/solidus-labs-tokensniffer-pairs-openapi.yml#GET /scams/tokens"
+    ]
+   },
+   "story-protocol": {
+    "segments": [
+     "tokens"
+    ],
+    "operations": [
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "blockNumber": "string",
+     "blockTime": "string",
+     "burntAt": "string",
+     "id": "string",
+     "licenseTemplate": "string",
+     "licenseTermsId": "string",
+     "licensorIpId": "string",
+     "owner": "string",
+     "transferable": "string",
+     "orderBy": "string",
+     "orderDirection": "string",
+     "pagination": "object",
+     "where": "object"
+    },
+    "evidence": [
+     "openapi/_original/story-protocol-openapi-original.json#GET /api/v3/licenses/tokens/{licenseTokenId}",
+     "openapi/_original/story-protocol-openapi-original.json#POST /api/v3/licenses/tokens"
+    ]
+   },
+   "surf": {
+    "segments": [
+     "token"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "address": "string",
+     "chain": "string",
+     "decimals": "integer",
+     "symbol": "string",
+     "volume_usd": "number"
+    },
+    "evidence": [
+     "openapi/_original/surf-openapi-original.json#GET /gateway/v1/search/token"
+    ]
+   },
+   "tezos": {
+    "segments": [
+     "tokens"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "id": "integer",
+     "contract": null,
+     "tokenId": "string",
+     "standard": "string",
+     "firstMinter": null,
+     "firstLevel": "integer",
+     "firstTime": "string",
+     "lastLevel": "integer",
+     "lastTime": "string",
+     "transfersCount": "integer",
+     "balancesCount": "integer",
+     "holdersCount": "integer",
+     "totalMinted": "string",
+     "totalBurned": "string",
+     "totalSupply": "string",
+     "metadata": null
+    },
+    "evidence": [
+     "openapi/_original/openapi.json#GET /v1/tokens"
+    ]
+   },
+   "thirdweb": {
+    "segments": [
+     "tokens",
+     "erc20"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "chainId": "integer",
+     "name": "string",
+     "symbol": "string",
+     "description": "string",
+     "imageUrl": "string",
+     "owner": "string",
+     "maxSupply": "string"
+    },
+    "evidence": [
+     "openapi/_original/thirdweb-openapi.yml#GET /v1/tokens",
+     "openapi/_original/thirdweb-openapi.yml#GET /v1/tokens/erc20/{ownerAddress}",
+     "openapi/_original/thirdweb-openapi.yml#POST /v1/tokens"
+    ]
+   },
+   "tooloracle-io": {
+    "segments": [
+     "tokens",
+     "token"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "access_token": "string",
+     "token_type": "string",
+     "expires_in": "integer",
+     "tier": "string"
+    },
+    "evidence": [
+     "openapi/_original/tooloracle-io-feedoracle-compliance-evidence-openapi.yml#GET /api/v1/feeds/trading/tokens",
+     "openapi/_original/tooloracle-io-feedoracle-compliance-evidence-openapi.yml#POST /mcp/token",
+     "openapi/_original/tooloracle-io-feedoracle-openapi.json#GET /api/v1/feeds/trading/tokens",
+     "openapi/_original/tooloracle-io-feedoracle-openapi.json#POST /mcp/token"
+    ]
+   },
+   "transpose": {
+    "segments": [
+     "tokens"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "contract_address": "string",
+     "name": "string",
+     "symbol": "string",
+     "decimals": "integer",
+     "total_supply": "string",
+     "created_timestamp": "string",
+     "creator_address": "string"
+    },
+    "evidence": [
+     "openapi/_original/openapi.yml#GET /token/tokens"
+    ]
+   },
+   "triton-one": {
+    "segments": [
+     "tokens"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "uuid": "string",
+     "value": "string",
+     "auth_username": "string",
+     "name": "string",
+     "rate_tier": "string",
+     "is_active": "boolean",
+     "deactivation_reasons": "array"
+    },
+    "evidence": [
+     "openapi/_original/triton-one-customers-api-openapi.yml#GET /api/v1/tokens",
+     "openapi/_original/triton-one-customers-api-openapi.yml#POST /api/v1/subscriptions/{subscriptionUuid}/tokens"
+    ]
+   },
+   "tzero": {
+    "segments": [
+     "tokens"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "string",
+     "symbol": "string",
+     "decimals": "integer",
+     "initialSupply": "string",
+     "supplyCap": "string",
+     "price": "number",
+     "assetType": "string",
+     "assetClass": "string",
+     "tokenStandard": "string",
+     "mintable": "boolean",
+     "burnable": "boolean",
+     "pausable": "boolean",
+     "upgradeable": "boolean",
+     "whitelistEnabled": "boolean",
+     "blacklistEnabled": "boolean",
+     "snapshotEnabled": "boolean",
+     "imported": "boolean",
+     "delisted": "boolean",
+     "lifecycleStatus": "string",
+     "createdAt": "string",
+     "deployments": "array"
+    },
+    "evidence": [
+     "openapi/_original/tzero-institutional-openapi.json#GET /api/v1/tokens/",
+     "openapi/_original/tzero-institutional-openapi.json#GET /api/v1/tokens/{id}"
+    ]
+   },
+   "waodao": {
+    "segments": [
+     "token"
+    ],
+    "operations": [
+     "GET item"
+    ],
+    "properties": {
+     "project": "string",
+     "schema": "string",
+     "schema_url": "string",
+     "day": "integer",
+     "date": "string",
+     "timestamp": "integer",
+     "name": "string",
+     "description": "string",
+     "image": "string",
+     "external_url": "string",
+     "real_artwork": "boolean",
+     "bonus_tokens": "integer",
+     "links": "object",
+     "attributes": "array",
+     "waodao": "object",
+     "market": "object",
+     "news": "array",
+     "trends": "object",
+     "source": "object"
+    },
+    "evidence": [
+     "openapi/_original/waodao-agent-api-openapi-3.0.json#GET /api/v1/waodao/token/{day}",
+     "openapi/_original/waodao-agent-api-openapi.json#GET /api/v1/waodao/token/{day}"
+    ]
+   }
+  }
+ },
+ "naming": {
+  "path_segment": {
+   "lower": [
+    "0g-labs",
+    "0x",
+    "a2a402-market",
+    "aelf-inc",
+    "aeternity",
+    "agentexchange-work",
+    "agenthealthmonitor-xyz",
+    "agora",
+    "airstack",
+    "akash",
+    "aleo",
+    "algorand",
+    "algovoi-co-uk",
+    "allium",
+    "alloyx",
+    "amazon-managed-blockchain",
+    "amazon-qldb",
+    "amberdata",
+    "anchor-x402",
+    "angle",
+    "ankr",
+    "api3",
+    "aptos",
+    "arkham",
+    "artifactcouncil",
+    "arweave",
+    "assetfare",
+    "audius",
+    "autonomys",
+    "ava-labs",
+    "ava-protocol",
+    "avalanche",
+    "avora-agent-forge",
+    "axelar",
+    "b3",
+    "babylon-labs",
+    "backpack",
+    "bakkt",
+    "banqu",
+    "barnbridge",
+    "biconomy",
+    "bigchaindb",
+    "binance",
+    "bitculator",
+    "bitgo",
+    "bithumb",
+    "bitpay",
+    "bitski",
+    "bitstamp",
+    "blackbird",
+    "blockaid",
+    "blockchain.com",
+    "blockchair",
+    "blockdaemon",
+    "blockfrost",
+    "blocklottos-com",
+    "blockscout",
+    "blocktorch",
+    "blockvision",
+    "blowfish",
+    "boost",
+    "braiins-academy",
+    "brale",
+    "brave-browser",
+    "breeze",
+    "brl",
+    "broke2builtai-com",
+    "btc-war-live-market-data-api",
+    "btcpay",
+    "bullet",
+    "burstiq",
+    "cables",
+    "cardano",
+    "celestia",
+    "ceramic",
+    "certik",
+    "chainaware-ai",
+    "chainlens",
+    "chainstack",
+    "cipherowl",
+    "civic",
+    "classic",
+    "coin-metrics",
+    "coinbase",
+    "coinflow",
+    "coingate",
+    "coingecko",
+    "coinlist",
+    "coinme",
+    "coinpaprika",
+    "coinrailz-com",
+    "commerce-coinbase",
+    "conduit",
+    "connskill-com",
+    "copper-co",
+    "cosmos",
+    "covalent",
+    "crossmint",
+    "crunchdao",
+    "crypto-com",
+    "cryptocompare",
+    "cryptonews",
+    "cryptoquant",
+    "cubist",
+    "culture-sbs",
+    "curve-finance",
+    "d3",
+    "dapper-labs",
+    "debank",
+    "defillama",
+    "deribit",
+    "derivadex",
+    "dflow",
+    "dfns",
+    "dialect",
+    "digital-asset",
+    "dinari",
+    "dmarket",
+    "dodo",
+    "done",
+    "dopex",
+    "dune-analytics",
+    "dynamic-labs",
+    "dynamic-xyz",
+    "easyfence-cn",
+    "eco",
+    "elliptic",
+    "elonsusk-com",
+    "enso",
+    "euler",
+    "evebrief-org",
+    "evedex",
+    "exactly",
+    "execution-market",
+    "farcaster",
+    "farmdash",
+    "figment",
+    "figure-technology-solutions",
+    "filebase",
+    "filecoin",
+    "fipto",
+    "flexa",
+    "flow-blockchain",
+    "fluence",
+    "footprint",
+    "fordefi",
+    "frax",
+    "gala-games",
+    "galaxy-com",
+    "gallop",
+    "gauntlet",
+    "gitcoin",
+    "glassnode",
+    "gmx",
+    "gnosis-safe",
+    "gonna-bond",
+    "gradient",
+    "graphadvocate-com",
+    "gte",
+    "halliday",
+    "hedera",
+    "hegic",
+    "helika",
+    "helius",
+    "hergertsynthora-com",
+    "hilt-so",
+    "hiro",
+    "hivemapper",
+    "horizon-blockchain-games",
+    "hostdefi",
+    "hummingbot",
+    "hyperbeat",
+    "idrx",
+    "imgauth-api-di-attestazione-opere-digitali",
+    "immutable",
+    "iota",
+    "jito",
+    "jupiter-ag",
+    "jupiter-exchange",
+    "kadena",
+    "kaiko",
+    "kamino",
+    "kuru",
+    "kusama",
+    "kyber-network",
+    "layerzero",
+    "ledger",
+    "lido",
+    "lido-finance",
+    "lifi",
+    "lighter",
+    "lightning-labs",
+    "lightspark",
+    "linea",
+    "liquidagent-ai",
+    "liquity",
+    "lit-protocol",
+    "litecoin",
+    "livepeer",
+    "looksrare",
+    "loot-rush-games",
+    "lukka",
+    "m-0",
+    "m0",
+    "madeonsol",
+    "magic-eden",
+    "magic-link",
+    "maicoin",
+    "manifold",
+    "mesh",
+    "messari",
+    "metalend",
+    "meter",
+    "mexc",
+    "mobula",
+    "moirailabs-com",
+    "moralis",
+    "mystars",
+    "n3xt",
+    "nano",
+    "nansen",
+    "near",
+    "nestcoin",
+    "nexus-mutual",
+    "neynar",
+    "now-payments",
+    "nym-technologies",
+    "obol",
+    "octav",
+    "odos",
+    "olympusdao",
+    "onchainagentintel-io",
+    "ondo-finance",
+    "one-inch",
+    "opennode",
+    "opensea",
+    "openzeppelin",
+    "orca",
+    "orderly-network",
+    "origin-protocol",
+    "oumla-ltd",
+    "pancakeswap",
+    "parafi",
+    "paragraph",
+    "paraswap",
+    "paxos",
+    "pendle",
+    "pinata",
+    "pocket-network",
+    "pokt",
+    "polkadot",
+    "polygon-id",
+    "polysign",
+    "privatedao-org",
+    "privy",
+    "proof-of-play",
+    "pyth",
+    "quant",
+    "quicknode",
+    "rarible",
+    "raydium",
+    "re",
+    "recall-labs",
+    "reown",
+    "rho-protocol",
+    "ribbon-finance",
+    "ripio",
+    "ripple-labs",
+    "rocket-pool",
+    "rocksolid",
+    "rugspull-read-api",
+    "safello",
+    "sahara-ai",
+    "sapien",
+    "scale3",
+    "securitize",
+    "sei",
+    "self-id",
+    "sentio",
+    "sequence",
+    "shapeshift",
+    "simba-chain",
+    "singularity-net",
+    "snowsignals",
+    "snowtrace",
+    "sojo-industries",
+    "solidus-labs",
+    "solscan",
+    "solvela-ai",
+    "stellar",
+    "story-protocol",
+    "superform",
+    "superrare",
+    "supra",
+    "surf",
+    "sushiswap",
+    "syndicate",
+    "synthetix",
+    "tatum",
+    "tendermint",
+    "tensor",
+    "tesser",
+    "tesseract",
+    "tether",
+    "tezos",
+    "the-graph",
+    "theloopbreaker-com",
+    "thirdweb",
+    "thorchain",
+    "timeswap",
+    "tooloracle-io",
+    "top-group",
+    "totalis",
+    "transpose",
+    "tristero",
+    "triton-one",
+    "trm-labs",
+    "trustboost-dev",
+    "tweed",
+    "tzero",
+    "uniblock",
+    "uniswap",
+    "unlock-protocol",
+    "unstoppable-domains",
+    "upland",
+    "utila",
+    "vesper",
+    "walrus-protocol",
+    "waodao",
+    "warppay402-com",
+    "wazirx",
+    "wealthville-defi-liquidity-pool-scores-api-solana-evm",
+    "wholechain",
+    "wincl",
+    "wormhole",
+    "x2y2",
+    "x402-list-api",
+    "xt-com",
+    "yearn",
+    "zerion",
+    "zerodev",
+    "zircuit",
+    "zkme",
+    "zora"
+   ],
+   "kebab-case": [
+    "0g-labs",
+    "0x",
+    "a2a402-market",
+    "aelf-inc",
+    "aeternity",
+    "agentexchange-work",
+    "agenthealthmonitor-xyz",
+    "agora",
+    "akash",
+    "algorand",
+    "algovoi-co-uk",
+    "allium",
+    "alloyx",
+    "amazon-qldb",
+    "amberdata",
+    "ankr",
+    "arkham",
+    "artifactcouncil",
+    "arweave",
+    "assetfare",
+    "audius",
+    "ava-labs",
+    "avalanche",
+    "avora-agent-forge",
+    "b3",
+    "babylon-labs",
+    "backpack",
+    "bakkt",
+    "banqu",
+    "barnbridge",
+    "biconomy",
+    "binance",
+    "bitculator",
+    "bitski",
+    "bitstamp",
+    "blockaid",
+    "blockchain.com",
+    "blockchair",
+    "blockdaemon",
+    "blocklottos-com",
+    "blockscout",
+    "boost",
+    "braiins-academy",
+    "brale",
+    "breeze",
+    "brl",
+    "broke2builtai-com",
+    "btc-war-live-market-data-api",
+    "btcpay",
+    "burstiq",
+    "cables",
+    "certik",
+    "chainaware-ai",
+    "chainlens",
+    "chainstack",
+    "cipherowl",
+    "coin-metrics",
+    "coinbase",
+    "coinflow",
+    "coinlist",
+    "coinme",
+    "coinrailz-com",
+    "conduit",
+    "connskill-com",
+    "copper-co",
+    "covalent",
+    "crossmint",
+    "crunchdao",
+    "crypto-com",
+    "cryptocompare",
+    "cryptonews",
+    "cryptoquant",
+    "cubist",
+    "culture-sbs",
+    "curve-finance",
+    "defillama",
+    "dflow",
+    "dfns",
+    "dialect",
+    "digital-asset",
+    "dmarket",
+    "done",
+    "dopex",
+    "dune-analytics",
+    "elliptic",
+    "elonsusk-com",
+    "euler",
+    "evebrief-org",
+    "evedex",
+    "execution-market",
+    "farmdash",
+    "figure-technology-solutions",
+    "filecoin",
+    "fipto",
+    "flipside",
+    "fluence",
+    "fordefi",
+    "frax",
+    "gala-games",
+    "galaxy-com",
+    "gmx",
+    "gnosis-safe",
+    "gonna-bond",
+    "graphadvocate-com",
+    "halliday",
+    "hedera",
+    "hegic",
+    "helius",
+    "hergertsynthora-com",
+    "hilt-so",
+    "hiro",
+    "hivemapper",
+    "hostdefi",
+    "hummingbot",
+    "idrx",
+    "imgauth-api-di-attestazione-opere-digitali",
+    "immutable",
+    "iota",
+    "jupiter-ag",
+    "kadena",
+    "kaiko",
+    "kamino",
+    "kuru",
+    "kusama",
+    "kyber-network",
+    "layerzero",
+    "ledger",
+    "lido",
+    "lido-finance",
+    "lighter",
+    "lightning-labs",
+    "lightspark",
+    "liquidagent-ai",
+    "liquity",
+    "litecoin",
+    "livepeer",
+    "lukka",
+    "m-0",
+    "m0",
+    "madeonsol",
+    "magic-eden",
+    "messari",
+    "metalend",
+    "meter",
+    "mexc",
+    "mobula",
+    "moirailabs-com",
+    "moralis",
+    "n3xt",
+    "nansen",
+    "near",
+    "nestcoin",
+    "neynar",
+    "now-payments",
+    "nym-technologies",
+    "obol",
+    "octav",
+    "odos",
+    "olympusdao",
+    "onchainagentintel-io",
+    "ondo-finance",
+    "one-inch",
+    "opennode",
+    "opensea",
+    "openzeppelin",
+    "orderly-network",
+    "origin-protocol",
+    "oumla-ltd",
+    "parafi",
+    "paragraph",
+    "paxos",
+    "pendle",
+    "pokt",
+    "polkadot",
+    "polygon-id",
+    "privatedao-org",
+    "quant",
+    "quicknode",
+    "raydium",
+    "recall-labs",
+    "rho-protocol",
+    "ribbon-finance",
+    "ripio",
+    "ripple-labs",
+    "rocket-pool",
+    "rocksolid",
+    "safello",
+    "sapien",
+    "securitize",
+    "sei",
+    "simba-chain",
+    "snowsignals",
+    "sojo-industries",
+    "solscan",
+    "stellar",
+    "story-protocol",
+    "superform",
+    "superrare",
+    "surf",
+    "sushiswap",
+    "synthetix",
+    "tensor",
+    "tesser",
+    "tesseract",
+    "tether",
+    "thirdweb",
+    "thorchain",
+    "timeswap",
+    "tooloracle-io",
+    "top-group",
+    "totalis",
+    "transpose",
+    "tristero",
+    "trm-labs",
+    "tweed",
+    "tzero",
+    "uniblock",
+    "unlock-protocol",
+    "unstoppable-domains",
+    "upland",
+    "vesper",
+    "walrus-protocol",
+    "warppay402-com",
+    "wealthville-defi-liquidity-pool-scores-api-solana-evm",
+    "wincl",
+    "wormhole",
+    "x402-list-api",
+    "xt-com",
+    "zerion"
+   ],
+   "snake_case": [
+    "akash",
+    "algovoi-co-uk",
+    "alloyx",
+    "aptos",
+    "arkham",
+    "arweave",
+    "audius",
+    "ava-labs",
+    "bitstamp",
+    "blackbird",
+    "blockchain.com",
+    "blockfrost",
+    "brale",
+    "burstiq",
+    "cardano",
+    "chainstack",
+    "coinbase",
+    "coingate",
+    "coingecko",
+    "commerce-coinbase",
+    "cosmos",
+    "covalent",
+    "crossmint",
+    "cubist",
+    "dapper-labs",
+    "debank",
+    "deribit",
+    "derivadex",
+    "dinari",
+    "elliptic",
+    "eosio",
+    "evedex",
+    "figment",
+    "filecoin",
+    "flexa",
+    "flow-blockchain",
+    "fluence",
+    "fordefi",
+    "frax",
+    "gala-games",
+    "gitcoin",
+    "glassnode",
+    "gmx",
+    "gte",
+    "hiro",
+    "iota",
+    "jito",
+    "kaiko",
+    "lightspark",
+    "liquity",
+    "lit-protocol",
+    "magic-eden",
+    "maicoin",
+    "mexc",
+    "monero",
+    "nano",
+    "near",
+    "neynar",
+    "nym-technologies",
+    "obol",
+    "ondo-finance",
+    "one-inch",
+    "opensea",
+    "orca",
+    "orderly-network",
+    "origin-protocol",
+    "pocket-network",
+    "pokt",
+    "polkadot",
+    "polysign",
+    "pyth",
+    "re",
+    "ripple-labs",
+    "scale3",
+    "sei",
+    "sentio",
+    "simba-chain",
+    "snowtrace",
+    "stellar",
+    "supra",
+    "tendermint",
+    "tezos",
+    "thorchain",
+    "tooloracle-io",
+    "top-group",
+    "triton-one",
+    "uniswap",
+    "unstoppable-domains",
+    "upland",
+    "warppay402-com",
+    "wazirx",
+    "wincl",
+    "wormhole",
+    "zerion"
+   ],
+   "other": [
+    "agenthealthmonitor-xyz",
+    "algovoi-co-uk",
+    "alloyx",
+    "amazon-managed-blockchain",
+    "amazon-qldb",
+    "aptos",
+    "art-blocks",
+    "arweave",
+    "assetfare",
+    "autonomys",
+    "ava-labs",
+    "ava-protocol",
+    "avalanche",
+    "avora-agent-forge",
+    "basescan",
+    "binance",
+    "blocklottos-com",
+    "boost",
+    "braiins-academy",
+    "bscscan",
+    "btc-war-live-market-data-api",
+    "bullet",
+    "burstiq",
+    "chainstack",
+    "cipherowl",
+    "coinme",
+    "coinrailz-com",
+    "covalent",
+    "crossmint",
+    "crunchdao",
+    "cubist",
+    "culture-sbs",
+    "dmarket",
+    "dynamic-labs",
+    "dynamic-xyz",
+    "easyfence-cn",
+    "elonsusk-com",
+    "evebrief-org",
+    "evedex",
+    "execution-market",
+    "farmdash",
+    "figment",
+    "filebase",
+    "gala-games",
+    "gonna-bond",
+    "hergertsynthora-com",
+    "hilt-so",
+    "hummingbot",
+    "iota",
+    "kadena",
+    "kaiko",
+    "kamino",
+    "lbank",
+    "liquity",
+    "litecoin",
+    "lukka",
+    "magic-eden",
+    "metalend",
+    "meter",
+    "mexc",
+    "near",
+    "obol",
+    "onchainagentintel-io",
+    "pokt",
+    "ripple-labs",
+    "safello",
+    "simba-chain",
+    "snowtrace",
+    "spacemesh",
+    "stellar",
+    "sui",
+    "thorchain",
+    "tooloracle-io",
+    "top-group",
+    "unlock-protocol",
+    "upland",
+    "utila",
+    "wazirx",
+    "wormhole"
+   ],
+   "camelCase": [
+    "aelf-inc",
+    "airstack",
+    "akash",
+    "aleo",
+    "algovoi-co-uk",
+    "angle",
+    "arkham",
+    "ava-labs",
+    "avalanche",
+    "b3",
+    "backpack",
+    "bakkt",
+    "banqu",
+    "binance",
+    "bithumb",
+    "bitpay",
+    "blockscout",
+    "blockvision",
+    "bullet",
+    "ceramic",
+    "chainstack",
+    "circle",
+    "coinflow",
+    "coinme",
+    "cryptocompare",
+    "curve-finance",
+    "defillama",
+    "dialect",
+    "dynamic-labs",
+    "dynamic-xyz",
+    "eco",
+    "enso",
+    "evedex",
+    "exactly",
+    "farcaster",
+    "gala-games",
+    "gallop",
+    "hegic",
+    "hummingbot",
+    "kadena",
+    "lifi",
+    "lighter",
+    "livepeer",
+    "lukka",
+    "magic-eden",
+    "mesh",
+    "mexc",
+    "moralis",
+    "near",
+    "neynar",
+    "obol",
+    "olympusdao",
+    "ondo-finance",
+    "oumla-ltd",
+    "pinata",
+    "polkadot",
+    "rarible",
+    "safello",
+    "sahara-ai",
+    "snowtrace",
+    "solana",
+    "superform",
+    "syndicate",
+    "timeswap",
+    "tweed",
+    "tzero",
+    "unlock-protocol",
+    "utila",
+    "wazirx",
+    "wincl",
+    "x2y2",
+    "xt-com",
+    "zkme",
+    "zora"
+   ],
+   "PascalCase": [
+    "btcpay",
+    "gala-games",
+    "horizon-blockchain-games",
+    "lukka",
+    "mexc",
+    "pokt",
+    "raydium",
+    "sequence",
+    "spacemesh",
+    "synthetix",
+    "wholechain"
+   ]
+  },
+  "query_param": {
+   "lower": [
+    "0g-labs",
+    "0x",
+    "a2a402-market",
+    "aelf-inc",
+    "aeternity",
+    "agentexchange-work",
+    "agenthealthmonitor-xyz",
+    "agora",
+    "airstack",
+    "akash",
+    "algorand",
+    "algovoi-co-uk",
+    "allium",
+    "alloyx",
+    "amazon-managed-blockchain",
+    "amberdata",
+    "anchor-x402",
+    "angle",
+    "aptos",
+    "arbiscan",
+    "arkham",
+    "artifactcouncil",
+    "arweave",
+    "audius",
+    "autonomys",
+    "ava-labs",
+    "ava-protocol",
+    "avalanche",
+    "avora-agent-forge",
+    "axelar",
+    "b3",
+    "babylon-labs",
+    "backpack",
+    "bakkt",
+    "banqu",
+    "barnbridge",
+    "basescan",
+    "bigchaindb",
+    "binance",
+    "bitculator",
+    "bitgo",
+    "bithumb",
+    "bitpay",
+    "bitski",
+    "bitstamp",
+    "blackbird",
+    "blockaid",
+    "blockchain.com",
+    "blockchair",
+    "blockdaemon",
+    "blockfrost",
+    "blocklottos-com",
+    "blockscout",
+    "blockvision",
+    "blowfish",
+    "boost",
+    "braiins-academy",
+    "brave-browser",
+    "breeze",
+    "brl",
+    "broke2builtai-com",
+    "bscscan",
+    "btcpay",
+    "bullet",
+    "burstiq",
+    "cardano",
+    "ceramic",
+    "certik",
+    "chainlens",
+    "chainstack",
+    "cipherowl",
+    "circle",
+    "classic",
+    "coin-metrics",
+    "coinbase",
+    "coinflow",
+    "coingate",
+    "coingecko",
+    "coinlist",
+    "coinme",
+    "coinpaprika",
+    "coinrailz-com",
+    "commerce-coinbase",
+    "connskill-com",
+    "copper-co",
+    "cosmos",
+    "covalent",
+    "crossmint",
+    "crunchdao",
+    "crypto-com",
+    "cryptocompare",
+    "cryptonews",
+    "cryptoquant",
+    "cubist",
+    "culture-sbs",
+    "d3",
+    "dapper-labs",
+    "debank",
+    "defillama",
+    "deribit",
+    "derivadex",
+    "dflow",
+    "dfns",
+    "dialect",
+    "dinari",
+    "dmarket",
+    "dodo",
+    "dopex",
+    "dune-analytics",
+    "dynamic-labs",
+    "dynamic-xyz",
+    "elliptic",
+    "elonsusk-com",
+    "enso",
+    "etherscan",
+    "euler",
+    "evedex",
+    "execution-market",
+    "farcaster",
+    "farmdash",
+    "figment",
+    "figure-technology-solutions",
+    "filebase",
+    "fipto",
+    "flexa",
+    "flow-blockchain",
+    "fluence",
+    "footprint",
+    "fordefi",
+    "frax",
+    "gala-games",
+    "galaxy-com",
+    "gauntlet",
+    "gitcoin",
+    "glassnode",
+    "gmx",
+    "gnosis-safe",
+    "gonna-bond",
+    "gte",
+    "halliday",
+    "hedera",
+    "hegic",
+    "helius",
+    "hilt-so",
+    "hiro",
+    "hivemapper",
+    "hostdefi",
+    "hummingbot",
+    "imgauth-api-di-attestazione-opere-digitali",
+    "immutable",
+    "iota",
+    "jupiter-ag",
+    "jupiter-exchange",
+    "kadena",
+    "kamino",
+    "kusama",
+    "kyber-network",
+    "layerzero",
+    "lbank",
+    "ledger",
+    "lido",
+    "lido-finance",
+    "lifi",
+    "lighter",
+    "lightning-labs",
+    "lightspark",
+    "linea",
+    "liquidagent-ai",
+    "lit-protocol",
+    "livepeer",
+    "looksrare",
+    "loot-rush-games",
+    "lukka",
+    "m-0",
+    "m0",
+    "madeonsol",
+    "magic-eden",
+    "magic-link",
+    "maicoin",
+    "messari",
+    "metalend",
+    "meter",
+    "mexc",
+    "mobula",
+    "moirailabs-com",
+    "moralis",
+    "mystars",
+    "n3xt",
+    "nansen",
+    "near",
+    "nestcoin",
+    "nexus-mutual",
+    "neynar",
+    "now-payments",
+    "nym-technologies",
+    "obol",
+    "octav",
+    "olympusdao",
+    "onchainagentintel-io",
+    "ondo-finance",
+    "one-inch",
+    "opennode",
+    "opensea",
+    "openzeppelin",
+    "optimistic-etherscan",
+    "orca",
+    "orderly-network",
+    "origin-protocol",
+    "oumla-ltd",
+    "parafi",
+    "paragraph",
+    "paraswap",
+    "paxos",
+    "pendle",
+    "pinata",
+    "pocket-network",
+    "pokt",
+    "polkadot",
+    "polygon-id",
+    "polygonscan",
+    "polysign",
+    "pyth",
+    "quant",
+    "rarible",
+    "raydium",
+    "re",
+    "recall-labs",
+    "reown",
+    "rho-protocol",
+    "ribbon-finance",
+    "ripio",
+    "ripple-labs",
+    "rocket-pool",
+    "rugspull-read-api",
+    "safello",
+    "sahara-ai",
+    "sapien",
+    "scale3",
+    "securitize",
+    "sei",
+    "sentio",
+    "shapeshift",
+    "simba-chain",
+    "singularity-net",
+    "snowsignals",
+    "snowtrace",
+    "sojo-industries",
+    "solidus-labs",
+    "solscan",
+    "spacemesh",
+    "stellar",
+    "superform",
+    "superrare",
+    "supra",
+    "surf",
+    "sushiswap",
+    "syndicate",
+    "synthetix",
+    "tendermint",
+    "tensor",
+    "tesser",
+    "tesseract",
+    "tether",
+    "tezos",
+    "theloopbreaker-com",
+    "thirdweb",
+    "thorchain",
+    "timeswap",
+    "tooloracle-io",
+    "top-group",
+    "totalis",
+    "transpose",
+    "tristero",
+    "triton-one",
+    "trm-labs",
+    "tzero",
+    "uniblock",
+    "uniswap",
+    "unlock-protocol",
+    "unstoppable-domains",
+    "upland",
+    "utila",
+    "walrus-protocol",
+    "wazirx",
+    "wealthville-defi-liquidity-pool-scores-api-solana-evm",
+    "wholechain",
+    "wincl",
+    "wormhole",
+    "x2y2",
+    "x402-list-api",
+    "xt-com",
+    "yearn",
+    "zerion",
+    "zerodev",
+    "zora"
+   ],
+   "camelCase": [
+    "0x",
+    "aelf-inc",
+    "agentexchange-work",
+    "airstack",
+    "akash",
+    "amazon-managed-blockchain",
+    "amazon-qldb",
+    "amberdata",
+    "angle",
+    "arbiscan",
+    "arkham",
+    "arweave",
+    "audius",
+    "ava-labs",
+    "ava-protocol",
+    "avalanche",
+    "b3",
+    "backpack",
+    "bakkt",
+    "banqu",
+    "barnbridge",
+    "basescan",
+    "binance",
+    "bitgo",
+    "bitpay",
+    "bitski",
+    "blockchain.com",
+    "blockscout",
+    "blockvision",
+    "boost",
+    "bscscan",
+    "btcpay",
+    "bullet",
+    "burstiq",
+    "ceramic",
+    "certik",
+    "cipherowl",
+    "circle",
+    "classic",
+    "coinbase",
+    "coinflow",
+    "coinme",
+    "commerce-coinbase",
+    "connskill-com",
+    "copper-co",
+    "cosmos",
+    "crossmint",
+    "crunchdao",
+    "cryptocompare",
+    "d3",
+    "derivadex",
+    "dflow",
+    "dfns",
+    "dialect",
+    "digital-asset",
+    "dmarket",
+    "dodo",
+    "dopex",
+    "dune-analytics",
+    "dynamic-labs",
+    "dynamic-xyz",
+    "elliptic",
+    "enso",
+    "euler",
+    "evedex",
+    "farcaster",
+    "farmdash",
+    "figure-technology-solutions",
+    "fluence",
+    "frax",
+    "gala-games",
+    "gmx",
+    "gte",
+    "hegic",
+    "helius",
+    "hivemapper",
+    "hostdefi",
+    "hummingbot",
+    "idrx",
+    "immutable",
+    "iota",
+    "jito",
+    "jupiter-ag",
+    "jupiter-exchange",
+    "kadena",
+    "kamino",
+    "kusama",
+    "kyber-network",
+    "layerzero",
+    "lbank",
+    "ledger",
+    "lido",
+    "lido-finance",
+    "lifi",
+    "lightspark",
+    "linea",
+    "livepeer",
+    "looksrare",
+    "loot-rush-games",
+    "lukka",
+    "m-0",
+    "m0",
+    "magic-eden",
+    "mesh",
+    "metalend",
+    "meter",
+    "mexc",
+    "mobula",
+    "moirailabs-com",
+    "moralis",
+    "n3xt",
+    "near",
+    "nestcoin",
+    "nexus-mutual",
+    "neynar",
+    "now-payments",
+    "obol",
+    "octav",
+    "odos",
+    "olympusdao",
+    "ondo-finance",
+    "one-inch",
+    "opensea",
+    "orca",
+    "orderly-network",
+    "origin-protocol",
+    "oumla-ltd",
+    "parafi",
+    "paragraph",
+    "paraswap",
+    "pendle",
+    "pinata",
+    "polkadot",
+    "polygon-id",
+    "quant",
+    "rarible",
+    "raydium",
+    "recall-labs",
+    "reown",
+    "rho-protocol",
+    "ripple-labs",
+    "rugspull-read-api",
+    "safello",
+    "securitize",
+    "sei",
+    "sentio",
+    "shapeshift",
+    "snowtrace",
+    "spacemesh",
+    "superform",
+    "superrare",
+    "sushiswap",
+    "syndicate",
+    "synthetix",
+    "tendermint",
+    "tensor",
+    "tether",
+    "tezos",
+    "theloopbreaker-com",
+    "thirdweb",
+    "thorchain",
+    "timeswap",
+    "trm-labs",
+    "tweed",
+    "tzero",
+    "uniblock",
+    "uniswap",
+    "unlock-protocol",
+    "unstoppable-domains",
+    "upland",
+    "utila",
+    "wazirx",
+    "wholechain",
+    "wincl",
+    "wormhole",
+    "x2y2",
+    "xt-com",
+    "yearn",
+    "zora"
+   ],
+   "snake_case": [
+    "0g-labs",
+    "aeternity",
+    "agentexchange-work",
+    "airstack",
+    "akash",
+    "algovoi-co-uk",
+    "allium",
+    "alloyx",
+    "amazon-qldb",
+    "aptos",
+    "arbiscan",
+    "arkham",
+    "audius",
+    "b3",
+    "babylon-labs",
+    "bakkt",
+    "bigchaindb",
+    "bitculator",
+    "bitstamp",
+    "blackbird",
+    "blockaid",
+    "blockdaemon",
+    "blocklottos-com",
+    "braiins-academy",
+    "brale",
+    "brave-browser",
+    "breeze",
+    "cardano",
+    "chainstack",
+    "cipherowl",
+    "coin-metrics",
+    "coinbase",
+    "coingate",
+    "coingecko",
+    "coinlist",
+    "commerce-coinbase",
+    "connskill-com",
+    "crunchdao",
+    "crypto-com",
+    "cryptocompare",
+    "cryptonews",
+    "cryptoquant",
+    "cubist",
+    "dapper-labs",
+    "debank",
+    "deribit",
+    "dinari",
+    "dune-analytics",
+    "dynamic-labs",
+    "dynamic-xyz",
+    "elliptic",
+    "evedex",
+    "execution-market",
+    "farcaster",
+    "figment",
+    "fipto",
+    "flow-blockchain",
+    "footprint",
+    "fordefi",
+    "galaxy-com",
+    "gauntlet",
+    "gitcoin",
+    "gnosis-safe",
+    "gonna-bond",
+    "gte",
+    "halliday",
+    "hedera",
+    "helius",
+    "hilt-so",
+    "hiro",
+    "hivemapper",
+    "immutable",
+    "ledger",
+    "lido",
+    "lido-finance",
+    "lighter",
+    "lightning-labs",
+    "lit-protocol",
+    "litecoin",
+    "madeonsol",
+    "magic-eden",
+    "magic-link",
+    "maicoin",
+    "mexc",
+    "moralis",
+    "mystars",
+    "near",
+    "neynar",
+    "now-payments",
+    "nym-technologies",
+    "odos",
+    "olympusdao",
+    "ondo-finance",
+    "opennode",
+    "opensea",
+    "openzeppelin",
+    "orca",
+    "orderly-network",
+    "origin-protocol",
+    "paxos",
+    "pendle",
+    "pocket-network",
+    "pokt",
+    "polygon-id",
+    "pyth",
+    "ribbon-finance",
+    "ripio",
+    "ripple-labs",
+    "rocksolid",
+    "scale3",
+    "sei",
+    "simba-chain",
+    "singularity-net",
+    "snowtrace",
+    "solidus-labs",
+    "stellar",
+    "superform",
+    "supra",
+    "surf",
+    "sushiswap",
+    "tendermint",
+    "tesser",
+    "thorchain",
+    "timeswap",
+    "tooloracle-io",
+    "top-group",
+    "totalis",
+    "transpose",
+    "tristero",
+    "triton-one",
+    "upland",
+    "walrus-protocol",
+    "wealthville-defi-liquidity-pool-scores-api-solana-evm",
+    "wholechain",
+    "wincl",
+    "wormhole",
+    "x2y2",
+    "x402-list-api",
+    "zerion"
+   ],
+   "other": [
+    "akash",
+    "brale",
+    "coingate",
+    "cosmos",
+    "crypto-com",
+    "cubist",
+    "dmarket",
+    "figment",
+    "fordefi",
+    "gnosis-safe",
+    "halliday",
+    "hedera",
+    "kyber-network",
+    "ledger",
+    "lightning-labs",
+    "livepeer",
+    "looksrare",
+    "magic-eden",
+    "opensea",
+    "paxos",
+    "pokt",
+    "polkadot",
+    "pyth",
+    "recall-labs",
+    "ripple-labs",
+    "sei",
+    "sentio",
+    "simba-chain",
+    "tezos",
+    "unlock-protocol",
+    "unstoppable-domains",
+    "wholechain",
+    "zerion"
+   ],
+   "kebab-case": [
+    "aeternity",
+    "algorand",
+    "brl",
+    "covalent",
+    "cryptonews",
+    "evedex",
+    "filebase",
+    "helius",
+    "ledger",
+    "mexc",
+    "ripple-labs",
+    "rocksolid"
+   ],
+   "PascalCase": [
+    "amazon-managed-blockchain",
+    "amazon-qldb",
+    "dmarket",
+    "mesh",
+    "pendle",
+    "wholechain"
+   ]
+  },
+  "pagination_param": {
+   "limit": [
+    "0g-labs",
+    "0x",
+    "aelf-inc",
+    "aeternity",
+    "agentexchange-work",
+    "agora",
+    "akash",
+    "algorand",
+    "algovoi-co-uk",
+    "alloyx",
+    "aptos",
+    "arkham",
+    "artifactcouncil",
+    "audius",
+    "autonomys",
+    "ava-protocol",
+    "axelar",
+    "b3",
+    "backpack",
+    "banqu",
+    "barnbridge",
+    "bigchaindb",
+    "binance",
+    "bitculator",
+    "bitgo",
+    "bitpay",
+    "bitski",
+    "bitstamp",
+    "blockchain.com",
+    "blockchair",
+    "blocklottos-com",
+    "blockvision",
+    "braiins-academy",
+    "breeze",
+    "btcpay",
+    "bullet",
+    "burstiq",
+    "ceramic",
+    "certik",
+    "chainstack",
+    "classic",
+    "coin-metrics",
+    "coinbase",
+    "coinflow",
+    "coingecko",
+    "coinlist",
+    "coinpaprika",
+    "commerce-coinbase",
+    "connskill-com",
+    "copper-co",
+    "cosmos",
+    "crossmint",
+    "cryptocompare",
+    "cryptoquant",
+    "culture-sbs",
+    "d3",
+    "debank",
+    "deribit",
+    "derivadex",
+    "dfns",
+    "dialect",
+    "dinari",
+    "dmarket",
+    "dune-analytics",
+    "dynamic-labs",
+    "dynamic-xyz",
+    "elliptic",
+    "elonsusk-com",
+    "euler",
+    "evedex",
+    "execution-market",
+    "farmdash",
+    "figment",
+    "figure-technology-solutions",
+    "filebase",
+    "footprint",
+    "fordefi",
+    "gala-games",
+    "gauntlet",
+    "gitcoin",
+    "gmx",
+    "gnosis-safe",
+    "gte",
+    "halliday",
+    "hedera",
+    "helius",
+    "hilt-so",
+    "hiro",
+    "hostdefi",
+    "hummingbot",
+    "jupiter-ag",
+    "kadena",
+    "kamino",
+    "layerzero",
+    "ledger",
+    "lido",
+    "lido-finance",
+    "lifi",
+    "lighter",
+    "lightspark",
+    "linea",
+    "lukka",
+    "m-0",
+    "m0",
+    "madeonsol",
+    "magic-eden",
+    "maicoin",
+    "mobula",
+    "moralis",
+    "mystars",
+    "n3xt",
+    "near",
+    "nestcoin",
+    "neynar",
+    "now-payments",
+    "obol",
+    "octav",
+    "ondo-finance",
+    "one-inch",
+    "opensea",
+    "orderly-network",
+    "origin-protocol",
+    "parafi",
+    "paragraph",
+    "paxos",
+    "pendle",
+    "pinata",
+    "pyth",
+    "quant",
+    "rarible",
+    "re",
+    "recall-labs",
+    "rho-protocol",
+    "ribbon-finance",
+    "ripio",
+    "rocket-pool",
+    "rugspull-read-api",
+    "safello",
+    "sapien",
+    "securitize",
+    "sentio",
+    "singularity-net",
+    "snowsignals",
+    "sojo-industries",
+    "solidus-labs",
+    "spacemesh",
+    "stellar",
+    "superform",
+    "supra",
+    "surf",
+    "syndicate",
+    "tendermint",
+    "tensor",
+    "tesser",
+    "tesseract",
+    "tether",
+    "tezos",
+    "thorchain",
+    "top-group",
+    "totalis",
+    "transpose",
+    "uniblock",
+    "uniswap",
+    "upland",
+    "wazirx",
+    "wealthville-defi-liquidity-pool-scores-api-solana-evm",
+    "x2y2",
+    "x402-list-api",
+    "xt-com",
+    "yearn"
+   ],
+   "page": [
+    "akash",
+    "amberdata",
+    "arbiscan",
+    "b3",
+    "barnbridge",
+    "basescan",
+    "binance",
+    "bitculator",
+    "blackbird",
+    "blockaid",
+    "blockdaemon",
+    "blockfrost",
+    "boost",
+    "breeze",
+    "bscscan",
+    "cardano",
+    "chainstack",
+    "coinflow",
+    "coingate",
+    "coingecko",
+    "coinme",
+    "cosmos",
+    "crossmint",
+    "crunchdao",
+    "crypto-com",
+    "cryptocompare",
+    "cryptonews",
+    "dinari",
+    "elliptic",
+    "enso",
+    "etherscan",
+    "execution-market",
+    "figment",
+    "fluence",
+    "fordefi",
+    "gala-games",
+    "galaxy-com",
+    "gonna-bond",
+    "hegic",
+    "helius",
+    "hilt-so",
+    "hiro",
+    "kyber-network",
+    "ledger",
+    "lido",
+    "lido-finance",
+    "linea",
+    "loot-rush-games",
+    "near",
+    "nestcoin",
+    "now-payments",
+    "nym-technologies",
+    "obol",
+    "octav",
+    "one-inch",
+    "opennode",
+    "openzeppelin",
+    "optimistic-etherscan",
+    "orderly-network",
+    "parafi",
+    "polygon-id",
+    "quant",
+    "raydium",
+    "reown",
+    "ripple-labs",
+    "scale3",
+    "securitize",
+    "sei",
+    "sentio",
+    "simba-chain",
+    "snowtrace",
+    "sojo-industries",
+    "stellar",
+    "superrare",
+    "syndicate",
+    "tendermint",
+    "tesser",
+    "triton-one",
+    "trm-labs",
+    "tzero",
+    "unlock-protocol",
+    "unstoppable-domains",
+    "wormhole",
+    "x2y2",
+    "x402-list-api",
+    "xt-com",
+    "yearn",
+    "zerion"
+   ],
+   "offset": [
+    "0g-labs",
+    "aelf-inc",
+    "algovoi-co-uk",
+    "arbiscan",
+    "arkham",
+    "audius",
+    "autonomys",
+    "b3",
+    "backpack",
+    "banqu",
+    "basescan",
+    "binance",
+    "bitculator",
+    "bitpay",
+    "bitski",
+    "blockchain.com",
+    "blockchair",
+    "braiins-academy",
+    "brave-browser",
+    "bscscan",
+    "btcpay",
+    "ceramic",
+    "chainstack",
+    "classic",
+    "coinbase",
+    "commerce-coinbase",
+    "connskill-com",
+    "copper-co",
+    "deribit",
+    "derivadex",
+    "dialect",
+    "dmarket",
+    "dune-analytics",
+    "dynamic-labs",
+    "dynamic-xyz",
+    "etherscan",
+    "euler",
+    "evedex",
+    "execution-market",
+    "farmdash",
+    "figment",
+    "figure-technology-solutions",
+    "footprint",
+    "gala-games",
+    "gitcoin",
+    "gnosis-safe",
+    "gte",
+    "hegic",
+    "hilt-so",
+    "hiro",
+    "ledger",
+    "lighter",
+    "lukka",
+    "m-0",
+    "m0",
+    "madeonsol",
+    "magic-eden",
+    "maicoin",
+    "mesh",
+    "mobula",
+    "n3xt",
+    "neynar",
+    "nym-technologies",
+    "obol",
+    "octav",
+    "optimistic-etherscan",
+    "origin-protocol",
+    "rarible",
+    "re",
+    "recall-labs",
+    "ribbon-finance",
+    "rocket-pool",
+    "safello",
+    "sentio",
+    "singularity-net",
+    "snowtrace",
+    "solidus-labs",
+    "spacemesh",
+    "stellar",
+    "superform",
+    "surf",
+    "tesseract",
+    "tezos",
+    "thorchain",
+    "top-group",
+    "wazirx",
+    "x402-list-api"
+   ],
+   "cursor": [
+    "0g-labs",
+    "0x",
+    "agora",
+    "allium",
+    "alloyx",
+    "bitski",
+    "blockaid",
+    "blockchain.com",
+    "blockvision",
+    "classic",
+    "coinbase",
+    "connskill-com",
+    "crossmint",
+    "d3",
+    "dialect",
+    "dmarket",
+    "dune-analytics",
+    "dynamic-labs",
+    "dynamic-xyz",
+    "enso",
+    "execution-market",
+    "frax",
+    "gmx",
+    "helius",
+    "hiro",
+    "ledger",
+    "lifi",
+    "lighter",
+    "lightspark",
+    "madeonsol",
+    "magic-eden",
+    "moralis",
+    "mystars",
+    "near",
+    "neynar",
+    "octav",
+    "ondo-finance",
+    "opensea",
+    "origin-protocol",
+    "paragraph",
+    "quant",
+    "rarible",
+    "rugspull-read-api",
+    "sapien",
+    "shapeshift",
+    "snowsignals",
+    "stellar",
+    "supra",
+    "surf",
+    "tensor",
+    "totalis",
+    "uniblock",
+    "uniswap",
+    "unstoppable-domains",
+    "x2y2"
+   ],
+   "page_size": [
+    "airstack",
+    "allium",
+    "ava-labs",
+    "avalanche",
+    "binance",
+    "blackbird",
+    "blockvision",
+    "boost",
+    "brale",
+    "cipherowl",
+    "circle",
+    "coin-metrics",
+    "coinbase",
+    "coinflow",
+    "commerce-coinbase",
+    "cubist",
+    "digital-asset",
+    "dinari",
+    "enso",
+    "farcaster",
+    "figment",
+    "fipto",
+    "immutable",
+    "kyber-network",
+    "ledger",
+    "lido",
+    "lido-finance",
+    "lit-protocol",
+    "loot-rush-games",
+    "mexc",
+    "neynar",
+    "quant",
+    "raydium",
+    "ripio",
+    "ripple-labs",
+    "scale3",
+    "sentio",
+    "shapeshift",
+    "stellar",
+    "unlock-protocol",
+    "upland",
+    "utila",
+    "wholechain",
+    "wincl",
+    "wormhole",
+    "x2y2"
+   ],
+   "size": [
+    "amberdata",
+    "arkham",
+    "binance",
+    "blockaid",
+    "coinme",
+    "crunchdao",
+    "elliptic",
+    "filebase",
+    "fordefi",
+    "gala-games",
+    "galaxy-com",
+    "gonna-bond",
+    "lbank",
+    "nestcoin",
+    "nym-technologies",
+    "orca",
+    "orderly-network",
+    "rarible",
+    "ripple-labs",
+    "safello",
+    "sapien",
+    "simba-chain",
+    "tezos",
+    "xt-com"
+   ],
+   "start": [
+    "aptos",
+    "bitculator",
+    "bithumb",
+    "bitstamp",
+    "blockvision",
+    "crunchdao",
+    "debank",
+    "dynamic-xyz",
+    "figment",
+    "fluence",
+    "gauntlet",
+    "jupiter-ag",
+    "kamino",
+    "layerzero",
+    "ledger",
+    "messari",
+    "mexc",
+    "olympusdao",
+    "rarible",
+    "safello",
+    "sentio",
+    "supra",
+    "tzero",
+    "walrus-protocol"
+   ],
+   "per_page": [
+    "bitculator",
+    "blockdaemon",
+    "breeze",
+    "coingate",
+    "coingecko",
+    "crossmint",
+    "elliptic",
+    "fluence",
+    "hilt-so",
+    "loot-rush-games",
+    "near",
+    "nym-technologies",
+    "openzeppelin",
+    "sei",
+    "superrare",
+    "tendermint",
+    "trm-labs",
+    "tzero",
+    "unstoppable-domains",
+    "wholechain",
+    "x402-list-api"
+   ],
+   "after": [
+    "artifactcouncil",
+    "ava-protocol",
+    "axelar",
+    "crossmint",
+    "culture-sbs",
+    "evedex",
+    "execution-market",
+    "filebase",
+    "helius",
+    "madeonsol",
+    "opensea",
+    "quant",
+    "ripple-labs",
+    "sei",
+    "upland",
+    "zora"
+   ],
+   "count": [
+    "blockfrost",
+    "brave-browser",
+    "btcpay",
+    "cardano",
+    "chainstack",
+    "coinme",
+    "commerce-coinbase",
+    "crypto-com",
+    "deribit",
+    "jupiter-ag",
+    "mesh",
+    "parafi",
+    "supra",
+    "thorchain",
+    "top-group",
+    "zora"
+   ],
+   "page_token": [
+    "airstack",
+    "arkham",
+    "ava-labs",
+    "avalanche",
+    "cipherowl",
+    "coinbase",
+    "commerce-coinbase",
+    "digital-asset",
+    "dinari",
+    "farcaster",
+    "neynar",
+    "pinata",
+    "ripple-labs",
+    "sentio",
+    "utila"
+   ],
+   "before": [
+    "ava-protocol",
+    "b3",
+    "deribit",
+    "evedex",
+    "filebase",
+    "helius",
+    "madeonsol",
+    "opensea",
+    "ripple-labs",
+    "sei",
+    "snowsignals",
+    "surf",
+    "trm-labs",
+    "upland"
+   ],
+   "skip": [
+    "akash",
+    "angle",
+    "btcpay",
+    "burstiq",
+    "certik",
+    "dopex",
+    "lido",
+    "lido-finance",
+    "oumla-ltd",
+    "pendle",
+    "upland",
+    "utila"
+   ],
+   "next": [
+    "algorand",
+    "dinari",
+    "evedex",
+    "gauntlet",
+    "hilt-so",
+    "kadena",
+    "lifi",
+    "opensea",
+    "orca"
+   ],
+   "starting_after": [
+    "akash",
+    "coinbase",
+    "coinlist",
+    "commerce-coinbase",
+    "unstoppable-domains"
+   ],
+   "max_results": [
+    "amazon-managed-blockchain",
+    "amazon-qldb",
+    "polygon-id"
+   ],
+   "top": [
+    "agentexchange-work"
+   ]
+  },
+  "path_param": {
+   "lower": [
+    "0g-labs",
+    "aelf-inc",
+    "aeternity",
+    "agenthealthmonitor-xyz",
+    "akash",
+    "aleo",
+    "algorand",
+    "algovoi-co-uk",
+    "alloyx",
+    "amazon-qldb",
+    "amberdata",
+    "ankr",
+    "aptos",
+    "arkham",
+    "artifactcouncil",
+    "arweave",
+    "audius",
+    "autonomys",
+    "ava-labs",
+    "ava-protocol",
+    "avalanche",
+    "axelar",
+    "b3",
+    "bakkt",
+    "banqu",
+    "barnbridge",
+    "bitculator",
+    "bitgo",
+    "bitpay",
+    "blackbird",
+    "blockaid",
+    "blockchain.com",
+    "blockchair",
+    "blockdaemon",
+    "blockfrost",
+    "blocklottos-com",
+    "blockscout",
+    "boost",
+    "braiins-academy",
+    "brale",
+    "brl",
+    "broke2builtai-com",
+    "btc-war-live-market-data-api",
+    "btcpay",
+    "burstiq",
+    "cardano",
+    "ceramic",
+    "certik",
+    "chainlens",
+    "chainstack",
+    "cipherowl",
+    "circle",
+    "civic",
+    "classic",
+    "coin-metrics",
+    "coinbase",
+    "coinflow",
+    "coingate",
+    "coingecko",
+    "coinlist",
+    "coinrailz-com",
+    "commerce-coinbase",
+    "cosmos",
+    "covalent",
+    "crossmint",
+    "crunchdao",
+    "cubist",
+    "curve-finance",
+    "d3",
+    "dapper-labs",
+    "defillama",
+    "dfns",
+    "dialect",
+    "dmarket",
+    "dopex",
+    "dune-analytics",
+    "dynamic-labs",
+    "dynamic-xyz",
+    "elliptic",
+    "elonsusk-com",
+    "enso",
+    "euler",
+    "evedex",
+    "execution-market",
+    "farmdash",
+    "figment",
+    "figure-technology-solutions",
+    "filebase",
+    "filecoin",
+    "flexa",
+    "flow-blockchain",
+    "footprint",
+    "fordefi",
+    "frax",
+    "gala-games",
+    "galaxy-com",
+    "gauntlet",
+    "gitcoin",
+    "gmx",
+    "gnosis-safe",
+    "gonna-bond",
+    "hedera",
+    "hegic",
+    "helius",
+    "hilt-so",
+    "hiro",
+    "hivemapper",
+    "hostdefi",
+    "hummingbot",
+    "hyperbeat",
+    "imgauth-api-di-attestazione-opere-digitali",
+    "immutable",
+    "iota",
+    "jupiter-ag",
+    "kadena",
+    "kamino",
+    "kusama",
+    "kyber-network",
+    "layerzero",
+    "ledger",
+    "lifi",
+    "lightning-labs",
+    "lightspark",
+    "liquidagent-ai",
+    "litecoin",
+    "livepeer",
+    "madeonsol",
+    "magic-eden",
+    "mesh",
+    "messari",
+    "metalend",
+    "meter",
+    "moirailabs-com",
+    "moralis",
+    "mystars",
+    "n3xt",
+    "near",
+    "nestcoin",
+    "nym-technologies",
+    "obol",
+    "octav",
+    "odos",
+    "onchainagentintel-io",
+    "ondo-finance",
+    "one-inch",
+    "opennode",
+    "opensea",
+    "openzeppelin",
+    "orca",
+    "orderly-network",
+    "origin-protocol",
+    "oumla-ltd",
+    "pancakeswap",
+    "parafi",
+    "paragraph",
+    "paraswap",
+    "paxos",
+    "pendle",
+    "pinata",
+    "pocket-network",
+    "pokt",
+    "polkadot",
+    "polygon-id",
+    "polysign",
+    "pyth",
+    "quant",
+    "quicknode",
+    "rarible",
+    "re",
+    "recall-labs",
+    "reown",
+    "rho-protocol",
+    "ripio",
+    "ripple-labs",
+    "rocket-pool",
+    "rugspull-read-api",
+    "safello",
+    "sei",
+    "sentio",
+    "shapeshift",
+    "solidus-labs",
+    "stellar",
+    "superform",
+    "superrare",
+    "supra",
+    "tensor",
+    "tesser",
+    "tesseract",
+    "tether",
+    "tezos",
+    "thirdweb",
+    "thorchain",
+    "tooloracle-io",
+    "top-group",
+    "totalis",
+    "tristero",
+    "trm-labs",
+    "tweed",
+    "tzero",
+    "uniblock",
+    "unlock-protocol",
+    "unstoppable-domains",
+    "upland",
+    "vesper",
+    "walrus-protocol",
+    "waodao",
+    "warppay402-com",
+    "wealthville-defi-liquidity-pool-scores-api-solana-evm",
+    "wincl",
+    "wormhole",
+    "x2y2",
+    "x402-list-api",
+    "xt-com",
+    "yearn",
+    "zerion"
+   ],
+   "camelCase": [
+    "0g-labs",
+    "0x",
+    "a2a402-market",
+    "aelf-inc",
+    "aeternity",
+    "agora",
+    "akash",
+    "aleo",
+    "amazon-managed-blockchain",
+    "amazon-qldb",
+    "amberdata",
+    "ankr",
+    "api3",
+    "arkham",
+    "art-blocks",
+    "audius",
+    "autonomys",
+    "ava-labs",
+    "avalanche",
+    "axelar",
+    "b3",
+    "bakkt",
+    "banqu",
+    "barnbridge",
+    "bitgo",
+    "bitpay",
+    "blockchain.com",
+    "blockchair",
+    "blocktorch",
+    "btcpay",
+    "burstiq",
+    "ceramic",
+    "chainlens",
+    "civic",
+    "classic",
+    "coinbase",
+    "coinflow",
+    "coinme",
+    "coinrailz-com",
+    "connskill-com",
+    "copper-co",
+    "cosmos",
+    "covalent",
+    "crossmint",
+    "crunchdao",
+    "culture-sbs",
+    "curve-finance",
+    "d3",
+    "dfns",
+    "dialect",
+    "digital-asset",
+    "dune-analytics",
+    "dynamic-labs",
+    "dynamic-xyz",
+    "elliptic",
+    "enso",
+    "euler",
+    "evedex",
+    "figure-technology-solutions",
+    "filebase",
+    "filecoin",
+    "frax",
+    "gala-games",
+    "gitcoin",
+    "hedera",
+    "helius",
+    "hiro",
+    "hummingbot",
+    "idrx",
+    "iota",
+    "jupiter-ag",
+    "kadena",
+    "kamino",
+    "kusama",
+    "layerzero",
+    "ledger",
+    "lido",
+    "lido-finance",
+    "lifi",
+    "lightspark",
+    "linea",
+    "litecoin",
+    "livepeer",
+    "loot-rush-games",
+    "lukka",
+    "m-0",
+    "m0",
+    "magic-eden",
+    "mesh",
+    "messari",
+    "metalend",
+    "moirailabs-com",
+    "moralis",
+    "n3xt",
+    "nestcoin",
+    "nexus-mutual",
+    "obol",
+    "octav",
+    "ondo-finance",
+    "one-inch",
+    "opensea",
+    "origin-protocol",
+    "oumla-ltd",
+    "parafi",
+    "paragraph",
+    "pendle",
+    "pocket-network",
+    "pokt",
+    "polkadot",
+    "privatedao-org",
+    "proof-of-play",
+    "quant",
+    "quicknode",
+    "rarible",
+    "recall-labs",
+    "rho-protocol",
+    "ripple-labs",
+    "rugspull-read-api",
+    "safello",
+    "sapien",
+    "securitize",
+    "self-id",
+    "sentio",
+    "story-protocol",
+    "superform",
+    "superrare",
+    "sushiswap",
+    "syndicate",
+    "tesser",
+    "tesseract",
+    "tether",
+    "the-graph",
+    "thirdweb",
+    "triton-one",
+    "trm-labs",
+    "tweed",
+    "tzero",
+    "uniblock",
+    "uniswap",
+    "unlock-protocol",
+    "unstoppable-domains",
+    "upland",
+    "warppay402-com",
+    "wealthville-defi-liquidity-pool-scores-api-solana-evm",
+    "wholechain",
+    "wincl",
+    "wormhole",
+    "xt-com",
+    "yearn",
+    "zerodev"
+   ],
+   "snake_case": [
+    "aeternity",
+    "agenthealthmonitor-xyz",
+    "airstack",
+    "akash",
+    "algovoi-co-uk",
+    "allium",
+    "alloyx",
+    "anchor-x402",
+    "aptos",
+    "arkham",
+    "assetfare",
+    "audius",
+    "b3",
+    "bigchaindb",
+    "bitski",
+    "bitstamp",
+    "blockaid",
+    "blockchain.com",
+    "blockdaemon",
+    "blockfrost",
+    "blocklottos-com",
+    "blockscout",
+    "braiins-academy",
+    "brale",
+    "breeze",
+    "cardano",
+    "ceramic",
+    "coin-metrics",
+    "coinbase",
+    "coingate",
+    "coingecko",
+    "coinlist",
+    "coinpaprika",
+    "commerce-coinbase",
+    "cubist",
+    "dapper-labs",
+    "dinari",
+    "dmarket",
+    "dune-analytics",
+    "elliptic",
+    "elonsusk-com",
+    "execution-market",
+    "figment",
+    "fipto",
+    "flow-blockchain",
+    "fluence",
+    "footprint",
+    "fordefi",
+    "galaxy-com",
+    "gauntlet",
+    "gitcoin",
+    "gnosis-safe",
+    "gonna-bond",
+    "gte",
+    "hilt-so",
+    "hiro",
+    "immutable",
+    "infstones",
+    "ledger",
+    "lifi",
+    "lightning-labs",
+    "magic-eden",
+    "maicoin",
+    "moralis",
+    "near",
+    "neynar",
+    "now-payments",
+    "nym-technologies",
+    "obol",
+    "odos",
+    "onchainagentintel-io",
+    "opensea",
+    "openzeppelin",
+    "orca",
+    "orderly-network",
+    "paxos",
+    "pokt",
+    "polysign",
+    "privy",
+    "pyth",
+    "reown",
+    "ribbon-finance",
+    "ripio",
+    "ripple-labs",
+    "rocksolid",
+    "sei",
+    "simba-chain",
+    "singularity-net",
+    "sojo-industries",
+    "solidus-labs",
+    "solvela-ai",
+    "stellar",
+    "superform",
+    "supra",
+    "surf",
+    "thorchain",
+    "tooloracle-io",
+    "top-group",
+    "tristero",
+    "trustboost-dev",
+    "utila",
+    "walrus-protocol",
+    "wincl",
+    "wormhole",
+    "zerion"
+   ],
+   "other": [
+    "akash",
+    "blockfrost",
+    "cardano",
+    "coinme",
+    "copper-co",
+    "lightning-labs"
+   ],
+   "kebab-case": [
+    "aeternity",
+    "algorand",
+    "brl",
+    "ripple-labs"
+   ],
+   "PascalCase": [
+    "amazon-managed-blockchain",
+    "dmarket",
+    "syndicate"
+   ]
+  },
+  "property": {
+   "lower": [
+    "aeternity",
+    "agentexchange-work",
+    "akash",
+    "aleo",
+    "algorand",
+    "amberdata",
+    "anchor-x402",
+    "ankr",
+    "aptos",
+    "arkham",
+    "arweave",
+    "ava-labs",
+    "ava-protocol",
+    "avalanche",
+    "b3",
+    "barnbridge",
+    "bitski",
+    "blockchair",
+    "blockfrost",
+    "blockscout",
+    "breeze",
+    "cardano",
+    "coin-metrics",
+    "coinbase",
+    "coinflow",
+    "coingecko",
+    "cosmos",
+    "crossmint",
+    "crunchdao",
+    "cubist",
+    "dapper-labs",
+    "debank",
+    "dfns",
+    "dynamic-labs",
+    "dynamic-xyz",
+    "enso",
+    "euler",
+    "evedex",
+    "execution-market",
+    "flow-blockchain",
+    "footprint",
+    "frax",
+    "gala-games",
+    "gmx",
+    "gnosis-safe",
+    "gte",
+    "hedera",
+    "helius",
+    "hiro",
+    "hummingbot",
+    "imgauth-api-di-attestazione-opere-digitali",
+    "immutable",
+    "iota",
+    "kadena",
+    "kusama",
+    "layerzero",
+    "ledger",
+    "lifi",
+    "lighter",
+    "lightspark",
+    "linea",
+    "litecoin",
+    "looksrare",
+    "madeonsol",
+    "magic-eden",
+    "manifold",
+    "mesh",
+    "meter",
+    "moralis",
+    "nano",
+    "near",
+    "neynar",
+    "odos",
+    "opensea",
+    "orca",
+    "orderly-network",
+    "origin-protocol",
+    "oumla-ltd",
+    "pancakeswap",
+    "paraswap",
+    "pocket-network",
+    "polkadot",
+    "quant",
+    "ripple-labs",
+    "securitize",
+    "sei",
+    "shapeshift",
+    "solidus-labs",
+    "stellar",
+    "story-protocol",
+    "supra",
+    "surf",
+    "tendermint",
+    "tezos",
+    "thirdweb",
+    "thorchain",
+    "tooloracle-io",
+    "top-group",
+    "transpose",
+    "triton-one",
+    "tzero",
+    "waodao",
+    "zerion"
+   ],
+   "camelCase": [
+    "akash",
+    "arkham",
+    "arweave",
+    "ava-labs",
+    "ava-protocol",
+    "avalanche",
+    "bitski",
+    "coinflow",
+    "cosmos",
+    "crossmint",
+    "crunchdao",
+    "dfns",
+    "dynamic-labs",
+    "dynamic-xyz",
+    "enso",
+    "euler",
+    "frax",
+    "gala-games",
+    "gmx",
+    "gnosis-safe",
+    "gte",
+    "helius",
+    "hummingbot",
+    "iota",
+    "kadena",
+    "kusama",
+    "layerzero",
+    "lifi",
+    "lightspark",
+    "linea",
+    "litecoin",
+    "looksrare",
+    "magic-eden",
+    "manifold",
+    "mesh",
+    "meter",
+    "moralis",
+    "odos",
+    "orca",
+    "oumla-ltd",
+    "paraswap",
+    "pendle",
+    "polkadot",
+    "quant",
+    "ripple-labs",
+    "securitize",
+    "shapeshift",
+    "story-protocol",
+    "surf",
+    "tezos",
+    "thirdweb",
+    "tzero"
+   ],
+   "snake_case": [
+    "aeternity",
+    "agentexchange-work",
+    "akash",
+    "anchor-x402",
+    "aptos",
+    "b3",
+    "blockfrost",
+    "blockscout",
+    "breeze",
+    "cardano",
+    "coin-metrics",
+    "coinbase",
+    "coinflow",
+    "cubist",
+    "dapper-labs",
+    "debank",
+    "execution-market",
+    "flow-blockchain",
+    "footprint",
+    "hedera",
+    "hiro",
+    "immutable",
+    "ledger",
+    "lighter",
+    "litecoin",
+    "madeonsol",
+    "manifold",
+    "moralis",
+    "nano",
+    "near",
+    "neynar",
+    "orderly-network",
+    "origin-protocol",
+    "pancakeswap",
+    "pocket-network",
+    "polkadot",
+    "sei",
+    "solidus-labs",
+    "stellar",
+    "supra",
+    "surf",
+    "tendermint",
+    "thorchain",
+    "tooloracle-io",
+    "top-group",
+    "transpose",
+    "triton-one",
+    "waodao"
+   ],
+   "other": [
+    "dapper-labs",
+    "flow-blockchain",
+    "pancakeswap",
+    "stellar"
+   ],
+   "PascalCase": [
+    "aelf-inc",
+    "amazon-qldb"
+   ],
+   "kebab-case": [
+    "algorand"
+   ]
+  }
+ }
+}

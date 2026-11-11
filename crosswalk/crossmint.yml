@@ -1,0 +1,29 @@
+provider: crossmint
+apis_io: https://apis.io/providers/crossmint/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      created_at: createdAt
+      id: id
+      fee: fees
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/crossmint-openapi.yml#GET /2025-06-09/wallets/me{walletLocator}/transactions
+    - openapi/_original/crossmint-openapi.yml#GET /2025-06-09/wallets/me{walletLocator}/transactions/{transactionId}
+    - openapi/_original/crossmint-openapi.yml#GET /2025-06-09/wallets/{walletLocator}/transactions
+    - openapi/_original/crossmint-openapi.yml#GET /2025-06-09/wallets/{walletLocator}/transactions/{transactionId}
+    - openapi/_original/crossmint-openapi.yml#POST /2025-06-09/wallets/me{walletLocator}/transactions
+  token:
+    path_segment:
+    - tokens
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/crossmint-openapi.yml#GET /2024-09-26/tokens
+    - openapi/_original/crossmint-openapi.yml#GET /2024-09-26/tokens/{tokenLocator}
+    - openapi/_original/crossmint-openapi.yml#GET /v1-alpha2/tokens
+    - openapi/_original/crossmint-openapi.yml#GET /v1-alpha2/tokens/{tokenLocator}

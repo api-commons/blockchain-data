@@ -1,0 +1,30 @@
+provider: surf
+apis_io: https://apis.io/providers/surf/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  transaction:
+    path_segment:
+    - tx
+    properties:
+      hash: hash
+      block_number: blockNumber
+      from: from
+      to: to
+      block_hash: blockHash
+      chain: chainId
+      type: type
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/surf-openapi-original.json#GET /gateway/v1/onchain/tx
+  token:
+    path_segment:
+    - token
+    properties:
+      symbol: symbol
+      decimals: decimals
+      contract_address: address
+      chain: chain
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/surf-openapi-original.json#GET /gateway/v1/search/token

@@ -1,0 +1,21 @@
+provider: ripple-labs
+apis_io: https://apis.io/providers/ripple-labs/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      hash:
+      - hash
+      - signature
+      created_at: createdAt
+      id:
+      - id
+      - externalId
+      chain: blockchain
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/ripple-labs-palisade-wallet-openapi-original.yml#GET /v2/vaults/{vaultId}/wallets/{walletId}/transactions
+    - openapi/_original/ripple-labs-palisade-wallet-openapi-original.yml#GET /v2/vaults/{vaultId}/wallets/{walletId}/transactions/{transactionId}

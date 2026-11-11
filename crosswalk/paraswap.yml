@@ -1,0 +1,18 @@
+provider: paraswap
+apis_io: https://apis.io/providers/paraswap/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  token:
+    path_segment:
+    - tokens
+    properties:
+      name: name
+      symbol: symbol
+      decimals: decimals
+      contract_address: address
+      chain: network
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/paraswap-market-api-v5.json#GET /tokens
+    - openapi/_original/paraswap-market-api-v5.json#GET /tokens/{network}

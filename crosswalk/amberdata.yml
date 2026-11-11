@@ -1,0 +1,20 @@
+provider: amberdata
+apis_io: https://apis.io/providers/amberdata/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  block:
+    path_segment:
+    - blocks
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/amberdata-openapi.yml#GET /blockchains/{blockchainId}/blocks
+  transaction:
+    path_segment:
+    - transactions
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/amberdata-blockchain-openapi.yaml#GET /addresses/{hash}/transactions
+    - openapi/_original/amberdata-openapi.yml#GET /blockchains/{blockchainId}/addresses/{address}/transactions

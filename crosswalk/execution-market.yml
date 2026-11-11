@@ -1,0 +1,17 @@
+provider: execution-market
+apis_io: https://apis.io/providers/execution-market/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  block:
+    path_segment:
+    - block
+    properties:
+      created_at: created_at
+      id: id
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/execution-market-openapi.json#DELETE /api/v1/users/block/{blocked_user_id}
+    - openapi/_original/execution-market-openapi.json#POST /api/v1/users/block
+    - openapi/_original/execution-market-openapi.yml#DELETE /api/v1/users/block/{blocked_user_id}
+    - openapi/_original/execution-market-openapi.yml#POST /api/v1/users/block

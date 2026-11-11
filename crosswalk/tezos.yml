@@ -1,0 +1,27 @@
+provider: tezos
+apis_io: https://apis.io/providers/tezos/
+context: blockchain-data
+generated: '2026-11-11'
+concepts:
+  block:
+    path_segment:
+    - blocks
+    properties:
+      created_at: timestamp
+      hash: hash
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/openapi.json#GET /v1/blocks
+    - openapi/_original/openapi.json#GET /v1/blocks/{hash}
+    - openapi/_original/openapi.json#GET /v1/blocks/{level}
+    - openapi/_original/openapi.json#GET /v1/blocks/{timestamp}
+  token:
+    path_segment:
+    - tokens
+    properties:
+      id:
+      - id
+      - tokenId
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/openapi.json#GET /v1/tokens
